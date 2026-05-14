@@ -151,6 +151,17 @@
       "notes": "Community edition. Runtime cost is rolled into the Hostinger VPS line — recorded as €0 here to keep the inventory complete."
     },
     {
+      "id": "recvncjMjSBuqwrw1",
+      "description": "Codex — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Intelligence",
+      "vendor": "OpenAI",
+      "amountEur": 25,
+      "cadence": "monthly",
+      "notes": "OpenAI Codex — cloud coding agent. Current tier €25/month. Expected to scale to €100/month as usage grows; bump the Amount field when the upgrade lands."
+    },
+    {
       "id": "reccWRmMOLFbzBLrv",
       "description": "Squarespace — oblqai.com domain (3-year registration)",
       "scope": "Internal",
