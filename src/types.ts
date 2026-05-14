@@ -60,6 +60,17 @@ export type Update = {
   body: string[];
 };
 
+export type Task = {
+  id: string;
+  title: string;
+  status: 'Todo' | 'In progress' | 'Done' | string;
+  owner?: string;
+  description?: string;
+  dueDate?: string;
+  customerIds?: string[];
+  notes?: string;
+};
+
 export type Snapshot = {
   generatedAt: string;
   customers: Customer[];
@@ -67,4 +78,5 @@ export type Snapshot = {
   activities: Activity[];
   updates?: Update[];
   globalDocs?: Deliverable[];
+  tasks?: Task[];
 };

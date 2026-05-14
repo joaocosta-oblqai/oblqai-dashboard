@@ -18,6 +18,14 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-14 — Operations board (internal kanban) added
+
+- New section at the bottom of the dashboard: **Operations board** — a To do / In progress / Done kanban for internal tasks.
+- Each card shows the task title, owner chip, one-line description, due date (turns orange when due in ≤3 days), and a linked-customer tag when applicable.
+- Data lives in Airtable (`Why AI Consulting CRM` → `Tasks` table). Add a row there with Title, Status, Owner, Description, Due Date — the dashboard reflects it on the next snapshot refresh.
+- Seeded with 8 tasks summarizing where things stand right now (proposal follow-up, initial-call scheduling for Renato + Zé Maria, brand-standard approval, Drive uploads, etc.).
+- The weekly Cowork scheduled task now also picks up the Tasks table on its Monday refresh.
+
 ## 2026-05-14 — Pipeline view is now compact
 
 - Customer cards in the pipeline shrunk from large to one-glance: name + vertical + market + a two-line "Next" excerpt. Full details still one click away on the customer page.

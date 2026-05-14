@@ -24,6 +24,7 @@ if (!TOKEN) {
 const CUSTOMERS = 'tblWL2k466OWjPOEr';
 const ACTIVITIES = 'tblCG7CCTSRrZraXJ';
 const COSTS = 'tbl0ItOffPAqtklCp';
+const TASKS = 'tblY1oN3f3S2obHsX';
 
 async function listAll(tableId) {
   const out = [];
@@ -101,11 +102,26 @@ const mapActivity = (r) => {
   };
 };
 
+const mapTask = (r) => {
+  const f = r.fields ?? {};
+  return {
+    id: r.id,
+    title: f['Title'] ?? '',
+    status: pickName(f['Status']) ?? 'Todo',
+    owner: f['Owner'],
+    description: f['Description'],
+    dueDate: f['Due Date'],
+    customerIds: f['Customer'] ?? [],
+    notes: f['Notes'],
+  };
+};
+
 async function main() {
-  const [customers, activities, costs] = await Promise.all([
+  const [customers, activities, costs, tasks] = await Promise.all([
     listAll(CUSTOMERS),
     listAll(ACTIVITIES),
     listAll(COSTS),
+    listAll(TASKS),
   ]);
 
   const snapshot = {
@@ -113,13 +129,15 @@ async function main() {
     customers: customers.map(mapCustomer),
     activities: activities.map(mapActivity),
     costs: costs.map(mapCost),
+    tasks: tasks.map(mapTask),
   };
 
   mkdirSync(dirname(OUT), { recursive: true });
   writeFileSync(OUT, JSON.stringify(snapshot, null, 2) + '\n');
   console.log(
     `Wrote ${OUT} — ${snapshot.customers.length} customers, ` +
-      `${snapshot.activities.length} activities, ${snapshot.costs.length} costs`
+      `${snapshot.activities.length} activities, ${snapshot.costs.length} costs, ` +
+      `${snapshot.tasks.length} tasks`
   );
 }
 

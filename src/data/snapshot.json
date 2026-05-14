@@ -95,6 +95,16 @@
   "updates": [
     {
       "date": "2026-05-14",
+      "headline": "Operations board (internal kanban) added",
+      "body": [
+        "New section at the bottom of the dashboard: an internal To do / In progress / Done kanban.",
+        "Each card shows the task title, owner chip, one-line description, due date (turns orange when due in ≤3 days), and a linked-customer tag when applicable.",
+        "Data lives in Airtable (Tasks table). Add a row with Title, Status, Owner, Description, Due Date and the dashboard picks it up on the next snapshot.",
+        "Seeded with 8 tasks summarizing current open work."
+      ]
+    },
+    {
+      "date": "2026-05-14",
       "headline": "Pipeline view is now compact",
       "body": [
         "Customer cards in the pipeline shrunk to one-glance: name + vertical + market + a two-line \"Next\" excerpt. Full details still one click away on the customer page.",
@@ -272,6 +282,73 @@
       "amountEur": 0,
       "cadence": "one-off",
       "notes": "3-year domain registration purchased 2026-05-13. Renews 2029-05-13. Amount placeholder — update with actual charge from Squarespace billing."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "recLeH6obj0QDIexH",
+      "title": "Approve OBLQAI Brand Standard v1.0 §01-§03",
+      "status": "In progress",
+      "owner": "Joao",
+      "description": "Read the v1.0 PDF, decide if foundations (logo / color / type) are locked, kick off design's v1.1 build of §04-§07.",
+      "dueDate": "2026-05-16"
+    },
+    {
+      "id": "recnYFe1KbTge8ZnX",
+      "title": "Follow up with Sergio on proposal response",
+      "status": "In progress",
+      "owner": "Joao",
+      "description": "Nudge Sergio for feedback on the formal proposal already sent.",
+      "dueDate": "2026-05-19",
+      "customerIds": ["rect4kxOi5Xzv7eSK"]
+    },
+    {
+      "id": "rec9eIHDvGIs3cVZw",
+      "title": "Set date for initial call with Renato",
+      "status": "In progress",
+      "owner": "Joao",
+      "description": "Waiting on Renato to confirm — first OpenClaw pilot can't start until this is scheduled.",
+      "customerIds": ["recUueACFukgzm3vV"]
+    },
+    {
+      "id": "recciqIxeFrFq0VKl",
+      "title": "Set date for initial call with Zé Maria",
+      "status": "In progress",
+      "owner": "Joao",
+      "description": "Reschedule the missed initial call so the free-trial work can actually start.",
+      "customerIds": ["recm75NajVcDGuMLo"]
+    },
+    {
+      "id": "recEGGLuxdr7CPL6c",
+      "title": "Upload deliverable files to Google Drive",
+      "status": "Todo",
+      "owner": "Joao",
+      "description": "Create per-client + global folders, upload the .docx/.pdf/.pptx files, paste the share URLs back so the dashboard deliverables become clickable.",
+      "dueDate": "2026-05-21"
+    },
+    {
+      "id": "recatMEUTk97q4GgM",
+      "title": "Finalize Legal Efficiency Suite pricing",
+      "status": "Todo",
+      "owner": "Joao",
+      "description": "Set the canonical build + monthly numbers for the law-firm package so Sergio's MRR can be unblocked.",
+      "dueDate": "2026-05-28"
+    },
+    {
+      "id": "recc1u7ueK2i2VKCE",
+      "title": "Apply House Standard v1.0 to website + dashboard",
+      "status": "Done",
+      "owner": "Claude",
+      "description": "One accent (#FF8449), Inter + Georgia, cream paper, typeset wordmark in footer — shipped on both surfaces.",
+      "dueDate": "2026-05-14"
+    },
+    {
+      "id": "recGarV3hiuLSc4PX",
+      "title": "Switch chatbot to gemini-2.5-flash-lite + wire env key",
+      "status": "Done",
+      "owner": "Claude",
+      "description": "Cheapest current model, Vite env-var convention, VITE_GEMINI_API_KEY secret now passing through to the build.",
+      "dueDate": "2026-05-14"
     }
   ],
   "globalDocs": [

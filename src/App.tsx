@@ -14,6 +14,7 @@ import type {
   Activity,
   Update,
   Deliverable,
+  Task,
 } from './types';
 import './App.css';
 
@@ -468,6 +469,141 @@ function DeliverableRow({ d }: { d: Deliverable }) {
   return inner;
 }
 
+function TaskCard({
+  t,
+  customersById,
+}: {
+  t: Task;
+  customersById: Map<string, Customer>;
+}) {
+  const linked = (t.customerIds ?? [])
+    .map((id) => customersById.get(id))
+    .filter((c): c is Customer => Boolean(c));
+  const dueSoon = (() => {
+    if (!t.dueDate) return false;
+    const days = Math.floor(
+      (new Date(t.dueDate).getTime() - Date.now()) / 86400000
+    );
+    return t.status !== 'Done' && days <= 3;
+  })();
+  return (
+    <div className="rounded-md border border-[#D8CFC0] bg-white p-2.5 shadow-sm">
+      <div className="flex items-start justify-between gap-2">
+        <h4 className="font-serif text-sm leading-tight">{t.title}</h4>
+        {t.owner && (
+          <span className="whitespace-nowrap rounded-full border border-[#D8CFC0] bg-[#FBF7EE] px-1.5 py-0.5 text-[10px] font-semibold text-[var(--color-charcoal)]">
+            {t.owner}
+          </span>
+        )}
+      </div>
+      {t.description && (
+        <p className="mt-1 text-[11px] leading-snug text-[var(--color-charcoal)]">
+          {t.description}
+        </p>
+      )}
+      <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] text-[var(--color-muted)]">
+        {t.dueDate && (
+          <span
+            className={
+              'uppercase tracking-wide ' +
+              (dueSoon
+                ? 'font-semibold text-[var(--color-accent)]'
+                : '')
+            }
+          >
+            Due {fmtDate(t.dueDate)}
+          </span>
+        )}
+        {linked.map((c) => (
+          <Link
+            key={c.id}
+            to={customerHref(c)}
+            className="rounded-full bg-[#EFE7D7] px-1.5 py-0.5 hover:bg-[var(--color-cream-deep)]"
+          >
+            {c.name.trim().split(' — ')[0]}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TasksBoard({
+  tasks,
+  customers,
+}: {
+  tasks: Task[];
+  customers: Customer[];
+}) {
+  if (!tasks || tasks.length === 0) return null;
+  const cols: { id: string; label: string; tone: 'gray' | 'yellow' | 'green' }[] = [
+    { id: 'Todo', label: 'To do', tone: 'gray' },
+    { id: 'In progress', label: 'In progress', tone: 'yellow' },
+    { id: 'Done', label: 'Done', tone: 'green' },
+  ];
+  const customersById = new Map(customers.map((c) => [c.id, c]));
+  const grouped = new Map<string, Task[]>(cols.map((c) => [c.id, []]));
+  for (const t of tasks) {
+    const key = grouped.has(t.status) ? t.status : 'Todo';
+    grouped.get(key)!.push(t);
+  }
+  // Sort within each column: due date ASC (no-date last), then title.
+  for (const arr of grouped.values()) {
+    arr.sort((a, b) => {
+      const ad = a.dueDate ?? '9999-12-31';
+      const bd = b.dueDate ?? '9999-12-31';
+      if (ad !== bd) return ad < bd ? -1 : 1;
+      return a.title.localeCompare(b.title);
+    });
+  }
+  const toneBg: Record<string, string> = {
+    gray: '#EFE7D7',
+    yellow: '#F7E6BE',
+    green: '#DDEAD2',
+  };
+  return (
+    <section className="mb-12">
+      <SectionHeader
+        eyebrow="Internal"
+        title="Operations board"
+        subtitle={`${tasks.length} task${tasks.length === 1 ? '' : 's'} · add new ones in Airtable (Tasks table) and ask Claude to refresh`}
+      />
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {cols.map((c) => {
+          const items = grouped.get(c.id) ?? [];
+          return (
+            <div
+              key={c.id}
+              className="rounded-lg p-3"
+              style={{ backgroundColor: toneBg[c.tone] }}
+            >
+              <div className="mb-3 flex items-baseline justify-between border-b border-[#D8CFC0] pb-2">
+                <h4 className="font-serif text-sm font-bold uppercase tracking-wider">
+                  {c.label}
+                </h4>
+                <span className="text-xs font-semibold text-[var(--color-muted)]">
+                  {items.length}
+                </span>
+              </div>
+              {items.length === 0 ? (
+                <p className="text-xs italic text-[var(--color-faint)]">
+                  Nothing here.
+                </p>
+              ) : (
+                <div className="space-y-2">
+                  {items.map((t) => (
+                    <TaskCard key={t.id} t={t} customersById={customersById} />
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 function GlobalDocs({ docs }: { docs: Deliverable[] }) {
   if (!docs || docs.length === 0) return null;
   return (
@@ -592,7 +728,7 @@ function PageShell({ children }: { children: React.ReactNode }) {
 }
 
 function Dashboard() {
-  const { customers, costs, activities, updates, globalDocs } = data;
+  const { customers, costs, activities, updates, globalDocs, tasks } = data;
   return (
     <PageShell>
       <KPIStrip customers={customers} costs={costs} />
@@ -600,6 +736,7 @@ function Dashboard() {
       <Costs costs={costs} />
       <Updates updates={updates ?? []} />
       <Activities activities={activities} customers={customers} />
+      <TasksBoard tasks={tasks ?? []} customers={customers} />
       <GlobalDocs docs={globalDocs ?? []} />
     </PageShell>
   );
