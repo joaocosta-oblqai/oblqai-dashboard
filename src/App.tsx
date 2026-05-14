@@ -4,14 +4,18 @@ import './App.css';
 
 const data = snapshot as Snapshot;
 
+// Matches the ObliqAI Ops GitHub Projects v2 board vocabulary
 const STAGE_ORDER = [
   'Lead',
+  'Qualified',
   'Discovery',
-  'Discovery Call',
-  'Proposal Sent',
-  'Onboarding',
-  'Active',
+  'Audit',
+  'Proposal',
+  'Negotiation',
   'Won',
+  'Onboarding',
+  'Live',
+  'Churned',
   'Lost',
 ];
 
@@ -316,7 +320,10 @@ function KPIStrip({
   const mrr = customers.reduce((a, c) => a + (c.mrr ?? 0), 0);
   const monthlyCost = sumCosts(costs);
   const pipeline = customers.filter(
-    (c) => c.stage !== 'Won' && c.stage !== 'Lost'
+    (c) =>
+      c.stage !== 'Won' &&
+      c.stage !== 'Lost' &&
+      c.stage !== 'Churned'
   ).length;
   const stats = [
     { label: 'Customers in pipeline', value: pipeline.toString() },

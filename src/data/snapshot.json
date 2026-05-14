@@ -8,7 +8,7 @@
       "vertical": "Law Firms",
       "verticalPackage": "Legal Efficiency Suite",
       "tier": "Claude Cowork Setup (Tier 1)",
-      "stage": "Proposal Sent",
+      "stage": "Proposal",
       "market": "Portugal",
       "nextAction": "Follow up on formal proposal & discovery use cases",
       "notes": "Law firm — Alpaca Law. Formal proposal already drafted. MRR cleared — Legal Efficiency Suite pricing not yet finalized (per costs/clients/sergio-lawyer.md). Setup fee range €3,000–5,000 — confirm at proposal stage. Law firms never get OpenClaw."
@@ -20,7 +20,7 @@
       "vertical": "Healthcare Clinics",
       "verticalPackage": "Practice Command",
       "tier": "TBD",
-      "stage": "Discovery Call",
+      "stage": "Discovery",
       "market": "Portugal",
       "nextAction": "Discovery call — 15 May 2026, 18:00",
       "nextActionDate": "2026-05-15",
@@ -33,7 +33,7 @@
       "vertical": "Other / Out of Scope",
       "verticalPackage": "Custom / TBD",
       "tier": "OpenClaw Setup (Tier 2)",
-      "stage": "Build & Configure",
+      "stage": "Onboarding",
       "market": "Portugal",
       "notes": "First OpenClaw pilot. Off-blueprint vertical (paint manufacturing). Strategic — first autonomous-agent deployment, focused on marketing automation."
     },
@@ -54,7 +54,7 @@
       "vertical": "Other / Out of Scope",
       "verticalPackage": "Custom / TBD",
       "tier": "Claude Cowork Setup (Tier 1)",
-      "stage": "Build & Configure",
+      "stage": "Onboarding",
       "market": "Portugal",
       "nextAction": "Follow up with some Use cases",
       "notes": "Off-blueprint engagement (agency + construction). Currently on a 2-month free trial; second discovery still pending."
