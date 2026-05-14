@@ -1,5 +1,5 @@
 import snapshot from './data/snapshot.json';
-import type { Snapshot, Customer, Cost, Activity } from './types';
+import type { Snapshot, Customer, Cost, Activity, Update } from './types';
 import './App.css';
 
 const data = snapshot as Snapshot;
@@ -351,8 +351,41 @@ function KPIStrip({
   );
 }
 
+function Updates({ updates }: { updates: Update[] }) {
+  if (!updates || updates.length === 0) return null;
+  return (
+    <section className="mb-12">
+      <SectionHeader
+        eyebrow="What's new"
+        title="Recent updates"
+        subtitle={`${updates.length} ${updates.length === 1 ? 'entry' : 'entries'} · most recent first`}
+      />
+      <div className="space-y-4">
+        {updates.map((u, i) => (
+          <article
+            key={`${u.date}-${i}`}
+            className="rounded-lg border border-[#D8CFC0] bg-white p-5"
+          >
+            <div className="mb-2 flex items-baseline justify-between gap-3">
+              <h3 className="font-serif text-lg leading-tight">{u.headline}</h3>
+              <span className="whitespace-nowrap text-xs uppercase tracking-wide text-[var(--color-copper)]">
+                {fmtDate(u.date)}
+              </span>
+            </div>
+            <ul className="list-disc space-y-1 pl-5 text-sm text-[var(--color-charcoal)]">
+              {u.body.map((line, j) => (
+                <li key={j}>{line}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function App() {
-  const { customers, costs, activities, generatedAt } = data;
+  const { customers, costs, activities, updates, generatedAt } = data;
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-12">
       <header className="mb-10 flex items-end justify-between gap-6 border-b border-[#D8CFC0] pb-6">
@@ -372,12 +405,13 @@ function App() {
       </header>
 
       <KPIStrip customers={customers} costs={costs} />
+      <Updates updates={updates ?? []} />
       <Pipeline customers={customers} />
       <Costs costs={costs} />
       <Activities activities={activities} customers={customers} />
 
       <footer className="mt-16 border-t border-[#D8CFC0] pt-6 text-center text-xs text-[var(--color-muted)]">
-        OBLQAI · Internal partner view · Data refreshed daily from Airtable
+        OBLQAI · Internal partner view · Snapshot generated {fmtDate(generatedAt)}
       </footer>
     </div>
   );

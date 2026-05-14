@@ -43,9 +43,16 @@ export type Activity = {
   nextStepDue?: string;
 };
 
+export type Update = {
+  date: string;
+  headline: string;
+  body: string[];
+};
+
 export type Snapshot = {
   generatedAt: string;
   customers: Customer[];
   costs: Cost[];
   activities: Activity[];
+  updates?: Update[];
 };

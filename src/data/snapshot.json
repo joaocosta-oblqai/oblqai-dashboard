@@ -34,7 +34,7 @@
       "vertical": "Other / Out of Scope",
       "verticalPackage": "Custom / TBD",
       "tier": "OpenClaw Setup (Tier 2)",
-      "stage": "Onboarding",
+      "stage": "Discovery",
       "market": "Portugal",
       "nextAction": "Waiting on Renato for a date for the initial call",
       "lastTouch": "2026-05-14",
@@ -57,11 +57,25 @@
       "vertical": "Other / Out of Scope",
       "verticalPackage": "Custom / TBD",
       "tier": "Claude Cowork Setup (Tier 1)",
-      "stage": "Onboarding",
+      "stage": "Discovery",
       "market": "Portugal",
       "nextAction": "Set a new date for the initial call with Zé Maria",
       "lastTouch": "2026-05-14",
       "notes": "Off-blueprint engagement (agency + construction). Currently on a 2-month free trial; second discovery still pending."
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-05-14",
+      "headline": "Dashboard goes live; partner change log begins",
+      "body": [
+        "Launched the partner operations dashboard at jccosta94.github.io/oblqai-dashboard.",
+        "Reconciled Airtable CRM + costs with GitHub ops so all three surfaces agree. Stage vocabulary now matches the ObliqAI Ops project board: Lead / Qualified / Discovery / Audit / Proposal / Negotiation / Won / Onboarding / Live / Churned / Lost.",
+        "Added OpenAI Codex to internal costs at €25/month (will scale to €100 once usage steps up). Monthly burn now €300.90.",
+        "Cleared the stale €2,499 MRR on Sergio's record — Legal Efficiency Suite pricing hasn't been finalized; old per-vertical pricing no longer applies.",
+        "Pipeline now: Sergio Proposal · Sara/Renato/Zé Maria Discovery · Miranda Lead.",
+        "Next moves: Sergio follow-up · Renato + Zé Maria initial call dates pending."
+      ]
     }
   ],
   "activities": [],
