@@ -18,6 +18,10 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-14 — Upload-Post added to internal costs (€15/month)
+
+- New cost line: **Upload-Post** at €15/month (multi-platform social media scheduler, supports the organic content strategy Miguel is putting together). Monthly burn now **€315.90**.
+
 ## 2026-05-14 — Kanban columns now cap their height
 
 - Each column on the Operations board (To do / In progress / Done) is now capped at ~24rem with internal vertical scroll.

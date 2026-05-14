@@ -95,6 +95,14 @@
   "updates": [
     {
       "date": "2026-05-14",
+      "headline": "Upload-Post added to internal costs (€15/month)",
+      "body": [
+        "New cost line: Upload-Post at €15/month (multi-platform social media scheduler, supports the organic content strategy Miguel is putting together).",
+        "Monthly burn moves from €300.90 → €315.90."
+      ]
+    },
+    {
+      "date": "2026-05-14",
       "headline": "Kanban columns now cap their height",
       "body": [
         "Each column on the Operations board (To do / In progress / Done) is now capped at ~24rem with internal vertical scroll.",
@@ -277,6 +285,17 @@
       "amountEur": 0,
       "cadence": "monthly",
       "notes": "Community edition. Runtime cost is rolled into the Hostinger VPS line — recorded as €0 here to keep the inventory complete."
+    },
+    {
+      "id": "recVQF3Hby2gcOtAT",
+      "description": "Upload-Post — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Tools",
+      "vendor": "Upload-Post",
+      "amountEur": 15,
+      "cadence": "monthly",
+      "notes": "upload-post.com — multi-platform social media scheduler. Used for the organic content strategy Miguel is putting together."
     },
     {
       "id": "recvncjMjSBuqwrw1",
