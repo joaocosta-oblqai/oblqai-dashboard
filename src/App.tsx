@@ -568,9 +568,14 @@ function TasksBoard({
         title="Operations board"
         subtitle={`${tasks.length} task${tasks.length === 1 ? '' : 's'} · add new ones in Airtable (Tasks table) and ask Claude to refresh`}
       />
+      {/* Each column is capped to max-h-96 with internal scroll so the board
+          can't grow unbounded as Done accumulates over time. Column header
+          stays visible above the scroll area (count tells you what you can't
+          see at a glance). */}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {cols.map((c) => {
           const items = grouped.get(c.id) ?? [];
+          const overflow = items.length > 3;
           return (
             <div
               key={c.id}
@@ -583,6 +588,11 @@ function TasksBoard({
                 </h4>
                 <span className="text-xs font-semibold text-[var(--color-muted)]">
                   {items.length}
+                  {overflow && (
+                    <span className="ml-1 text-[10px] font-normal italic text-[var(--color-faint)]">
+                      · scroll
+                    </span>
+                  )}
                 </span>
               </div>
               {items.length === 0 ? (
@@ -590,7 +600,7 @@ function TasksBoard({
                   Nothing here.
                 </p>
               ) : (
-                <div className="space-y-2">
+                <div className="max-h-96 space-y-2 overflow-y-auto pr-1 [scrollbar-width:thin]">
                   {items.map((t) => (
                     <TaskCard key={t.id} t={t} customersById={customersById} />
                   ))}

@@ -95,6 +95,14 @@
   "updates": [
     {
       "date": "2026-05-14",
+      "headline": "Kanban columns now cap their height",
+      "body": [
+        "Each column on the Operations board (To do / In progress / Done) is now capped at ~24rem with internal vertical scroll.",
+        "Column header shows the count and a small \"· scroll\" hint once a column has more than 3 cards. Keeps the dashboard footprint stable no matter how Done grows."
+      ]
+    },
+    {
+      "date": "2026-05-14",
       "headline": "Three new tasks on the board, all due 18 May",
       "body": [
         "Jo — configure the website chatbot for our purpose (tune the system prompt + knowledge base to land on-brand).",
