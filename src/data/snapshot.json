@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T11:30:00.000Z",
+  "generatedAt": "2026-05-14T11:40:00.000Z",
   "customers": [
     {
       "id": "rect4kxOi5Xzv7eSK",
@@ -12,7 +12,7 @@
       "market": "Portugal",
       "mrr": 2499,
       "nextAction": "Follow up on formal proposal & discovery use cases",
-      "notes": "Law firm — Alpaca Law. Formal proposal already drafted. Law firms never get OpenClaw."
+      "notes": "Law firm — Alpaca Law. Formal proposal already drafted. MRR €2,499 is from the old pricing model — refresh once Legal Efficiency Suite pricing is finalized. Law firms never get OpenClaw."
     },
     {
       "id": "recFSvcEJmF9r10Gg",
@@ -22,16 +22,19 @@
       "verticalPackage": "Practice Command",
       "tier": "TBD",
       "stage": "Discovery Call",
+      "market": "Portugal",
       "nextAction": "Discovery call — 15 May 2026, 18:00",
       "nextActionDate": "2026-05-15",
       "lastTouch": "2026-05-02",
-      "notes": "Beauty / aesthetic clinic. Practice Command pricing applies. Confirm market, language, scope on discovery call."
+      "notes": "Aesthetic clinic, Portugal. Practice Command pilot. GDPR Article 9 (special-category health data) handling rules apply. Confirm market, language, scope on discovery call."
     },
     {
       "id": "recUueACFukgzm3vV",
       "name": "Renato — Paint Manufacturer",
+      "vertical": "Other / Out of Scope",
+      "verticalPackage": "Custom / TBD",
+      "tier": "OpenClaw Setup (Tier 2)",
       "market": "Portugal",
-      "stage": "Discovery",
       "notes": "First OpenClaw pilot. Off-blueprint vertical (paint manufacturing). Strategic — first autonomous-agent deployment, focused on marketing automation."
     },
     {
@@ -48,12 +51,28 @@
       "id": "recm75NajVcDGuMLo",
       "name": "Ze Maria —  Ad Agency and Construction",
       "contact": "Ze Maria",
+      "vertical": "Other / Out of Scope",
+      "verticalPackage": "Custom / TBD",
+      "tier": "Claude Cowork Setup (Tier 1)",
       "stage": "Lead",
-      "nextAction": "Follow up with some Use cases"
+      "market": "Portugal",
+      "nextAction": "Follow up with some Use cases",
+      "notes": "Off-blueprint engagement (agency + construction). Currently on a 2-month free trial; second discovery still pending."
     }
   ],
   "activities": [],
   "costs": [
+    {
+      "id": "recRwGZ0Pe0yAhCNP",
+      "description": "Anthropic Claude Pro Max — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Intelligence",
+      "vendor": "Anthropic",
+      "amountEur": 221.4,
+      "cadence": "monthly",
+      "notes": "Joao's claude.ai Max subscription. Powers all Cowork sessions for delivery work."
+    },
     {
       "id": "recR9fyjf4TIbYq2m",
       "description": "Hostinger VPS — May 2026",
@@ -66,15 +85,15 @@
       "notes": "Hosts OpenClaw, n8n, future Hermes. Cost re-allocates across active customer engagements in monthly review."
     },
     {
-      "id": "recRwGZ0Pe0yAhCNP",
-      "description": "Anthropic Claude Pro Max — May 2026",
+      "id": "recwXQFqalk4vtGcQ",
+      "description": "Google AI subscription — May 2026",
       "scope": "Internal",
       "date": "2026-05-01",
       "category": "Intelligence",
-      "vendor": "Anthropic",
-      "amountEur": 221.4,
+      "vendor": "Google",
+      "amountEur": 22,
       "cadence": "monthly",
-      "notes": "Joao's claude.ai Max subscription. Powers all Cowork sessions for delivery work."
+      "notes": "Gemini Advanced / AI Pro — image gen and video gen."
     },
     {
       "id": "recnkiNeMslwn0a4U",
@@ -88,15 +107,59 @@
       "notes": "Business tier. hello@oblqai.com email + DKIM/SPF/MX on oblqai.com domain."
     },
     {
-      "id": "recwXQFqalk4vtGcQ",
-      "description": "Google AI subscription — May 2026",
+      "id": "recDeyXhw4QRPW4AS",
+      "description": "Firebase Hosting — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Compute",
+      "vendor": "Firebase",
+      "amountEur": 0,
+      "cadence": "monthly",
+      "notes": "Hosting for oblqai.com on the Spark (free) tier. Tracked so the line is in place when traffic crosses paid thresholds."
+    },
+    {
+      "id": "recKNNjjZsHuP6E7A",
+      "description": "GitHub — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Tools",
+      "vendor": "GitHub",
+      "amountEur": 0,
+      "cadence": "monthly",
+      "notes": "Free tier — repos, Projects v2, GitHub Actions. Upgrade to Pro only if private-repo Pages is needed."
+    },
+    {
+      "id": "recSgvSCEuVw4HTlG",
+      "description": "Claude Cowork — May 2026",
       "scope": "Internal",
       "date": "2026-05-01",
       "category": "Intelligence",
-      "vendor": "Google",
-      "amountEur": 22,
+      "vendor": "Anthropic",
+      "amountEur": 0,
       "cadence": "monthly",
-      "notes": "Gemini Advanced / AI Pro — image gen and video gen."
+      "notes": "Anthropic-provided research preview — no direct cost today. May become a paid tier."
+    },
+    {
+      "id": "recEZydmmjcP0sq7k",
+      "description": "n8n (self-hosted) — May 2026",
+      "scope": "Shared",
+      "date": "2026-05-01",
+      "category": "Compute",
+      "vendor": "Other",
+      "amountEur": 0,
+      "cadence": "monthly",
+      "notes": "Community edition. Runtime cost is rolled into the Hostinger VPS line — recorded as €0 here to keep the inventory complete."
+    },
+    {
+      "id": "reccWRmMOLFbzBLrv",
+      "description": "Squarespace — oblqai.com domain (3-year registration)",
+      "scope": "Internal",
+      "date": "2026-05-13",
+      "category": "Tools",
+      "vendor": "Squarespace",
+      "amountEur": 0,
+      "cadence": "one-off",
+      "notes": "3-year domain registration purchased 2026-05-13. Renews 2029-05-13. Amount placeholder — update with actual charge from Squarespace billing."
     }
   ]
 }
