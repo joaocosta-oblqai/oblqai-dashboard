@@ -18,6 +18,13 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-14 — Practice Command monthly halved (multiplier re-tune, two passes)
+
+- Internal pricing stack re-tuned in two passes today. **Pass 1:** Intelligence / Compliance / Integrations dropped from **10x → 5x** each. **Pass 2:** Compute dropped from **5x → 2x** and Messaging from **3x → 2x**. Total stack moves from **38x → 19x** — exactly half.
+- Monthly Practice Command prices drop accordingly: **PT €1,870 → €950/mo**, **DE €2,805 → €1,425/mo**, **CH CHF 3,740 → CHF 1,900/mo**. That's a **~50% cut** to monthly recurring revenue per Practice Command client vs. where we started the day.
+- One-time build is unchanged (PT €8,000, DE €12,000, CH CHF 16,000) — implementation effort is the same; only ongoing operational load is lighter, reflecting maturing tooling (cheaper Claude usage, pre-built MCPs, productized RGPD templates, VPS consolidation, standardized messaging infra) and a more aggressive pilot entry price.
+- All open Healthcare quotes (Sara) and any Healthcare prospects should re-quote off the new monthly. Canonical pricing memory and project CLAUDE.md updated to match.
+
 ## 2026-05-14 — Upload-Post added to internal costs (€15/month)
 
 - New cost line: **Upload-Post** at €15/month (multi-platform social media scheduler, supports the organic content strategy Miguel is putting together). Monthly burn now **€315.90**.
