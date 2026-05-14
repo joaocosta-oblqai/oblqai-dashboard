@@ -517,17 +517,21 @@ function KPIStrip({
   );
 }
 
+// Logo lives in /public/oblqai-logo.png — Vite respects the Pages base path
+const LOGO_SRC = `${import.meta.env.BASE_URL}oblqai-logo.png`;
+
 function PageShell({ children }: { children: React.ReactNode }) {
   const { generatedAt } = data;
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-12">
       <header className="mb-10 flex items-end justify-between gap-6 border-b border-[#D8CFC0] pb-6">
         <Link to="/" className="block hover:opacity-80">
-          <div className="font-serif text-3xl md:text-4xl">
-            <span className="text-[var(--color-ink)]">OBLQ</span>
-            <span className="text-[var(--color-copper)]"> · AI</span>
-          </div>
-          <div className="mt-1 text-xs uppercase tracking-widest text-[var(--color-muted)]">
+          <img
+            src={LOGO_SRC}
+            alt="OBLQAI"
+            className="h-12 w-auto md:h-16"
+          />
+          <div className="mt-2 text-xs uppercase tracking-widest text-[var(--color-muted)]">
             Partner Operations Dashboard
           </div>
         </Link>
@@ -537,8 +541,9 @@ function PageShell({ children }: { children: React.ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="mt-16 border-t border-[#D8CFC0] pt-6 text-center text-xs text-[var(--color-muted)]">
-        OBLQAI · Internal partner view · Snapshot generated {fmtDate(generatedAt)}
+      <footer className="mt-16 flex flex-col items-center gap-3 border-t border-[#D8CFC0] pt-6 text-center text-xs text-[var(--color-muted)]">
+        <img src={LOGO_SRC} alt="OBLQAI" className="h-6 w-auto opacity-60" />
+        <div>Internal partner view · Snapshot generated {fmtDate(generatedAt)}</div>
       </footer>
     </div>
   );

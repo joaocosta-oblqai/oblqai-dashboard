@@ -18,6 +18,12 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-14 — Dashboard branding now matches the OBLQAI logo
+
+- Replaced the text wordmark in the header with the actual OBLQAI logo image (black "oblq" + orange "Ai"). Also appears small in the footer.
+- Retuned the accent color from the copper editorial tone (`#C27C4E`) to the website orange (`#FF8449`) so the dashboard reads as the same brand as oblqai.com.
+- New favicon — black square + orange dot — to match.
+
 ## 2026-05-14 — Customer detail pages + Global docs section
 
 - Customer cards on the pipeline are now clickable — each opens a detail page with the customer's full notes, key fields, and a list of every deliverable we have on file (proposals, decks, demos, research briefs).
