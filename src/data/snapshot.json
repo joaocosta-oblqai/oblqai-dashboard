@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-05-14T11:30:00.000Z",
+  "customers": [
+    {
+      "id": "rect4kxOi5Xzv7eSK",
+      "name": "Sergio —  Lawfirm",
+      "contact": "Sergio",
+      "vertical": "Law Firms",
+      "verticalPackage": "Legal Efficiency Suite",
+      "tier": "Claude Cowork Setup (Tier 1)",
+      "stage": "Proposal Sent",
+      "market": "Portugal",
+      "mrr": 2499,
+      "nextAction": "Follow up on formal proposal & discovery use cases",
+      "notes": "Law firm — Alpaca Law. Formal proposal already drafted. Law firms never get OpenClaw."
+    },
+    {
+      "id": "recFSvcEJmF9r10Gg",
+      "name": "Sara — Beauty Clinic",
+      "contact": "Sara",
+      "vertical": "Healthcare Clinics",
+      "verticalPackage": "Practice Command",
+      "tier": "TBD",
+      "stage": "Discovery Call",
+      "nextAction": "Discovery call — 15 May 2026, 18:00",
+      "nextActionDate": "2026-05-15",
+      "lastTouch": "2026-05-02",
+      "notes": "Beauty / aesthetic clinic. Practice Command pricing applies. Confirm market, language, scope on discovery call."
+    },
+    {
+      "id": "recUueACFukgzm3vV",
+      "name": "Renato — Paint Manufacturer",
+      "market": "Portugal",
+      "stage": "Discovery",
+      "notes": "First OpenClaw pilot. Off-blueprint vertical (paint manufacturing). Strategic — first autonomous-agent deployment, focused on marketing automation."
+    },
+    {
+      "id": "recolPLilW4wKUpiD",
+      "name": "Miranda & Associados - Law firm ",
+      "vertical": "Law Firms",
+      "verticalPackage": "Legal Efficiency Suite",
+      "tier": "Claude Cowork Setup (Tier 1)",
+      "stage": "Lead",
+      "market": "Portugal",
+      "notes": "Potential law firm client. Pre-pilot / lead. Legal Efficiency Suite — Claude Cowork Setup only (no OpenClaw for law firms)."
+    },
+    {
+      "id": "recm75NajVcDGuMLo",
+      "name": "Ze Maria —  Ad Agency and Construction",
+      "contact": "Ze Maria",
+      "stage": "Lead",
+      "nextAction": "Follow up with some Use cases"
+    }
+  ],
+  "activities": [],
+  "costs": [
+    {
+      "id": "recR9fyjf4TIbYq2m",
+      "description": "Hostinger VPS — May 2026",
+      "scope": "Shared",
+      "date": "2026-05-01",
+      "category": "Compute",
+      "vendor": "Hostinger",
+      "amountEur": 20.5,
+      "cadence": "monthly",
+      "notes": "Hosts OpenClaw, n8n, future Hermes. Cost re-allocates across active customer engagements in monthly review."
+    },
+    {
+      "id": "recRwGZ0Pe0yAhCNP",
+      "description": "Anthropic Claude Pro Max — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Intelligence",
+      "vendor": "Anthropic",
+      "amountEur": 221.4,
+      "cadence": "monthly",
+      "notes": "Joao's claude.ai Max subscription. Powers all Cowork sessions for delivery work."
+    },
+    {
+      "id": "recnkiNeMslwn0a4U",
+      "description": "Google Workspace — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Tools",
+      "vendor": "Google",
+      "amountEur": 12,
+      "cadence": "monthly",
+      "notes": "Business tier. hello@oblqai.com email + DKIM/SPF/MX on oblqai.com domain."
+    },
+    {
+      "id": "recwXQFqalk4vtGcQ",
+      "description": "Google AI subscription — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Intelligence",
+      "vendor": "Google",
+      "amountEur": 22,
+      "cadence": "monthly",
+      "notes": "Gemini Advanced / AI Pro — image gen and video gen."
+    }
+  ]
+}
