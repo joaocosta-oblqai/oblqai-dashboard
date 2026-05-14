@@ -1,5 +1,15 @@
+export type Deliverable = {
+  title: string;
+  filename?: string;
+  type?: 'pdf' | 'docx' | 'pptx' | 'xlsx' | 'md' | 'html' | 'other';
+  url?: string | null;
+  description?: string;
+  date?: string;
+};
+
 export type Customer = {
   id: string;
+  slug?: string;
   name: string;
   contact?: string;
   email?: string;
@@ -15,6 +25,7 @@ export type Customer = {
   nextActionDate?: string;
   lastTouch?: string;
   notes?: string;
+  deliverables?: Deliverable[];
 };
 
 export type Cost = {
@@ -55,4 +66,5 @@ export type Snapshot = {
   costs: Cost[];
   activities: Activity[];
   updates?: Update[];
+  globalDocs?: Deliverable[];
 };

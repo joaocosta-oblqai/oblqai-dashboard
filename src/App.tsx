@@ -1,5 +1,19 @@
+import {
+  HashRouter,
+  Link,
+  Route,
+  Routes,
+  useParams,
+} from 'react-router-dom';
 import snapshot from './data/snapshot.json';
-import type { Snapshot, Customer, Cost, Activity, Update } from './types';
+import type {
+  Snapshot,
+  Customer,
+  Cost,
+  Activity,
+  Update,
+  Deliverable,
+} from './types';
 import './App.css';
 
 const data = snapshot as Snapshot;
@@ -37,8 +51,7 @@ function fmtDate(s?: string) {
   });
 }
 
-// One column per planned stage, in canonical order, even when empty —
-// so partners can see how the pipeline is structured end-to-end.
+// One column per planned stage, in canonical order, even when empty
 function groupByStage(customers: Customer[]) {
   const groups = new Map<string, Customer[]>(
     STAGE_ORDER.map((s) => [s, []])
@@ -70,9 +83,17 @@ function costsByCategory(costs: Cost[]) {
   return [...m.entries()].sort((a, b) => b[1] - a[1]);
 }
 
+function customerHref(c: Customer) {
+  return `/customer/${c.slug ?? c.id}`;
+}
+
 function CustomerCard({ c }: { c: Customer }) {
+  const dCount = c.deliverables?.length ?? 0;
   return (
-    <div className="rounded-lg border border-[#D8CFC0] bg-white p-4 shadow-sm">
+    <Link
+      to={customerHref(c)}
+      className="block rounded-lg border border-[#D8CFC0] bg-white p-4 shadow-sm transition hover:border-[var(--color-copper)] hover:shadow-md"
+    >
       <div className="mb-2 flex items-start justify-between gap-3">
         <h3 className="font-serif text-base leading-tight">{c.name.trim()}</h3>
         {typeof c.mrr === 'number' && c.mrr > 0 && (
@@ -114,7 +135,15 @@ function CustomerCard({ c }: { c: Customer }) {
           )}
         </div>
       )}
-    </div>
+      <div className="mt-3 flex items-center justify-between text-xs text-[var(--color-faint)]">
+        <span>
+          {dCount} {dCount === 1 ? 'deliverable' : 'deliverables'}
+        </span>
+        <span className="font-semibold text-[var(--color-copper)]">
+          View details →
+        </span>
+      </div>
+    </Link>
   );
 }
 
@@ -145,9 +174,7 @@ function Pipeline({ customers }: { customers: Customer[] }) {
                 <div
                   className={
                     'mb-3 flex items-baseline justify-between border-b pb-2 ' +
-                    (empty
-                      ? 'border-[#E0D6C5]'
-                      : 'border-[#D8CFC0]')
+                    (empty ? 'border-[#E0D6C5]' : 'border-[#D8CFC0]')
                   }
                 >
                   <h4
@@ -266,6 +293,39 @@ function Costs({ costs }: { costs: Cost[] }) {
   );
 }
 
+function Updates({ updates }: { updates: Update[] }) {
+  if (!updates || updates.length === 0) return null;
+  return (
+    <section className="mb-12">
+      <SectionHeader
+        eyebrow="What's new"
+        title="Recent updates"
+        subtitle={`${updates.length} ${updates.length === 1 ? 'entry' : 'entries'} · most recent first`}
+      />
+      <div className="space-y-4">
+        {updates.map((u, i) => (
+          <article
+            key={`${u.date}-${i}`}
+            className="rounded-lg border border-[#D8CFC0] bg-white p-5"
+          >
+            <div className="mb-2 flex items-baseline justify-between gap-3">
+              <h3 className="font-serif text-lg leading-tight">{u.headline}</h3>
+              <span className="whitespace-nowrap text-xs uppercase tracking-wide text-[var(--color-copper)]">
+                {fmtDate(u.date)}
+              </span>
+            </div>
+            <ul className="list-disc space-y-1 pl-5 text-sm text-[var(--color-charcoal)]">
+              {u.body.map((line, j) => (
+                <li key={j}>{line}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Activities({
   activities,
   customers,
@@ -329,6 +389,77 @@ function Activities({
   );
 }
 
+const TYPE_LABEL: Record<string, string> = {
+  pdf: 'PDF',
+  docx: 'Word',
+  pptx: 'Deck',
+  xlsx: 'Spreadsheet',
+  md: 'Markdown',
+  html: 'Demo',
+  other: 'File',
+};
+
+function DeliverableRow({ d }: { d: Deliverable }) {
+  const label = TYPE_LABEL[d.type ?? 'other'] ?? 'File';
+  const inner = (
+    <div className="flex items-start justify-between gap-3 rounded-md border border-[#D8CFC0] bg-white p-3 text-sm hover:border-[var(--color-copper)]">
+      <div className="min-w-0 flex-1">
+        <div className="font-semibold text-[var(--color-ink)]">{d.title}</div>
+        {d.filename && (
+          <div className="truncate text-xs text-[var(--color-muted)]">
+            {d.filename}
+          </div>
+        )}
+        {d.description && (
+          <div className="mt-1 text-xs text-[var(--color-charcoal)]">
+            {d.description}
+          </div>
+        )}
+      </div>
+      <div className="flex shrink-0 flex-col items-end gap-1">
+        <span className="rounded-full bg-[#EFE7D7] px-2 py-0.5 text-[10px] uppercase tracking-wide text-[var(--color-muted)]">
+          {label}
+        </span>
+        {d.url ? (
+          <span className="text-xs font-semibold text-[var(--color-copper)]">
+            Open →
+          </span>
+        ) : (
+          <span className="text-xs italic text-[var(--color-faint)]">
+            link pending
+          </span>
+        )}
+      </div>
+    </div>
+  );
+  if (d.url) {
+    return (
+      <a href={d.url} target="_blank" rel="noopener noreferrer" className="block">
+        {inner}
+      </a>
+    );
+  }
+  return inner;
+}
+
+function GlobalDocs({ docs }: { docs: Deliverable[] }) {
+  if (!docs || docs.length === 0) return null;
+  return (
+    <section className="mb-12">
+      <SectionHeader
+        eyebrow="Reference"
+        title="Global / general docs"
+        subtitle="OBLQAI reference materials — service blueprint, pricing canon, brand standards. Useful context for partners."
+      />
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        {docs.map((d, i) => (
+          <DeliverableRow key={`${d.title}-${i}`} d={d} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function SectionHeader({
   eyebrow,
   title,
@@ -361,19 +492,13 @@ function KPIStrip({
   const mrr = customers.reduce((a, c) => a + (c.mrr ?? 0), 0);
   const monthlyCost = sumCosts(costs);
   const pipeline = customers.filter(
-    (c) =>
-      c.stage !== 'Won' &&
-      c.stage !== 'Lost' &&
-      c.stage !== 'Churned'
+    (c) => c.stage !== 'Won' && c.stage !== 'Lost' && c.stage !== 'Churned'
   ).length;
   const stats = [
     { label: 'Customers in pipeline', value: pipeline.toString() },
     { label: 'Monthly recurring revenue', value: fmtEUR(mrr) },
     { label: 'Monthly operating cost', value: fmtEUR(monthlyCost) },
-    {
-      label: 'Net monthly',
-      value: fmtEUR(mrr - monthlyCost),
-    },
+    { label: 'Net monthly', value: fmtEUR(mrr - monthlyCost) },
   ];
   return (
     <section className="mb-10 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -392,45 +517,12 @@ function KPIStrip({
   );
 }
 
-function Updates({ updates }: { updates: Update[] }) {
-  if (!updates || updates.length === 0) return null;
-  return (
-    <section className="mb-12">
-      <SectionHeader
-        eyebrow="What's new"
-        title="Recent updates"
-        subtitle={`${updates.length} ${updates.length === 1 ? 'entry' : 'entries'} · most recent first`}
-      />
-      <div className="space-y-4">
-        {updates.map((u, i) => (
-          <article
-            key={`${u.date}-${i}`}
-            className="rounded-lg border border-[#D8CFC0] bg-white p-5"
-          >
-            <div className="mb-2 flex items-baseline justify-between gap-3">
-              <h3 className="font-serif text-lg leading-tight">{u.headline}</h3>
-              <span className="whitespace-nowrap text-xs uppercase tracking-wide text-[var(--color-copper)]">
-                {fmtDate(u.date)}
-              </span>
-            </div>
-            <ul className="list-disc space-y-1 pl-5 text-sm text-[var(--color-charcoal)]">
-              {u.body.map((line, j) => (
-                <li key={j}>{line}</li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function App() {
-  const { customers, costs, activities, updates, generatedAt } = data;
+function PageShell({ children }: { children: React.ReactNode }) {
+  const { generatedAt } = data;
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-12">
       <header className="mb-10 flex items-end justify-between gap-6 border-b border-[#D8CFC0] pb-6">
-        <div>
+        <Link to="/" className="block hover:opacity-80">
           <div className="font-serif text-3xl md:text-4xl">
             <span className="text-[var(--color-ink)]">OBLQ</span>
             <span className="text-[var(--color-copper)]"> · AI</span>
@@ -438,23 +530,171 @@ function App() {
           <div className="mt-1 text-xs uppercase tracking-widest text-[var(--color-muted)]">
             Partner Operations Dashboard
           </div>
-        </div>
+        </Link>
         <div className="text-right text-xs text-[var(--color-muted)]">
           <div>Last updated</div>
           <div className="text-[var(--color-ink)]">{fmtDate(generatedAt)}</div>
         </div>
       </header>
-
-      <KPIStrip customers={customers} costs={costs} />
-      <Updates updates={updates ?? []} />
-      <Pipeline customers={customers} />
-      <Costs costs={costs} />
-      <Activities activities={activities} customers={customers} />
-
+      {children}
       <footer className="mt-16 border-t border-[#D8CFC0] pt-6 text-center text-xs text-[var(--color-muted)]">
         OBLQAI · Internal partner view · Snapshot generated {fmtDate(generatedAt)}
       </footer>
     </div>
+  );
+}
+
+function Dashboard() {
+  const { customers, costs, activities, updates, globalDocs } = data;
+  return (
+    <PageShell>
+      <KPIStrip customers={customers} costs={costs} />
+      <Pipeline customers={customers} />
+      <Costs costs={costs} />
+      <Updates updates={updates ?? []} />
+      <Activities activities={activities} customers={customers} />
+      <GlobalDocs docs={globalDocs ?? []} />
+    </PageShell>
+  );
+}
+
+function CustomerDetail() {
+  const { slug } = useParams<{ slug: string }>();
+  const c = data.customers.find(
+    (cust) => cust.slug === slug || cust.id === slug
+  );
+  if (!c) {
+    return (
+      <PageShell>
+        <div className="rounded-lg border border-[#D8CFC0] bg-white p-6 text-center">
+          <p className="mb-3 font-serif text-xl">Customer not found</p>
+          <Link
+            to="/"
+            className="text-sm font-semibold text-[var(--color-copper)]"
+          >
+            ← Back to dashboard
+          </Link>
+        </div>
+      </PageShell>
+    );
+  }
+  const deliverables = c.deliverables ?? [];
+  const fields: { label: string; value: string | number | undefined }[] = [
+    { label: 'Stage', value: c.stage },
+    { label: 'Vertical', value: c.vertical },
+    { label: 'Package', value: c.verticalPackage },
+    { label: 'Tier', value: c.tier },
+    { label: 'Market', value: c.market },
+    {
+      label: 'MRR',
+      value: typeof c.mrr === 'number' ? fmtEUR(c.mrr) : undefined,
+    },
+    {
+      label: 'Setup fee',
+      value: typeof c.setupFee === 'number' ? fmtEUR(c.setupFee) : undefined,
+    },
+    { label: 'Contact', value: c.contact },
+    { label: 'Email', value: c.email },
+    { label: 'Phone', value: c.phone },
+    { label: 'Last touch', value: c.lastTouch && fmtDate(c.lastTouch) },
+  ];
+  return (
+    <PageShell>
+      <div className="mb-6">
+        <Link
+          to="/"
+          className="text-xs font-semibold uppercase tracking-widest text-[var(--color-copper)] hover:underline"
+        >
+          ← Back to dashboard
+        </Link>
+      </div>
+      <header className="mb-8 border-b border-[#D8CFC0] pb-4">
+        <h1 className="font-serif text-3xl md:text-4xl">{c.name.trim()}</h1>
+        {c.stage && (
+          <div className="mt-2 inline-block rounded-full bg-[var(--color-copper)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+            {c.stage}
+          </div>
+        )}
+      </header>
+
+      <section className="mb-10 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+        {fields
+          .filter((f) => f.value !== undefined && f.value !== null && f.value !== '')
+          .map((f) => (
+            <div
+              key={f.label}
+              className="rounded-lg border border-[#D8CFC0] bg-white p-3"
+            >
+              <div className="text-xs uppercase tracking-wide text-[var(--color-faint)]">
+                {f.label}
+              </div>
+              <div className="text-sm font-medium text-[var(--color-ink)]">
+                {f.value}
+              </div>
+            </div>
+          ))}
+      </section>
+
+      {c.nextAction && (
+        <section className="mb-10">
+          <SectionHeader eyebrow="Next" title="What we're doing next" />
+          <div className="rounded-lg border border-[#D8CFC0] bg-white p-4">
+            <div className="text-base text-[var(--color-ink)]">
+              {c.nextAction}
+            </div>
+            {c.nextActionDate && (
+              <div className="mt-1 text-xs text-[var(--color-muted)]">
+                {fmtDate(c.nextActionDate)}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {c.notes && (
+        <section className="mb-10">
+          <SectionHeader eyebrow="Context" title="Notes" />
+          <div className="rounded-lg border border-[#D8CFC0] bg-white p-4 text-sm leading-relaxed text-[var(--color-charcoal)]">
+            {c.notes}
+          </div>
+        </section>
+      )}
+
+      <section className="mb-10">
+        <SectionHeader
+          eyebrow="Deliverables"
+          title="Files on this engagement"
+          subtitle={
+            deliverables.length === 0
+              ? 'No deliverables logged yet'
+              : `${deliverables.length} ${deliverables.length === 1 ? 'file' : 'files'} on file. Items marked "link pending" exist on Joao's machine — public links coming once hosting is set up.`
+          }
+        />
+        {deliverables.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-[#D8CFC0] bg-[#FBF7EE] p-6 text-center text-sm text-[var(--color-muted)]">
+            Nothing on file yet for this engagement.
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            {deliverables.map((d, i) => (
+              <DeliverableRow key={`${d.title}-${i}`} d={d} />
+            ))}
+          </div>
+        )}
+      </section>
+    </PageShell>
+  );
+}
+
+function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/customer/:slug" element={<CustomerDetail />} />
+        <Route path="*" element={<Dashboard />} />
+      </Routes>
+    </HashRouter>
   );
 }
 

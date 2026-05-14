@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-05-14T11:50:00.000Z",
+  "generatedAt": "2026-05-14T13:00:00.000Z",
   "customers": [
     {
       "id": "rect4kxOi5Xzv7eSK",
+      "slug": "sergio-lawyer",
       "name": "Sergio —  Lawfirm",
       "contact": "Sergio",
       "vertical": "Law Firms",
@@ -12,10 +13,20 @@
       "market": "Portugal",
       "nextAction": "Follow up with Sergio on his answer to the proposal",
       "lastTouch": "2026-05-14",
-      "notes": "Law firm — Alpaca Law. Formal proposal already drafted. MRR cleared — Legal Efficiency Suite pricing not yet finalized (per costs/clients/sergio-lawyer.md). Setup fee range €3,000–5,000 — confirm at proposal stage. Law firms never get OpenClaw."
+      "notes": "Law firm — Alpaca Law. Formal proposal already drafted. MRR cleared — Legal Efficiency Suite pricing not yet finalized (per costs/clients/sergio-lawyer.md). Setup fee range €3,000–5,000 — confirm at proposal stage. Law firms never get OpenClaw.",
+      "deliverables": [
+        { "title": "Meeting Notes", "filename": "01-Meeting-Notes.docx", "type": "docx", "url": null },
+        { "title": "Alpaca Law Research Brief", "filename": "02-Alpaca-Law-Research-Brief.docx", "type": "docx", "url": null },
+        { "title": "Use-Case Recommendations", "filename": "03-Use-Case-Recommendations.docx", "type": "docx", "url": null },
+        { "title": "Next-Steps Plan", "filename": "04-Next-Steps-Plan.docx", "type": "docx", "url": null },
+        { "title": "Alpaca vs Claude Cowork — Plain Language (EN)", "filename": "05-Alpaca-vs-Claude-Cowork-Plain-Language.docx", "type": "docx", "url": null },
+        { "title": "Alpaca vs Claude Cowork — Linguagem Simples (PT)", "filename": "06-Alpaca-vs-Claude-Cowork-Linguagem-Simples-PT.docx", "type": "docx", "url": null },
+        { "title": "Formal Cowork Proposal — Use Cases & Discovery", "filename": "07-Claude-Cowork-Proposta-Formal-Use-Cases-e-Discovery-Sergio.docx", "type": "docx", "url": null, "description": "The formal proposal currently with Sergio." }
+      ]
     },
     {
       "id": "recFSvcEJmF9r10Gg",
+      "slug": "sara",
       "name": "Sara — Beauty Clinic",
       "contact": "Sara",
       "vertical": "Healthcare Clinics",
@@ -26,10 +37,14 @@
       "nextAction": "Discovery call — 15 May 2026, 18:00",
       "nextActionDate": "2026-05-15",
       "lastTouch": "2026-05-02",
-      "notes": "Aesthetic clinic, Portugal. Practice Command pilot. GDPR Article 9 (special-category health data) handling rules apply. Confirm market, language, scope on discovery call."
+      "notes": "Aesthetic clinic, Portugal. Practice Command pilot. GDPR Article 9 (special-category health data) handling rules apply. Confirm market, language, scope on discovery call.",
+      "deliverables": [
+        { "title": "Aesthetic Clinic — 10 Use Cases (PT)", "filename": "10-casos-de-uso-clinica-estetica.pptx", "type": "pptx", "url": null }
+      ]
     },
     {
       "id": "recUueACFukgzm3vV",
+      "slug": "renato",
       "name": "Renato — Paint Manufacturer",
       "vertical": "Other / Out of Scope",
       "verticalPackage": "Custom / TBD",
@@ -38,20 +53,29 @@
       "market": "Portugal",
       "nextAction": "Waiting on Renato for a date for the initial call",
       "lastTouch": "2026-05-14",
-      "notes": "First OpenClaw pilot. Off-blueprint vertical (paint manufacturing). Strategic — first autonomous-agent deployment, focused on marketing automation."
+      "notes": "First OpenClaw pilot. Off-blueprint vertical (paint manufacturing). Strategic — first autonomous-agent deployment, focused on marketing automation.",
+      "deliverables": []
     },
     {
       "id": "recolPLilW4wKUpiD",
+      "slug": "miranda",
       "name": "Miranda & Associados - Law firm ",
       "vertical": "Law Firms",
       "verticalPackage": "Legal Efficiency Suite",
       "tier": "Claude Cowork Setup (Tier 1)",
       "stage": "Lead",
       "market": "Portugal",
-      "notes": "Potential law firm client. Pre-pilot / lead. Legal Efficiency Suite — Claude Cowork Setup only (no OpenClaw for law firms)."
+      "notes": "Potential law firm client. Pre-pilot / lead. Legal Efficiency Suite — Claude Cowork Setup only (no OpenClaw for law firms).",
+      "deliverables": [
+        { "title": "Implementation Proposal", "filename": "Miranda-Law-Firm-Implementation-Proposal.pdf", "type": "pdf", "url": null },
+        { "title": "Pitch Deck", "filename": "Miranda-Pitch-Deck.pptx", "type": "pptx", "url": null },
+        { "title": "Live Demo", "filename": "Miranda-Demo.html", "type": "html", "url": null },
+        { "title": "Demo Video Script", "filename": "Miranda-Demo-Video-Script.md", "type": "md", "url": null }
+      ]
     },
     {
       "id": "recm75NajVcDGuMLo",
+      "slug": "ze-maria",
       "name": "Ze Maria —  Ad Agency and Construction",
       "contact": "Ze Maria",
       "vertical": "Other / Out of Scope",
@@ -61,10 +85,24 @@
       "market": "Portugal",
       "nextAction": "Set a new date for the initial call with Zé Maria",
       "lastTouch": "2026-05-14",
-      "notes": "Off-blueprint engagement (agency + construction). Currently on a 2-month free trial; second discovery still pending."
+      "notes": "Off-blueprint engagement (agency + construction). Currently on a 2-month free trial; second discovery still pending.",
+      "deliverables": [
+        { "title": "Proposta v0.2 (PT)", "filename": "Ze-Maria-Proposta-v0.2-PT.pptx", "type": "pptx", "url": null, "description": "Latest version of the proposal — Portuguese." },
+        { "title": "Example (PT)", "filename": "Example_pt.pdf", "type": "pdf", "url": null }
+      ]
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-14",
+      "headline": "Customer detail pages + Global docs section",
+      "body": [
+        "Customer cards on the pipeline are now clickable — each opens a detail page with the customer's full notes, key fields, and a list of every deliverable we have on file (proposals, decks, demos, research briefs).",
+        "Added a Global / General docs section at the bottom of the main page for reference materials partners might want (Service Blueprint v2, pricing canon, discovery process).",
+        "Moved the Recent updates section down so the main page flow is now: KPIs → Pipeline → Costs → Updates → Activities → Global docs.",
+        "Deliverables are listed by title + filename + type for now. Actual clickable file links depend on where we host the files (see next steps with Joao)."
+      ]
+    },
     {
       "date": "2026-05-14",
       "headline": "Full pipeline now visible on the dashboard",
@@ -198,6 +236,47 @@
       "amountEur": 0,
       "cadence": "one-off",
       "notes": "3-year domain registration purchased 2026-05-13. Renews 2029-05-13. Amount placeholder — update with actual charge from Squarespace billing."
+    }
+  ],
+  "globalDocs": [
+    {
+      "title": "Service Blueprint v2 — what we sell",
+      "filename": "claude-cowork-service-blueprint-v2.docx",
+      "type": "docx",
+      "url": null,
+      "description": "Canonical source-of-truth for service scope, capabilities, pricing methodology, and vertical packaging. Always defer to this if anything else contradicts."
+    },
+    {
+      "title": "Practice Command pricing canon",
+      "type": "md",
+      "url": null,
+      "description": "Final managed-AI-ops pricing for Healthcare Clinics: PT €8k build / €1,870 monthly · DE €12k / €2,805 · CH CHF 16k / CHF 3,740. Setup fee = workflow setup + integrations + deployment + onboarding."
+    },
+    {
+      "title": "Discovery Process Overview",
+      "filename": "00-Discovery-Process-Overview.md",
+      "type": "md",
+      "url": null,
+      "description": "How we run discovery: free 30-min call → paid audit → implementation blueprint."
+    },
+    {
+      "title": "ROI Scoring Framework",
+      "filename": "06-ROI-Scoring-Framework.md",
+      "type": "md",
+      "url": null,
+      "description": "How we estimate ROI for prospects during the audit phase."
+    },
+    {
+      "title": "Vertical capability checklists",
+      "type": "md",
+      "url": null,
+      "description": "Per-vertical capability libraries (Home Services, Healthcare Clinics, Law Firms). Used to scope engagements."
+    },
+    {
+      "title": "Brand identity (OBLQAI house standard)",
+      "type": "md",
+      "url": null,
+      "description": "Visual identity for decks and docs: charcoal #3C3C3C + cream #E7E3DC + copper #C27C4E accent. Georgia headers, Calibri body. Reference deck: Comercial/Demos/Law-Firms-Legal-Efficiency-PT.pptx."
     }
   ]
 }
