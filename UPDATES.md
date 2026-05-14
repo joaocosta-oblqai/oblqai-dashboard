@@ -18,6 +18,12 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-14 — Pipeline view is now compact
+
+- Customer cards in the pipeline shrunk from large to one-glance: name + vertical + market + a two-line "Next" excerpt. Full details still one click away on the customer page.
+- Active stage columns narrowed from 256px → 208px. Empty stage columns shrank to 112px with a discrete em-dash placeholder, so the structure of the full pipeline is still visible without taking half the page.
+- Net effect: the pipeline section is roughly half as tall.
+
 ## 2026-05-14 — Recent updates + Activity log: cap to 2, expand to see history
 
 - Both sections now show the 2 most recent entries by default with a "View N older" toggle that reveals the rest inside a max-height scrollable container. Keeps the page short and partners focused on what changed this week without losing the historical log.

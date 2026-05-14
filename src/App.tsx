@@ -88,62 +88,36 @@ function customerHref(c: Customer) {
   return `/customer/${c.slug ?? c.id}`;
 }
 
+// Compact card — name + vertical + a single next-action line.
+// Full detail is one click away on the customer page.
 function CustomerCard({ c }: { c: Customer }) {
-  const dCount = c.deliverables?.length ?? 0;
   return (
     <Link
       to={customerHref(c)}
-      className="block rounded-lg border border-[#D8CFC0] bg-white p-4 shadow-sm transition hover:border-[var(--color-copper)] hover:shadow-md"
+      className="block rounded-md border border-[#D8CFC0] bg-white p-2.5 shadow-sm transition hover:border-[var(--color-copper)]"
     >
-      <div className="mb-2 flex items-start justify-between gap-3">
-        <h3 className="font-serif text-base leading-tight">{c.name.trim()}</h3>
+      <div className="flex items-start justify-between gap-2">
+        <h3 className="font-serif text-sm leading-tight">{c.name.trim()}</h3>
         {typeof c.mrr === 'number' && c.mrr > 0 && (
-          <span className="whitespace-nowrap rounded-full bg-[var(--color-copper)] px-2 py-0.5 text-xs font-semibold text-white">
-            {fmtEUR(c.mrr)} MRR
+          <span className="whitespace-nowrap rounded-full bg-[var(--color-copper)] px-1.5 py-0.5 text-[10px] font-semibold text-white">
+            {fmtEUR(c.mrr)}
           </span>
         )}
       </div>
-      <div className="space-y-0.5 text-xs text-[var(--color-muted)]">
-        {c.vertical && (
-          <div>
-            <span className="text-[var(--color-faint)]">Vertical:</span>{' '}
-            <span className="text-[var(--color-ink)]">{c.vertical}</span>
-          </div>
-        )}
-        {c.verticalPackage && (
-          <div>
-            <span className="text-[var(--color-faint)]">Package:</span>{' '}
-            <span className="text-[var(--color-ink)]">{c.verticalPackage}</span>
-          </div>
-        )}
-        {c.market && (
-          <div>
-            <span className="text-[var(--color-faint)]">Market:</span>{' '}
-            <span className="text-[var(--color-ink)]">{c.market}</span>
-          </div>
-        )}
-      </div>
-      {c.nextAction && (
-        <div className="mt-3 border-t border-dashed border-[#D8CFC0] pt-2 text-xs">
-          <div className="font-semibold uppercase tracking-wide text-[var(--color-copper)]">
-            Next
-          </div>
-          <div className="text-[var(--color-ink)]">{c.nextAction}</div>
-          {c.nextActionDate && (
-            <div className="text-[var(--color-muted)]">
-              {fmtDate(c.nextActionDate)}
-            </div>
-          )}
+      {c.vertical && (
+        <div className="mt-1 truncate text-xs text-[var(--color-muted)]">
+          {c.vertical}
+          {c.market && <span> · {c.market}</span>}
         </div>
       )}
-      <div className="mt-3 flex items-center justify-between text-xs text-[var(--color-faint)]">
-        <span>
-          {dCount} {dCount === 1 ? 'deliverable' : 'deliverables'}
-        </span>
-        <span className="font-semibold text-[var(--color-copper)]">
-          View details →
-        </span>
-      </div>
+      {c.nextAction && (
+        <div className="mt-1.5 line-clamp-2 text-[11px] text-[var(--color-charcoal)]">
+          <span className="font-semibold uppercase tracking-wide text-[var(--color-copper)]">
+            Next ·{' '}
+          </span>
+          {c.nextAction}
+        </div>
+      )}
     </Link>
   );
 }
@@ -158,29 +132,30 @@ function Pipeline({ customers }: { customers: Customer[] }) {
         title="Customers by stage"
         subtitle={`${customers.length} customers · ${populatedCount} of ${groups.length} stages active. Pipeline flows left to right: Lead → Live (the last two are terminal outcomes).`}
       />
-      <div className="-mx-2 overflow-x-auto pb-3 [scrollbar-width:thin]">
-        <div className="flex min-w-max gap-4 px-2">
+      <div className="-mx-1 overflow-x-auto pb-2 [scrollbar-width:thin]">
+        <div className="flex min-w-max items-stretch gap-2 px-1">
           {groups.map(([stage, items]) => {
             const empty = items.length === 0;
+            // Empty stages render as narrow placeholders so the active stages
+            // dominate the visual weight without losing the full pipeline.
             return (
               <div
                 key={stage}
                 className={
-                  'w-64 shrink-0 rounded-lg p-3 ' +
-                  (empty
-                    ? 'border border-dashed border-[#D8CFC0] bg-transparent'
-                    : 'bg-[#EFE7D7]')
+                  empty
+                    ? 'w-28 shrink-0 rounded-md border border-dashed border-[#D8CFC0] bg-transparent p-2'
+                    : 'w-52 shrink-0 rounded-md bg-[#EFE7D7] p-2'
                 }
               >
                 <div
                   className={
-                    'mb-3 flex items-baseline justify-between border-b pb-2 ' +
+                    'mb-2 flex items-baseline justify-between border-b pb-1.5 ' +
                     (empty ? 'border-[#E0D6C5]' : 'border-[#D8CFC0]')
                   }
                 >
                   <h4
                     className={
-                      'font-serif text-sm font-bold uppercase tracking-wider ' +
+                      'font-serif text-xs font-bold uppercase tracking-wider ' +
                       (empty ? 'text-[var(--color-faint)]' : '')
                     }
                   >
@@ -188,7 +163,7 @@ function Pipeline({ customers }: { customers: Customer[] }) {
                   </h4>
                   <span
                     className={
-                      'text-xs ' +
+                      'text-[10px] font-semibold ' +
                       (empty
                         ? 'text-[var(--color-faint)]'
                         : 'text-[var(--color-muted)]')
@@ -198,11 +173,11 @@ function Pipeline({ customers }: { customers: Customer[] }) {
                   </span>
                 </div>
                 {empty ? (
-                  <p className="text-xs italic text-[var(--color-faint)]">
-                    No customers in this stage yet
+                  <p className="text-[10px] italic leading-tight text-[var(--color-faint)]">
+                    —
                   </p>
                 ) : (
-                  <div className="space-y-3">
+                  <div className="space-y-1.5">
                     {items.map((c) => (
                       <CustomerCard key={c.id} c={c} />
                     ))}

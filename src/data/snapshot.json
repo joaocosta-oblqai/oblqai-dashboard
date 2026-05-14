@@ -95,6 +95,15 @@
   "updates": [
     {
       "date": "2026-05-14",
+      "headline": "Pipeline view is now compact",
+      "body": [
+        "Customer cards in the pipeline shrunk to one-glance: name + vertical + market + a two-line \"Next\" excerpt. Full details still one click away on the customer page.",
+        "Active stage columns narrowed from 256px → 208px. Empty stage columns shrank to 112px with a discrete em-dash placeholder.",
+        "Net effect: the pipeline section is roughly half as tall."
+      ]
+    },
+    {
+      "date": "2026-05-14",
       "headline": "Recent updates + Activity log: cap to 2, expand for history",
       "body": [
         "Both sections now show the 2 most recent entries by default with a \"View N older\" toggle that reveals the rest inside a max-height scrollable container.",
