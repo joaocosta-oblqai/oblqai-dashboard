@@ -18,6 +18,12 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-14 — Three new tasks on the board, all due 18 May
+
+- **Jo** — configure the website chatbot for our purpose (tune the system prompt + knowledge base to land on-brand).
+- **Jo** — add all updated docs to company Google Drive and share the links on the dashboard so deliverables become clickable. (This replaces the earlier Drive task on the board — same scope, moved to the 18 May deadline.)
+- **Miguel** — define the social media organic content strategy (channels, cadence, pillars, examples, KPIs).
+
 ## 2026-05-14 — Operations board (internal kanban) added
 
 - New section at the bottom of the dashboard: **Operations board** — a To do / In progress / Done kanban for internal tasks.

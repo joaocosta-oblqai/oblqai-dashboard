@@ -95,6 +95,15 @@
   "updates": [
     {
       "date": "2026-05-14",
+      "headline": "Three new tasks on the board, all due 18 May",
+      "body": [
+        "Jo — configure the website chatbot for our purpose (tune the system prompt + knowledge base to land on-brand).",
+        "Jo — add all updated docs to company Google Drive and share the links so dashboard deliverables become clickable (replaces the earlier Drive task on the board).",
+        "Miguel — define the social media organic content strategy (channels, cadence, pillars, examples, KPIs)."
+      ]
+    },
+    {
+      "date": "2026-05-14",
       "headline": "Operations board (internal kanban) added",
       "body": [
         "New section at the bottom of the dashboard: an internal To do / In progress / Done kanban.",
@@ -320,11 +329,27 @@
     },
     {
       "id": "recEGGLuxdr7CPL6c",
-      "title": "Upload deliverable files to Google Drive",
+      "title": "Jo to add all updated docs to company Google Drive + share links on dashboard",
       "status": "Todo",
       "owner": "Joao",
-      "description": "Create per-client + global folders, upload the .docx/.pdf/.pptx files, paste the share URLs back so the dashboard deliverables become clickable.",
-      "dueDate": "2026-05-21"
+      "description": "Upload all current customer-facing docs (proposals, decks, demos, research briefs) to a structured Google Drive folder per client + global. Send the share-links list so the dashboard deliverables become clickable.",
+      "dueDate": "2026-05-18"
+    },
+    {
+      "id": "recslfMVjoh17qIIz",
+      "title": "Jo to configure the website chatbot for our purpose",
+      "status": "Todo",
+      "owner": "Joao",
+      "description": "Tune the chatbot system prompt and knowledge base so responses land on-brand: editorial voice, OBLQAI service scope, vertical packages, pricing canon, current discovery flow. Test on the live site.",
+      "dueDate": "2026-05-18"
+    },
+    {
+      "id": "recsR5FiAj874A7jQ",
+      "title": "Miguel to define social media organic content strategy",
+      "status": "Todo",
+      "owner": "Miguel",
+      "description": "Draft the organic social content strategy: channels in scope, posting cadence, content pillars, examples per pillar, KPIs. Ready for review by 18 May.",
+      "dueDate": "2026-05-18"
     },
     {
       "id": "recatMEUTk97q4GgM",
