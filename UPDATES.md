@@ -18,6 +18,16 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-16 — Site repositioned as Claude Cowork implementation partner
+
+- Homepage rewritten end-to-end to lead with **Claude Cowork**, not generic "AI automation". New hero: *"Claude Cowork, implemented for European SMBs."* Eyebrow, subhead, footer tagline, methodology and differentiators all updated to lead on the implementation-partner role rather than the prior "integration layer / productized AI operating layer" framing.
+- New **"Bringing Claude Cowork into your office"** section on the homepage. Stylized Cowork desktop mockup matching the real app's three-pane layout (Chat / Cowork / Code mode tabs, left nav + Recents, center thread with Act / Opus / Queue composer, right Progress + workspace + Context panels) running a live Q1-supplier-audit demo task with a copper human-in-the-loop review banner. Five floating connector tiles (QuickBooks · HubSpot · Google Drive · Airtable · Gmail) ring the mockup with "Connected" status badges so the integration story reads at a glance.
+- Five hero outcome cards replaced with Cowork-anchored copy: *An autonomous operations engine · A tireless executive assistant · Bespoke proposals in minutes · Absorb growth without adding headcount · Shift from builder to editor*.
+- Services section rewritten as **"Four pieces of work, one Cowork install"** — Cowork Install & Configure / MCP & Connector Engineering / Agentic Workflow Design / Team Adoption & Managed Service.
+- Differentiators rewritten as **"The Cowork implementation partner"** — Anthropic's official agent / We live in the agent / Live in 30 days / Stay on the line after launch.
+- Use Cases page: five Aha! cards now carry Cowork-specific narratives across Legal, E-commerce, Marketing, Healthcare, SaaS. Slider labels swapped from "Before AI / After AI" to **"Before Claude / With Claude Cowork"**, and a per-industry *"Drafted / Analyzed / Recommended / Triaged by Claude"* badge now sits on the After side of every comparison.
+- Live at https://oblqai.com — deployed via Firebase Hosting (`claude-cowork-consulting` project).
+
 ## 2026-05-15 — Website refresh shipped — new Use Cases page + blog repositioned
 
 - New **/use-cases** page is live on oblqai.com — an interactive Before/After slider paired with a 5-industry tile picker (Legal, E-Commerce, Marketing, Healthcare, Software). Each scenario is anchored to a concrete operational outcome the system delivers: **€2.4M risk surfaced** on a 247-contract M&A diligence, **€340k/mo margin** from pricing intelligence across the catalog, a **complete multi-channel launch kit** in 4 hours vs. a 6-week agency cycle, **€58,200 recovered** from a denied-claims backlog, **support backlog cut 71%** with first-response time down from 14h to 4m.
