@@ -15,13 +15,49 @@
       "lastTouch": "2026-05-14",
       "notes": "Law firm — Alpaca Law. Formal proposal already drafted. MRR cleared — Legal Efficiency Suite pricing not yet finalized (per costs/clients/sergio-lawyer.md). Setup fee range €3,000–5,000 — confirm at proposal stage. Law firms never get OpenClaw.",
       "deliverables": [
-        { "title": "Meeting Notes", "filename": "01-Meeting-Notes.docx", "type": "docx", "url": null },
-        { "title": "Alpaca Law Research Brief", "filename": "02-Alpaca-Law-Research-Brief.docx", "type": "docx", "url": null },
-        { "title": "Use-Case Recommendations", "filename": "03-Use-Case-Recommendations.docx", "type": "docx", "url": null },
-        { "title": "Next-Steps Plan", "filename": "04-Next-Steps-Plan.docx", "type": "docx", "url": null },
-        { "title": "Alpaca vs Claude Cowork — Plain Language (EN)", "filename": "05-Alpaca-vs-Claude-Cowork-Plain-Language.docx", "type": "docx", "url": null },
-        { "title": "Alpaca vs Claude Cowork — Linguagem Simples (PT)", "filename": "06-Alpaca-vs-Claude-Cowork-Linguagem-Simples-PT.docx", "type": "docx", "url": null },
-        { "title": "Formal Cowork Proposal — Use Cases & Discovery", "filename": "07-Claude-Cowork-Proposta-Formal-Use-Cases-e-Discovery-Sergio.docx", "type": "docx", "url": null, "description": "The formal proposal currently with Sergio." }
+        {
+          "title": "Meeting Notes",
+          "filename": "01-Meeting-Notes.docx",
+          "type": "docx",
+          "url": null
+        },
+        {
+          "title": "Alpaca Law Research Brief",
+          "filename": "02-Alpaca-Law-Research-Brief.docx",
+          "type": "docx",
+          "url": null
+        },
+        {
+          "title": "Use-Case Recommendations",
+          "filename": "03-Use-Case-Recommendations.docx",
+          "type": "docx",
+          "url": null
+        },
+        {
+          "title": "Next-Steps Plan",
+          "filename": "04-Next-Steps-Plan.docx",
+          "type": "docx",
+          "url": null
+        },
+        {
+          "title": "Alpaca vs Claude Cowork — Plain Language (EN)",
+          "filename": "05-Alpaca-vs-Claude-Cowork-Plain-Language.docx",
+          "type": "docx",
+          "url": null
+        },
+        {
+          "title": "Alpaca vs Claude Cowork — Linguagem Simples (PT)",
+          "filename": "06-Alpaca-vs-Claude-Cowork-Linguagem-Simples-PT.docx",
+          "type": "docx",
+          "url": null
+        },
+        {
+          "title": "Formal Cowork Proposal — Use Cases & Discovery",
+          "filename": "07-Claude-Cowork-Proposta-Formal-Use-Cases-e-Discovery-Sergio.docx",
+          "type": "docx",
+          "url": null,
+          "description": "The formal proposal currently with Sergio."
+        }
       ]
     },
     {
@@ -39,7 +75,12 @@
       "lastTouch": "2026-05-02",
       "notes": "Aesthetic clinic, Portugal. Practice Command pilot. GDPR Article 9 (special-category health data) handling rules apply. Confirm market, language, scope on discovery call.",
       "deliverables": [
-        { "title": "Aesthetic Clinic — 10 Use Cases (PT)", "filename": "10-casos-de-uso-clinica-estetica.pptx", "type": "pptx", "url": null }
+        {
+          "title": "Aesthetic Clinic — 10 Use Cases (PT)",
+          "filename": "10-casos-de-uso-clinica-estetica.pptx",
+          "type": "pptx",
+          "url": null
+        }
       ]
     },
     {
@@ -67,10 +108,30 @@
       "market": "Portugal",
       "notes": "Potential law firm client. Pre-pilot / lead. Legal Efficiency Suite — Claude Cowork Setup only (no OpenClaw for law firms).",
       "deliverables": [
-        { "title": "Implementation Proposal", "filename": "Miranda-Law-Firm-Implementation-Proposal.pdf", "type": "pdf", "url": null },
-        { "title": "Pitch Deck", "filename": "Miranda-Pitch-Deck.pptx", "type": "pptx", "url": null },
-        { "title": "Live Demo", "filename": "Miranda-Demo.html", "type": "html", "url": null },
-        { "title": "Demo Video Script", "filename": "Miranda-Demo-Video-Script.md", "type": "md", "url": null }
+        {
+          "title": "Implementation Proposal",
+          "filename": "Miranda-Law-Firm-Implementation-Proposal.pdf",
+          "type": "pdf",
+          "url": null
+        },
+        {
+          "title": "Pitch Deck",
+          "filename": "Miranda-Pitch-Deck.pptx",
+          "type": "pptx",
+          "url": null
+        },
+        {
+          "title": "Live Demo",
+          "filename": "Miranda-Demo.html",
+          "type": "html",
+          "url": null
+        },
+        {
+          "title": "Demo Video Script",
+          "filename": "Miranda-Demo-Video-Script.md",
+          "type": "md",
+          "url": null
+        }
       ]
     },
     {
@@ -87,12 +148,33 @@
       "lastTouch": "2026-05-14",
       "notes": "Off-blueprint engagement (agency + construction). Currently on a 2-month free trial; second discovery still pending.",
       "deliverables": [
-        { "title": "Proposta v0.2 (PT)", "filename": "Ze-Maria-Proposta-v0.2-PT.pptx", "type": "pptx", "url": null, "description": "Latest version of the proposal — Portuguese." },
-        { "title": "Example (PT)", "filename": "Example_pt.pdf", "type": "pdf", "url": null }
+        {
+          "title": "Proposta v0.2 (PT)",
+          "filename": "Ze-Maria-Proposta-v0.2-PT.pptx",
+          "type": "pptx",
+          "url": null,
+          "description": "Latest version of the proposal — Portuguese."
+        },
+        {
+          "title": "Example (PT)",
+          "filename": "Example_pt.pdf",
+          "type": "pdf",
+          "url": null
+        }
       ]
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-19",
+      "headline": "oblqai.com goes bilingual — EN + pt-PT live with header toggle",
+      "body": [
+        "The marketing site at oblqai.com now ships in English and European Portuguese. A copper-accented PT | EN toggle in the top bar (desktop and mobile) switches the whole site — chrome, marketing copy, the three blog posts, and the SEO meta. URL strategy is path-prefix (`/pt/...` for Portuguese, `/...` for English) so both languages are independently crawlable. Language choice persists across reload and route navigation.",
+        "Business meaning: we can now run paid and organic acquisition in Portuguese without sending prospects to an English page. The GDPR-compliant-AI post and the founder-POV post on lawyer supervision both rank for queries Portuguese clinic owners and lawyers actually type — the Portuguese version unlocks that surface directly. Same infrastructure is extensible to German (1.5x PT market multiplier) when we decide to lean into DE acquisition.",
+        "Process note for partners: this was shipped via a sub-agent pipeline inside Claude Code — i18n-architect → pt-translator → react-implementer → playwright-qa → brand-qa. The Playwright behavioral suite (15 assertions, all green) caught three runtime bugs that static tooling missed: i18next resolution overreach, a LangGuard re-render race, and a featured-post filter regression. Static QA alone would have shipped them. Lesson institutionalized: behavioral testing is now mandatory for user-visible UI features.",
+        "Scope-excluded by design: Pricing.tsx remains dormant with v1-era pricing copy in both languages — component is unmounted so not visible, content debt for when we remount it with Practice Command canonical numbers. Blog post bodies stay translated only to pt-PT; further languages are a future decision."
+      ]
+    },
     {
       "date": "2026-05-18",
       "headline": "Weekly recap: no material changes to CRM or costs",
@@ -379,7 +461,9 @@
       "owner": "Joao",
       "description": "Nudge Sergio for feedback on the formal proposal already sent.",
       "dueDate": "2026-05-19",
-      "customerIds": ["rect4kxOi5Xzv7eSK"]
+      "customerIds": [
+        "rect4kxOi5Xzv7eSK"
+      ]
     },
     {
       "id": "rec9eIHDvGIs3cVZw",
@@ -387,7 +471,9 @@
       "status": "In progress",
       "owner": "Joao",
       "description": "Waiting on Renato to confirm — first OpenClaw pilot can't start until this is scheduled.",
-      "customerIds": ["recUueACFukgzm3vV"]
+      "customerIds": [
+        "recUueACFukgzm3vV"
+      ]
     },
     {
       "id": "recciqIxeFrFq0VKl",
@@ -395,7 +481,9 @@
       "status": "In progress",
       "owner": "Joao",
       "description": "Reschedule the missed initial call so the free-trial work can actually start.",
-      "customerIds": ["recm75NajVcDGuMLo"]
+      "customerIds": [
+        "recm75NajVcDGuMLo"
+      ]
     },
     {
       "id": "recEGGLuxdr7CPL6c",
