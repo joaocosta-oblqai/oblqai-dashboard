@@ -18,6 +18,16 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-19 — Sergio + Sara + Zé Maria deliverables uploaded to Drive — every CRM card's deliverable now opens a working Google Doc
+
+- Created OBLQAI → Clients → Sergio — Alpaca Law, OBLQAI → Clients → Sara — Beauty Clinic, and OBLQAI → Clients → Zé Maria — Agency + Construction in Drive. Uploaded 10 deliverables total: 7 Sergio docs (Meeting Notes, Alpaca research brief, Use-Case recommendations, Next-Steps plan, Alpaca-vs-Cowork plain-language EN + PT, formal proposal), Sara's 16-slide aesthetic-clinic deck, Zé Maria's v0.2 proposal, and the Example Agency reference deck Zé Maria used as a benchmark. Every customer's deliverables array in snapshot.json now has working URLs.
+- Conversion path: the GDrive MCP still rejects docx/pptx/pdf binary uploads (same error as prior rounds), so docs were converted server-side — pandoc for the 7 Sergio .docx files, python-pptx text extraction for Sara's and Zé Maria's .pptx decks, pdftotext for the Example reference. Each Drive copy is a Markdown/text mirror; the canonical formatted source files remain in the project repo under client-implementations/.
+- Two staleness flags surfaced inline: (a) Sara's deck slide 3 still carries the pre-2026-05-14 Practice Command pricing (Tier 1 €2.000–2.500 / €1.299/mo; Tier 2 €3.000–4.000 / €2.299/mo); current canonical is PT €8.000 / €950/mo. The .pptx source needs revising before any further client send. (b) Sergio's Next-Steps Plan internal pricing note references the parked Legal Efficiency Suite numbers — flagged inline.
+- Operations board: "Jo to add all updated docs to company Google Drive + share links on dashboard" moved from Todo → In progress; description updated to reflect what's done and what's still outstanding. Outstanding for the next pass: Miranda — she has 4 deliverables on file (Implementation Proposal pdf, Pitch Deck pptx, Live Demo html, Demo Video Script md) that were NOT requested in this round; her stage is still Lead so this may be intentional but flagging for explicit Joao decision.
+- Sergio activity entries (proposal sent, etc.) and Sara/Zé Maria touches are NOT yet logged in the Activities section — offered separately, awaiting Joao's call on whether to backfill from history or only log new touches going forward.
+
+---
+
 ## 2026-05-19 — Global Docs uploaded to Drive — all six dashboard globalDocs links now live; staleness flags surfaced inline
 
 - Created OBLQAI → General Docs in Drive and uploaded all six globalDocs as Google Docs (the GDrive MCP doesn't accept docx/pdf binary uploads in this session — the canonical .docx and .pdf source files remain in the project repo and are referenced from each Drive doc). Every dashboard globalDoc URL is now wired to a live Drive link.

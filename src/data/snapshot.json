@@ -18,45 +18,51 @@
         {
           "title": "Meeting Notes",
           "filename": "01-Meeting-Notes.docx",
-          "type": "docx",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1360adqwFTj0UHQjprB80ZglLYxy0NUmgQWkrYqxl8xY/edit",
+          "description": "Discovery call notes — Sergio profile, current Alpaca Law stack, workflow, reactions to the 6 use cases, action items."
         },
         {
           "title": "Alpaca Law Research Brief",
           "filename": "02-Alpaca-Law-Research-Brief.docx",
-          "type": "docx",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1_YBK4goc81asRtS5CQpBvnBFSQ5LvlYEarNIot4oQ9A/edit",
+          "description": "What Alpaca Law is, what it does, corpus coverage, pricing as reported by Sergio, where Claude Cowork complements vs competes."
         },
         {
           "title": "Use-Case Recommendations",
           "filename": "03-Use-Case-Recommendations.docx",
-          "type": "docx",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1hQkGqGBKR-KDZdsEK1XJZNhOKC_vh8jWfyUv9dPaEV8/edit",
+          "description": "Filter framework, foundation integrations (Calendar / Email / Word+Drive / WhatsApp / Alpaca connector), pilot use cases UC-A through UC-H, ~12-week sequencing."
         },
         {
           "title": "Next-Steps Plan",
           "filename": "04-Next-Steps-Plan.docx",
-          "type": "docx",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1JLipJt9tqxpGe3ZfWubNBOitPuq4FDwpeuXNvVRCQCQ/edit",
+          "description": "Phased plan: Phase 0 Alpaca verification, Phase 1 three discovery sessions in June, Phase 2 free 12-week pilot build, Phase 3 go/no-go. Carries a stale Legal Efficiency Suite pricing note — flagged inline; Legal Efficiency Suite pricing has been parked off the board."
         },
         {
           "title": "Alpaca vs Claude Cowork — Plain Language (EN)",
           "filename": "05-Alpaca-vs-Claude-Cowork-Plain-Language.docx",
-          "type": "docx",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1Cr12j5rKvpNRKBoGLggf7RfWCw4Ta5kdBqUiZ-3ljjI/edit",
+          "description": "Client-facing plain-English explainer of how Alpaca Law and Claude Cowork relate to each other (complementary, not competing)."
         },
         {
           "title": "Alpaca vs Claude Cowork — Linguagem Simples (PT)",
           "filename": "06-Alpaca-vs-Claude-Cowork-Linguagem-Simples-PT.docx",
-          "type": "docx",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1ri0a1DFLcN32aUVT5uQqwlF-LN-vkenn6W3eUviHL30/edit",
+          "description": "European Portuguese version of the plain-language explainer — for sending directly to Sergio."
         },
         {
           "title": "Formal Cowork Proposal — Use Cases & Discovery",
           "filename": "07-Claude-Cowork-Proposta-Formal-Use-Cases-e-Discovery-Sergio.docx",
-          "type": "docx",
-          "url": null,
-          "description": "The formal proposal currently with Sergio."
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1szTC64ROzrYrHH7MHSRHLsusuTJbWmYLYBui24S9enY/edit",
+          "description": "The formal Portuguese proposal currently with Sergio — use case table, 9 workshops, prerequisites, next steps."
         }
       ]
     },
@@ -78,8 +84,9 @@
         {
           "title": "Aesthetic Clinic — 10 Use Cases (PT)",
           "filename": "10-casos-de-uso-clinica-estetica.pptx",
-          "type": "pptx",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1mbOe7aSCw6yrzH-PAov-UawVpp_JgendyK9jXgg0-d0/edit",
+          "description": "16-slide PT pitch deck for Sara — context, two-tier approach, 10 use-case catalogue, next steps. STALE pricing on slide 3 (carries pre-2026-05-14 Practice Command numbers); flagged inline in the Drive doc. Source .pptx in client-implementations/Sara/."
         }
       ]
     },
@@ -168,20 +175,32 @@
         {
           "title": "Proposta v0.2 (PT)",
           "filename": "Ze-Maria-Proposta-v0.2-PT.pptx",
-          "type": "pptx",
-          "url": null,
-          "description": "Latest version of the proposal — Portuguese."
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1D3bt24GgwHawaMRnGVSTnTw9K3Yu7UV8FFKOcqh7mfA/edit",
+          "description": "9-slide PT proposal — agency 4 flows + construction 6 flows, 2-month free trial framing, Cowork-first with OpenClaw as a later option, open questions to close. Source .pptx in client-implementations/Ze Maria/."
         },
         {
-          "title": "Example (PT)",
+          "title": "Example Agency — reference deck (PT, competitor benchmark)",
           "filename": "Example_pt.pdf",
-          "type": "pdf",
-          "url": null
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/10dByqqJ-3WSP0-ktWynOJEamvnpdaRN0UwK-_2HILBI/edit",
+          "description": "NOT a Zé Maria deliverable — a Portuguese marketing-agency proposal from 'Example Agency' kept here as benchmark for the PT marketing-agency vertical (pricing reference, format reference). Their pricing, not OBLQAI's. Source PDF in client-implementations/Ze Maria/."
         }
       ]
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-19",
+      "headline": "Sergio + Sara + Zé Maria deliverables uploaded to Drive — every CRM card's deliverable now opens a working Google Doc",
+      "body": [
+        "Created OBLQAI → Clients → Sergio — Alpaca Law, OBLQAI → Clients → Sara — Beauty Clinic, and OBLQAI → Clients → Zé Maria — Agency + Construction in Drive. Uploaded 10 deliverables total: 7 Sergio docs (Meeting Notes, Alpaca research brief, Use-Case recommendations, Next-Steps plan, Alpaca-vs-Cowork plain-language EN + PT, formal proposal), Sara's 16-slide aesthetic-clinic deck, Zé Maria's v0.2 proposal, and the Example Agency reference deck Zé Maria used as a benchmark. Every customer's deliverables array in snapshot.json now has working URLs.",
+        "Conversion path: the GDrive MCP still rejects docx/pptx/pdf binary uploads (same error as prior rounds), so docs were converted server-side — pandoc for the 7 Sergio .docx files, python-pptx text extraction for Sara's and Zé Maria's .pptx decks, pdftotext for the Example reference. Each Drive copy is a Markdown/text mirror; the canonical formatted source files remain in the project repo under client-implementations/.",
+        "Two staleness flags surfaced inline: (a) Sara's deck slide 3 still carries the pre-2026-05-14 Practice Command pricing (Tier 1 €2.000–2.500 / €1.299/mo; Tier 2 €3.000–4.000 / €2.299/mo); current canonical is PT €8.000 / €950/mo. The .pptx source needs revising before any further client send. (b) Sergio's Next-Steps Plan internal pricing note references the parked Legal Efficiency Suite numbers — flagged inline.",
+        "Operations board: 'Jo to add all updated docs to company Google Drive + share links on dashboard' moved from Todo → In progress; description updated to reflect what's done and what's still outstanding. Outstanding for the next pass: Miranda — she has 4 deliverables on file (Implementation Proposal pdf, Pitch Deck pptx, Live Demo html, Demo Video Script md) that were NOT requested in this round; her stage is still Lead so this may be intentional but flagging for explicit Joao decision.",
+        "Sergio activity entries (proposal sent, etc.) and Sara/Zé Maria touches are NOT yet logged in the Activities section — offered separately, awaiting Joao's call on whether to backfill from history or only log new touches going forward."
+      ]
+    },
     {
       "date": "2026-05-19",
       "headline": "Global Docs uploaded to Drive — all six dashboard globalDocs links now live; staleness flags surfaced inline",
@@ -560,9 +579,9 @@
     {
       "id": "recEGGLuxdr7CPL6c",
       "title": "Jo to add all updated docs to company Google Drive + share links on dashboard",
-      "status": "Todo",
+      "status": "In progress",
       "owner": "Joao",
-      "description": "Upload all current customer-facing docs (proposals, decks, demos, research briefs) to a structured Google Drive folder per client + global. Send the share-links list so the dashboard deliverables become clickable.",
+      "description": "Upload all current customer-facing docs (proposals, decks, demos, research briefs) to a structured Google Drive folder per client + global. Send the share-links list so the dashboard deliverables become clickable. Status as of 2026-05-19: General Docs + Renato + Sergio + Sara + Zé Maria folders all uploaded and wired through the dashboard. Outstanding: Miranda has 4 deliverables (Implementation Proposal pdf, Pitch Deck pptx, Live Demo html, Demo Video Script md) NOT yet uploaded — flag with Joao; her stage is still Lead so may be intentional. Plus any docs Joao adds going forward.",
       "dueDate": "2026-05-18"
     },
     {
