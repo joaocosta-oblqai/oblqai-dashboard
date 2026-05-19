@@ -38,13 +38,13 @@ jobs:
           AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
         run: node scripts/snapshot.mjs
 
-      - name: Commit refreshed snapshot (if changed)
+      - name: Commit refreshed snapshot + UPDATES.md (if changed)
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: |
-          if [[ -n "$(git status --porcelain src/data/snapshot.json)" ]]; then
+          if [[ -n "$(git status --porcelain src/data/snapshot.json UPDATES.md)" ]]; then
             git config user.name "oblqai-bot"
             git config user.email "bot@oblqai.com"
-            git add src/data/snapshot.json
+            git add src/data/snapshot.json UPDATES.md
             git commit -m "chore(snapshot): daily Airtable refresh"
             git push
           else
