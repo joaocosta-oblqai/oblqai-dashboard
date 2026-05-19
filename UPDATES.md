@@ -18,6 +18,15 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-19 — Global Docs uploaded to Drive — all six dashboard globalDocs links now live; staleness flags surfaced inline
+
+- Created OBLQAI → General Docs in Drive and uploaded all six globalDocs as Google Docs (the GDrive MCP doesn't accept docx/pdf binary uploads in this session — the canonical .docx and .pdf source files remain in the project repo and are referenced from each Drive doc). Every dashboard globalDoc URL is now wired to a live Drive link.
+- Service Blueprint v2 uploaded as a Markdown-converted searchable mirror with a clear pointer back to the canonical .docx in repo. Practice Command Pricing Canon written fresh from memory + CLAUDE.md and uploaded as a new standalone doc — supersedes the Healthcare row of the Service Blueprint. Discovery Process Overview, ROI Scoring Framework, Brand Identity House Standard, and the four Vertical Checklists files (README + Home Services + Healthcare Clinics + Law Firms) uploaded into a Vertical Checklists subfolder.
+- Three staleness flags surfaced inline at the top of each affected doc and noted in the dashboard descriptions: (a) Discovery Process Overview still references the deprecated €1,500 audit and the old 4-vertical list (restaurants / health & beauty / real estate are out of scope); (b) Vertical Checklists README still links to those out-of-scope vertical files; (c) Healthcare Clinics checklist still carries the pre-2026-05-14 Practice Command monthly numbers (€1,870 / €2,805 / CHF 3,740 — current canonical is €950 / €1,425 / CHF 1,900); (d) Home Services checklist contains unfinalized Field Service Command pricing ranges in writing (€5-12k / €15-30k / €1,500-3,500/mo). Drive docs include warnings; source files on disk need revising before treating as canonical.
+- The Service Blueprint .docx itself also carries the OLD Healthcare pricing row (€2,000–2,500 setup / €1,299 monthly) — the Drive doc flags this; revising the actual .docx is a separate task on the board if/when the blueprint is next revved.
+
+---
+
 ## 2026-05-19 — Renato proposal v2 (CRM + email added); Brand Standard approved; Legal Efficiency pricing task parked; June 15 follow-up queued
 
 - Renato proposal updated to v2 — added a fourth Phase-1 bundle: headless Airtable CRM (Contacts / Conversations / Stores / Products, manipulated through Claude, no Airtable UI for Renato's team) and an email connector (inbound triage into the same CRM, pt-PT reply drafts, weekly digest). Reasoning: Joao flagged on the discovery call that Renato is likely to want both, and they sit beneath everything else in the proposal — better to surface them as scoped from Day 1 than to land them as a surprise later. The email provider stays dependent on Renato's 2026-06-15 tools-list decision. v2 doc is now linked from the Renato CRM card; v1 remains in Drive as history.

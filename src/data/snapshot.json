@@ -184,6 +184,16 @@
   "updates": [
     {
       "date": "2026-05-19",
+      "headline": "Global Docs uploaded to Drive — all six dashboard globalDocs links now live; staleness flags surfaced inline",
+      "body": [
+        "Created OBLQAI → General Docs in Drive and uploaded all six globalDocs as Google Docs (the GDrive MCP doesn't accept docx/pdf binary uploads in this session — the canonical .docx and .pdf source files remain in the project repo and are referenced from each Drive doc). Every dashboard globalDoc URL is now wired to a live Drive link.",
+        "Service Blueprint v2 uploaded as a Markdown-converted searchable mirror with a clear pointer back to the canonical .docx in repo. Practice Command Pricing Canon written fresh from memory + CLAUDE.md and uploaded as a new standalone doc — supersedes the Healthcare row of the Service Blueprint. Discovery Process Overview, ROI Scoring Framework, Brand Identity House Standard, and the four Vertical Checklists files (README + Home Services + Healthcare Clinics + Law Firms) uploaded into a Vertical Checklists subfolder.",
+        "Three staleness flags surfaced inline at the top of each affected doc and noted in the dashboard descriptions: (a) Discovery Process Overview still references the deprecated €1,500 audit and the old 4-vertical list (restaurants / health & beauty / real estate are out of scope); (b) Vertical Checklists README still links to those out-of-scope vertical files; (c) Healthcare Clinics checklist still carries the pre-2026-05-14 Practice Command monthly numbers (€1,870 / €2,805 / CHF 3,740 — current canonical is €950 / €1,425 / CHF 1,900); (d) Home Services checklist contains unfinalized Field Service Command pricing ranges in writing (€5-12k / €15-30k / €1,500-3,500/mo). Drive docs include warnings; source files on disk need revising before treating as canonical.",
+        "The Service Blueprint .docx itself also carries the OLD Healthcare pricing row (€2,000–2,500 setup / €1,299 monthly) — the Drive doc flags this; revising the actual .docx is a separate task on the board if/when the blueprint is next revved."
+      ]
+    },
+    {
+      "date": "2026-05-19",
       "headline": "Renato proposal v2 (CRM + email added); Brand Standard approved; Legal Efficiency pricing task parked; June 15 follow-up queued",
       "body": [
         "Renato proposal updated to v2 — added a fourth Phase-1 bundle: headless Airtable CRM (Contacts / Conversations / Stores / Products, manipulated through Claude, no Airtable UI for Renato's team) and an email connector (inbound triage into the same CRM, pt-PT reply drafts, weekly digest). Reasoning: Joao flagged on the discovery call that Renato is likely to want both, and they sit beneath everything else in the proposal — better to surface them as scoped from Day 1 than to land them as a surprise later. The email provider stays dependent on Renato's 2026-06-15 tools-list decision. v2 doc is now linked from the Renato CRM card; v1 remains in Drive as history.",
@@ -580,41 +590,41 @@
     {
       "title": "Service Blueprint v2 — what we sell",
       "filename": "claude-cowork-service-blueprint-v2.docx",
-      "type": "docx",
-      "url": null,
-      "description": "Canonical source-of-truth for service scope, capabilities, pricing methodology, and vertical packaging. Always defer to this if anything else contradicts."
+      "type": "gdoc",
+      "url": "https://docs.google.com/document/d/1O2sYh4GJgvQRgagY5IXyfnJSxv9r2y1Y7aye-6JWLr4/edit",
+      "description": "Searchable Markdown mirror of the canonical .docx (which lives in the project repo). Carries staleness flag on the Healthcare pricing rows — see the Practice Command — Pricing Canon doc for current numbers."
     },
     {
-      "title": "Practice Command pricing canon",
-      "type": "md",
-      "url": null,
-      "description": "Final managed-AI-ops pricing for Healthcare Clinics: PT €8k build / €1,870 monthly · DE €12k / €2,805 · CH CHF 16k / CHF 3,740. Setup fee = workflow setup + integrations + deployment + onboarding."
+      "title": "Practice Command — Pricing Canon",
+      "type": "gdoc",
+      "url": "https://docs.google.com/document/d/17pWjD1Eee7yvUW8dCyYdCqovdc1fgKujS9Mqu5YPmP4/edit",
+      "description": "Canonical managed-AI-ops pricing for Healthcare Clinics, post the 2026-05-14 multiplier re-tune: PT €8k build / €950 monthly · DE €12k / €1,425 · CH CHF 16k / CHF 1,900. Supersedes the Healthcare row in the Service Blueprint v2."
     },
     {
       "title": "Discovery Process Overview",
       "filename": "00-Discovery-Process-Overview.md",
-      "type": "md",
-      "url": null,
-      "description": "How we run discovery: free 30-min call → paid audit → implementation blueprint."
+      "type": "gdoc",
+      "url": "https://docs.google.com/document/d/1r9uAfFLb4n39NbDiWSv4-AK1sSZkbRfrPvlFqsdl2J4/edit",
+      "description": "How we run discovery: free 30-min call → paid audit → implementation blueprint. Carries staleness flag — references the deprecated €1,500 audit price and old 4-vertical list; revise on disk before treating as canonical."
     },
     {
       "title": "ROI Scoring Framework",
       "filename": "06-ROI-Scoring-Framework.md",
-      "type": "md",
-      "url": null,
-      "description": "How we estimate ROI for prospects during the audit phase."
+      "type": "gdoc",
+      "url": "https://docs.google.com/document/d/1y9ZinwFsD9-UzzCOCu6XxOPnq3avGCffNqm1mBHkQG8/edit",
+      "description": "How we score and tier automation opportunities during the audit. Impact × Effort × Risk matrix → Tier 1/2/3. Drives the Strategy Roadmap output."
     },
     {
       "title": "Vertical capability checklists",
-      "type": "md",
-      "url": null,
-      "description": "Per-vertical capability libraries (Home Services, Healthcare Clinics, Law Firms). Used to scope engagements."
+      "type": "gdrive-folder",
+      "url": "https://drive.google.com/drive/folders/1vZ67R3U2sdTtoY2oSMG26Q1D3QAk_3M9",
+      "description": "Per-vertical discovery checklists (Home Services, Healthcare Clinics, Law Firms). Folder contains README + 3 checklists. Healthcare carries a staleness flag (old Practice Command monthly figures); Home Services flagged as unfinalized pricing — do not quote either without Joao's sign-off."
     },
     {
-      "title": "Brand identity (OBLQAI house standard)",
-      "type": "md",
-      "url": null,
-      "description": "Visual identity for decks and docs: charcoal #3C3C3C + cream #E7E3DC + copper #C27C4E accent. Georgia headers, Calibri body. Reference deck: Comercial/Demos/Law-Firms-Legal-Efficiency-PT.pptx."
+      "title": "Brand Identity — OBLQAI House Standard",
+      "type": "gdoc",
+      "url": "https://docs.google.com/document/d/1QuendVdhjldq_TJNN0JyeR_p6y2Q5A2eqtS_4S0Qebk/edit",
+      "description": "v1.0 of the house brand standard: logo system, palette (orange #FF8449 + cream/sand/ink + gray ramp), typography (Inter + Georgia). The 26-page formatted PDF lives in the project repo at Brand/OBLQAI-Brand-Identity-House-Standard-v1.pdf — this Drive doc is the searchable Markdown mirror."
     }
   ]
 }
