@@ -106,11 +106,11 @@
           "description": "Full call summary, prospect snapshot, what Renato wants, open questions Renato will close on 2026-06-15, diagnostic read, risks."
         },
         {
-          "title": "Cowork Roadmap Proposal — DRAFT (internal)",
-          "filename": "Renato (Incotin) — Cowork Roadmap Proposal (DRAFT, internal)",
+          "title": "Cowork Roadmap Proposal — DRAFT v2 (CRM + email added)",
+          "filename": "Renato (Incotin) — Cowork Roadmap Proposal (DRAFT v2 — CRM + email added)",
           "type": "gdoc",
-          "url": "https://docs.google.com/document/d/1HOoRiPvBp41Pau3UOqlGZXEcZK2O9K8ozoiJ2oC6RBM/edit",
-          "description": "Tier 1 Cowork roadmap anchored on the B2C website + Claude-powered configurator, with Hugo as Phase 2. No pricing — Joao to set once 2026-06-15 list lands. Includes Internal Notes section to strip before any client send."
+          "url": "https://docs.google.com/document/d/1XYSSb8eG9067ytgYbVj_wh4HklPdL5g0lh12HrGBMHQ/edit",
+          "description": "Tier 1 Cowork roadmap anchored on B2C website + Claude-powered configurator + headless Airtable CRM + email connector. Hugo as Phase 2. No pricing — Joao to set once 2026-06-15 list lands. Includes Internal Notes section to strip before any client send. v1 doc still in Drive as history."
         }
       ]
     },
@@ -182,6 +182,16 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-19",
+      "headline": "Renato proposal v2 (CRM + email added); Brand Standard approved; Legal Efficiency pricing task parked; June 15 follow-up queued",
+      "body": [
+        "Renato proposal updated to v2 — added a fourth Phase-1 bundle: headless Airtable CRM (Contacts / Conversations / Stores / Products, manipulated through Claude, no Airtable UI for Renato's team) and an email connector (inbound triage into the same CRM, pt-PT reply drafts, weekly digest). Reasoning: Joao flagged on the discovery call that Renato is likely to want both, and they sit beneath everything else in the proposal — better to surface them as scoped from Day 1 than to land them as a surprise later. The email provider stays dependent on Renato's 2026-06-15 tools-list decision. v2 doc is now linked from the Renato CRM card; v1 remains in Drive as history.",
+        "Operations board changes: 'Set date for initial call with Renato' marked Done (call completed 2026-05-19). 'Approve OBLQAI Brand Standard v1.0 §01-§03' marked Done (approved by Joao 2026-05-19; was previously overdue against its 2026-05-16 due date). 'Finalize Legal Efficiency Suite pricing' removed from the board for now — parking the work, will re-add when Sergio's deal forces the question.",
+        "New task added for Joao with a 2026-06-15 due date: follow up with Renato on the channels & tools list. Pairs with the Cowork scheduled task that fires 2026-06-16 morning to either summarize what arrived or draft a pt-PT chase email.",
+        "Internal note: the discovery workbook (Discovery Docs/claude_coworker_requirements_blueprint_with_workflow_map.xlsx) was checked for coverage of per-client CLAUDE.md / memory.md / tasks.md / Context/ scaffolding. Result: not covered. The workbook addresses the Anthropic-side architecture (skills, MCP, connectors, plugins, agents) but nothing about the project-files structure Jo's global CLAUDE.md mandates. Worth a follow-up to either add a sheet or extend one of the discovery markdowns."
+      ]
+    },
     {
       "date": "2026-05-19",
       "headline": "Renato (Incotin) discovery call complete — Cowork pilot anchored on B2C website + configurator; cost line correction on Upload-Post",
@@ -478,9 +488,9 @@
     {
       "id": "recLeH6obj0QDIexH",
       "title": "Approve OBLQAI Brand Standard v1.0 §01-§03",
-      "status": "In progress",
+      "status": "Done",
       "owner": "Joao",
-      "description": "Read the v1.0 PDF, decide if foundations (logo / color / type) are locked, kick off design's v1.1 build of §04-§07.",
+      "description": "Read the v1.0 PDF, decide if foundations (logo / color / type) are locked, kick off design's v1.1 build of §04-§07. Approved 2026-05-19.",
       "dueDate": "2026-05-16"
     },
     {
@@ -497,9 +507,20 @@
     {
       "id": "rec9eIHDvGIs3cVZw",
       "title": "Set date for initial call with Renato",
-      "status": "In progress",
+      "status": "Done",
       "owner": "Joao",
-      "description": "Waiting on Renato to confirm — first OpenClaw pilot can't start until this is scheduled.",
+      "description": "Initial discovery call completed 2026-05-19. Engagement now Cowork-first (Tier 1) anchored on B2C website + configurator + headless CRM + email connector; Hugo as Phase 2. Renato to revert with channels/tools list by 2026-06-15.",
+      "customerIds": [
+        "recUueACFukgzm3vV"
+      ]
+    },
+    {
+      "id": "recRENATOFOLLOWUP615",
+      "title": "Follow up with Renato — channels & tools list",
+      "status": "Todo",
+      "owner": "Joao",
+      "description": "Renato committed on 2026-05-19 to deliver his B2C channel mix and operating-tools list by 2026-06-15. Confirm receipt, review against the proposal draft, sign off on pricing model so Phase 1 scope can be locked. Cowork scheduled task ('renato-incotin-followup-june-16') fires the morning of 2026-06-16 to either summarize what arrived or draft a pt-PT chase email.",
+      "dueDate": "2026-06-15",
       "customerIds": [
         "recUueACFukgzm3vV"
       ]
@@ -537,14 +558,6 @@
       "owner": "Miguel",
       "description": "Draft the organic social content strategy: channels in scope, posting cadence, content pillars, examples per pillar, KPIs. Ready for review by 18 May.",
       "dueDate": "2026-05-18"
-    },
-    {
-      "id": "recatMEUTk97q4GgM",
-      "title": "Finalize Legal Efficiency Suite pricing",
-      "status": "Todo",
-      "owner": "Joao",
-      "description": "Set the canonical build + monthly numbers for the law-firm package so Sergio's MRR can be unblocked.",
-      "dueDate": "2026-05-28"
     },
     {
       "id": "recc1u7ueK2i2VKCE",

@@ -18,6 +18,15 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-19 — Renato proposal v2 (CRM + email added); Brand Standard approved; Legal Efficiency pricing task parked; June 15 follow-up queued
+
+- Renato proposal updated to v2 — added a fourth Phase-1 bundle: headless Airtable CRM (Contacts / Conversations / Stores / Products, manipulated through Claude, no Airtable UI for Renato's team) and an email connector (inbound triage into the same CRM, pt-PT reply drafts, weekly digest). Reasoning: Joao flagged on the discovery call that Renato is likely to want both, and they sit beneath everything else in the proposal — better to surface them as scoped from Day 1 than to land them as a surprise later. The email provider stays dependent on Renato's 2026-06-15 tools-list decision. v2 doc is now linked from the Renato CRM card; v1 remains in Drive as history.
+- Operations board changes: "Set date for initial call with Renato" marked Done (call completed 2026-05-19). "Approve OBLQAI Brand Standard v1.0 §01-§03" marked Done (approved by Joao 2026-05-19; was previously overdue against its 2026-05-16 due date). "Finalize Legal Efficiency Suite pricing" removed from the board for now — parking the work, will re-add when Sergio's deal forces the question.
+- New task added for Joao with a 2026-06-15 due date: follow up with Renato on the channels & tools list. Pairs with the Cowork scheduled task that fires 2026-06-16 morning to either summarize what arrived or draft a pt-PT chase email.
+- Internal note: the discovery workbook (Discovery Docs/claude_coworker_requirements_blueprint_with_workflow_map.xlsx) was checked for coverage of per-client CLAUDE.md / memory.md / tasks.md / Context/ scaffolding. Result: not covered. The workbook addresses the Anthropic-side architecture (skills, MCP, connectors, plugins, agents) but nothing about the project-files structure Jo's global CLAUDE.md mandates. Worth a follow-up to either add a sheet or extend one of the discovery markdowns.
+
+---
+
 ## 2026-05-19 — Renato (Incotin) discovery call complete — Cowork pilot anchored on B2C website + configurator; cost line correction on Upload-Post
 
 - Renato is Incotin (incotin.com.pt), a paint manufacturer based in Lavra/Matosinhos. Construction + furniture/metalmecânica products, INCOMIX color-matching as the differentiator, markets across PT/ES/FR + Lusophone Africa. Strong B2B trade backbone, near-zero on AI and consumer marketing. Concrete ask is opening a B2C channel for end consumers (particulares), anchored on a new B2C section of their website with a guided paint configurator that helps consumers pick the right product for their job.
