@@ -18,12 +18,23 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-19 — Renato (Incotin) discovery call complete — Cowork pilot anchored on B2C website + configurator; cost line correction on Upload-Post
+
+- Renato is Incotin (incotin.com.pt), a paint manufacturer based in Lavra/Matosinhos. Construction + furniture/metalmecânica products, INCOMIX color-matching as the differentiator, markets across PT/ES/FR + Lusophone Africa. Strong B2B trade backbone, near-zero on AI and consumer marketing. Concrete ask is opening a B2C channel for end consumers (particulares), anchored on a new B2C section of their website with a guided paint configurator that helps consumers pick the right product for their job.
+- Engagement positioned as Tier 1 Claude Cowork Setup using the website rebuild as the natural entry use case, with Hugo (OpenClaw marketing autopilot, Tier 2) as a Phase 2 upgrade once the consumer funnel is live and producing data. CRM record updated to reflect this — Renato was previously marked as a Tier 2 OpenClaw lead; that has been corrected to Cowork-first with Hugo as the upgrade path, consistent with the house rule.
+- Renato committed to deliver his final decisions on B2C channels (own webshop vs. marketplaces vs. retail-led vs. hybrid) and operating tool stack by 2026-06-15. Proposal is therefore a roadmap, not a fixed scope, until that list lands. A Cowork scheduled task fires 2026-06-16 morning to either summarize what arrived or draft a polite pt-PT chase email for Joao's review.
+- Two new deliverables now in Drive and linked from the Renato CRM card: the full discovery-call summary and the Cowork roadmap proposal draft. Both live in OBLQAI → Clients → Renato — Incotin. The proposal includes an Internal Notes section that needs stripping before any client-facing version is sent, and carries no pricing — off-blueprint vertical, Joao to set the model before any number goes in writing.
+- Cost correction: Upload-Post monthly subscription updated from €15 → €25 (the €15 figure was entered in error on 2026-05-14; €25 is the actual billing). Monthly burn moves from €315.90 → €325.90. No other cost-line changes.
+
+---
+
 ## 2026-05-19 — oblqai.com goes bilingual — EN + pt-PT live with header toggle
 
 - The marketing site at oblqai.com now ships in English and European Portuguese. A copper-accented PT | EN toggle in the top bar (desktop and mobile) switches the whole site — chrome, marketing copy, the three blog posts, and the SEO meta. URL strategy is path-prefix (`/pt/...` for Portuguese, `/...` for English) so both languages are independently crawlable. Language choice persists across reload and route navigation.
 - Business meaning: we can now run paid and organic acquisition in Portuguese without sending prospects to an English page. The GDPR-compliant-AI post and the founder-POV post on lawyer supervision both rank for queries Portuguese clinic owners and lawyers actually type — the Portuguese version unlocks that surface directly. Same infrastructure is extensible to German (1.5x PT market multiplier) when we decide to lean into DE acquisition.
 - Process note for partners: this was shipped via a sub-agent pipeline inside Claude Code — i18n-architect → pt-translator → react-implementer → playwright-qa → brand-qa. The Playwright behavioral suite (15 assertions, all green) caught three runtime bugs that static tooling missed: i18next resolution overreach, a LangGuard re-render race, and a featured-post filter regression. Static QA alone would have shipped them. Lesson institutionalized: behavioral testing is now mandatory for user-visible UI features.
 - Scope-excluded by design: Pricing.tsx remains dormant with v1-era pricing copy in both languages — component is unmounted so not visible, content debt for when we remount it with Practice Command canonical numbers. Blog post bodies stay translated only to pt-PT; further languages are a future decision.
+- Technical follow-ups parked deliberately: production JS bundle is 735KB in a single chunk (Vite warns past 500KB). Route-level code-splitting is the standard fix, but we are deferring until real-world TTI data from PT/DE traffic justifies the work — premature optimization without measurement is the wrong tradeoff for a B2B marketing surface that mostly converts on desktop. Will revisit if a mobile-heavy paid acquisition campaign launches.
 
 ---
 
