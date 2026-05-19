@@ -18,6 +18,16 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-19 — Renato — per-customer requirements workbook v1 adapted from template
+
+- Copied the canonical "Claude Coworker Requirements Blueprint" from `Discovery Docs/` (template left untouched) and adapted it for Renato/Incotin: `client-implementations/Renato/Renato-Requirements-v1.xlsx`.
+- 16 sheets pre-filled: customer context, discovery answers (from the 2026-05-19 call), 8 candidate workflows captured + scored, current/future workflow map for the two priority workflows (INCOMIX configurator + B2C inbound triage), 6 Claude role cards, 6 skill definitions, 17 MCP/connector entries, 14 actions+permissions rows, and 7 plugin specs (6 Phase 1 + Hugo Phase 2).
+- Every unresolved item marked `TBD — Renato delivers 2026-06-15` (or BrightWeb-blocked / post-call-2). The workbook is the requirements engineer's spine for the day Renato's channel/tool decisions land.
+- Companion Markdown summary uploaded as a Google Doc in Renato's Drive folder; the binary xlsx stays in the iCloud-synced repo since it's above the inline upload limit. Airtable Deliverables row created and linked to the Renato customer record. New "Renato — Requirements Workbook v1" entry now appears on the Renato dashboard card.
+- Decision recorded: every customer engagement after discovery should get its own adapted copy of this workbook. The template lives in `Discovery Docs/`; per-customer copies live under `client-implementations/<Customer>/`.
+
+---
+
 ## 2026-05-20 — Renato — proposal deck shipped (with OBLQAI logo + weekly cadence) + master plan + refreshed notes wired to Drive, Airtable, and dashboard
 
 - Three new artifacts pushed for Renato: (a) the 7-slide proposal-mode deck `Renato-Proposal.pptx` now carries the OBLQAI wordmark on every slide and drops the "Internal draft" caption — review cadence stated as weekly with Joao or Tiago Fernandes for the first 2 months (settling to monthly after the pilot); (b) the master plan diagram Joao compiled (`Renato_Plan.excalidraw`, 2,364 elements, 2.1 MB) combining the Capabilities Map + Scope Summary + Process Flow 1 (Consumer Acquisition) + Process Flow 3 (Inbound Triage) + the Still-in-Motion panel into a single canvas; (c) a refreshed Drive copy of the discovery call notes with cleaner formatting.

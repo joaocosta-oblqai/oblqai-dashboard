@@ -139,6 +139,13 @@
           "type": "excalidraw",
           "url": "https://docs.google.com/document/d/1S180kPz_-OWefjY-22ww_-2dXCSmrIHm4NGh9aV4TVM/edit",
           "description": "Joao's consolidated master plan — single Excalidraw canvas combining the Capabilities Map, Scope Summary, Process Flow 1 (Consumer Acquisition), Process Flow 3 (Inbound Triage), and the Still-in-Motion (Open Questions, Decisions, Processes) panel. 2,364 elements · 2.1 MB. Drive doc is pointer; actual .excalidraw lives in client-implementations/Renato/."
+        },
+        {
+          "title": "Renato — Requirements Workbook v1",
+          "filename": "Renato-Requirements-v1.xlsx",
+          "type": "xlsx",
+          "url": "https://docs.google.com/document/d/1iT-VZxOEi1VlnwLt35De6inq097RzDdP9U8Zs6vlhGM/edit",
+          "description": "Per-customer adaptation of the canonical discovery/requirements workbook. 16 sheets pre-filled for Renato/Incotin (customer context, 8 workflows, current/future workflow maps, role cards, 6 skills, 17 MCP/connectors, 14 action/permission rows, 7 plugin specs). Every unresolved item marked TBD — most resolve when Renato delivers channels/tools on 2026-06-15. Binary xlsx lives in the iCloud-synced repo; the Drive link is a companion Markdown summary."
         }
       ]
     },
@@ -211,6 +218,17 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-19",
+      "headline": "Renato — per-customer requirements workbook v1 adapted from template",
+      "bullets": [
+        "Copied the canonical 'Claude Coworker Requirements Blueprint' from Discovery Docs/ (template untouched) and pre-filled 16 sheets for Renato/Incotin.",
+        "Captured 8 workflows (configurator, B2C inbound triage, content & ads, GMB, strategy plugin, headless CRM, B2C site updates, performance review), 6 Claude role cards, 6 skills, 17 MCP/connector entries, 14 actions+permissions rows, 7 plugin specs (Phase 1 + Hugo Phase 2).",
+        "Every unresolved item marked TBD with a target resolution date — most close out when Renato delivers his channels/tools list on 2026-06-15.",
+        "Companion summary uploaded to Drive (Renato folder); binary xlsx lives in the iCloud-synced repo at client-implementations/Renato/Renato-Requirements-v1.xlsx.",
+        "Airtable Deliverables row created and linked to Renato customer record."
+      ]
+    },
     {
       "date": "2026-05-20",
       "headline": "Renato — proposal deck shipped (with OBLQAI logo + weekly cadence) + master plan + refreshed notes wired to Drive, Airtable, and dashboard",
@@ -424,7 +442,9 @@
     {
       "id": "act-renato-2026-05-19-discovery",
       "activity": "Discovery call with Renato (Incotin)",
-      "customerIds": ["recUueACFukgzm3vV"],
+      "customerIds": [
+        "recUueACFukgzm3vV"
+      ],
       "date": "2026-05-19",
       "type": "Discovery call",
       "status": "Completed",
