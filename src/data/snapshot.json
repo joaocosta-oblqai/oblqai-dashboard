@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T09:00:00.000Z",
+  "generatedAt": "2026-05-21T00:00:00Z",
   "customers": [
     {
       "id": "rect4kxOi5Xzv7eSK",
@@ -98,11 +98,11 @@
       "vertical": "Other / Out of Scope",
       "verticalPackage": "Custom / TBD",
       "tier": "Claude Cowork Setup (Tier 1) → Hugo (Tier 2) as Phase 2 upgrade",
-      "stage": "Discovery",
+      "stage": "Proposal",
       "market": "Portugal",
-      "nextAction": "Awaiting Renato's channels & tools list (committed on 2026-05-19 call, due 2026-06-15). Cowork scheduled task fires 2026-06-16 morning to chase if not delivered.",
+      "nextAction": "Proposal + Use Cases decks sent 2026-05-21. Awaiting Renato's review, then alignment call before his 2026-06-15 channels & tools deliverable.",
       "nextActionDate": "2026-06-15",
-      "lastTouch": "2026-05-19",
+      "lastTouch": "2026-05-21",
       "notes": "Incotin (incotin.com.pt) — paint manufacturer based in Lavra, Matosinhos. Construction + furniture/metalmecânica paints; INCOMIX color-matching as their differentiator. Markets: PT/ES/FR + Lusophone Africa. Concrete ask is a B2C section + paint configurator on their existing brochure site (built by BrightWeb). Engagement positioned as Tier 1 Cowork anchored on that website rebuild, with Hugo / Hermes marketing-autopilot as a Phase 2 upgrade once the consumer funnel is live and producing data. Off-blueprint vertical — pricing model TBD with Joao before any number goes in writing.",
       "deliverables": [
         {
@@ -503,6 +503,15 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-21",
+      "headline": "Renato pilot — proposal + use cases sent, awaiting feedback",
+      "bullets": [
+        "Sent the two-deck deliverable to Renato (Incotin): Renato-Proposal.pptx + Renato-Use-Cases.pptx. He reviews, then we schedule an alignment call before his 2026-06-15 channels & tools deliverable.",
+        "Renato customer record moved to Proposal stage in OBLQAI Ops. Activity logged: 'Proposal sent — Completed', next step due 2026-06-15.",
+        "Mirrored everywhere it needs to be: Airtable Activities + customer record, project memory, and this dashboard."
+      ]
+    },
     {
       "date": "2026-05-20",
       "headline": "Renato pilot — Use Cases deck shipped alongside proposal",

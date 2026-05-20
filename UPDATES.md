@@ -18,6 +18,15 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-21 — Renato pilot — proposal + use cases sent, awaiting feedback
+
+- Sent the two-deck deliverable to Renato (Incotin): `Renato-Proposal.pptx` + `Renato-Use-Cases.pptx`. He reviews, then we schedule an alignment call before his 2026-06-15 channels & tools deliverable.
+- Renato customer record moved to **Proposal** stage in OBLQAI Ops. Activity logged: "Proposal sent — Completed", next step due 2026-06-15.
+- Mirrored everywhere it needs to be: Airtable Activities + customer record, project memory, and this dashboard.
+
+---
+
+
 ## 2026-05-20 — Renato pilot — Use Cases deck shipped alongside proposal
 
 - Renato gets a two-part deliverable for the 2026-06-15 follow-up: (1) `Renato-Proposal.pptx` — 8 slides, what we propose; (2) `Renato-Use-Cases.pptx` — 13 slides, how every flow actually runs through Cowork.
