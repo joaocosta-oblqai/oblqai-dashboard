@@ -124,7 +124,7 @@
           "filename": "Renato-Proposal.pptx",
           "type": "pptx",
           "url": "https://docs.google.com/document/d/1E8v-roLUyQ6V7EqtKbvK3lOTB4z0IwggsfVnQ7DdxN8/edit",
-          "description": "7-slide proposal-mode deck with OBLQAI logo, cover + 4-kits overview + Open Questions across 2 slides + Processes + Future iterations + Next steps. Review cadence stated as weekly with Joao or Tiago Fernandes for first 2 months. Drive doc is searchable content mirror; actual .pptx lives in client-implementations/Renato/."
+          "description": "8-slide proposal deck (was 7). Adds 'The alternative cost picture — Portugal' as slide 3: four columns (PEOPLE / BUILDS / STACK / MISTAKES) showing what Incotin would spend any other way, anchored on PT SMB ranges (agency or junior + freelance for headcount; configurator as the one realistic build; freemium-tier-aware SaaS; opportunity cost of delayed B2C entry). Brand standard (cream + copper + Georgia/Calibri); no OBLQAI pricing claim on the slide — alternative-cost reference only."
         },
         {
           "title": "Discovery Call Notes — 2026-05-19 (refreshed)",
@@ -218,6 +218,17 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-20",
+      "headline": "Renato — proposal deck v3 — added cost-savings slide (PT-anchored)",
+      "bullets": [
+        "Renato-Proposal.pptx now 8 slides. New slide 3: 'The alternative cost picture — Portugal' — four columns showing what Incotin would spend to stand up the same B2C surface any other way.",
+        "Ranges re-anchored from CH/UK-coded benchmarks to PT SMB reality after Joao's first pass: PEOPLE column reframed as 'agency OR junior + freelance' (not a five-person team); BUILDS pared to just the configurator (€4-12k) plus the cheap shortcuts a PT SMB would actually approve; STACK kept as global SaaS list pricing for now.",
+        "No OBLQAI price on the slide — explicit footer states it's an alternative-cost reference, not a quote. Pricing stays as a proposal-call conversation.",
+        "Standalone single-slide source kept at Renato-Proposal-CostSlide.pptx for future reuse / standalone send.",
+        "Diagnosed and noted: the deck was iCloud-evicted (size 1.18MB local metadata but zero blocks). Required 'brctl download' from Joao's Terminal before the sandbox could read it. Worth remembering for next iCloud-locked binary."
+      ]
+    },
     {
       "date": "2026-05-19",
       "headline": "Renato — per-customer requirements workbook v1 adapted from template",

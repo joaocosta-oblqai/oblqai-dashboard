@@ -18,6 +18,16 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-20 — Renato — proposal deck v3 — added cost-savings slide (PT-anchored)
+
+- `Renato-Proposal.pptx` is now 8 slides (was 7). The new slide 3 — **"The alternative cost picture — Portugal"** — sits between the scope/kits slide and the open-questions sequence, four columns wide: **PEOPLE** (operator you don't pay — agency OR junior + freelance), **BUILDS** (configurator + the cheap shortcuts a PT SMB would actually approve), **STACK** (SaaS subscriptions Cowork displaces), **MISTAKES** (wasted ad spend, delayed B2C entry, RGPD risk, the ~€80k–240k/season ES-reference market). Brand standard (cream + copper + Georgia/Calibri).
+- Ranges re-anchored from CH/UK-coded benchmarks to PT SMB reality across two review passes by Joao: the PEOPLE column dropped from a five-person fantasy team to the two paths Incotin would actually take (agency on retainer OR one junior generalist + occasional freelance); BUILDS was pared to just the configurator as the one realistic spend (€4-12k) plus three cheap shortcuts. STACK kept as global SaaS list price for now — open to similar treatment if Joao flags.
+- No OBLQAI price appears on the slide. Footer is explicit: *"Not a quote — an alternative-cost reference. OBLQAI engagement pricing covered in the proposal call."* Keeps off-blueprint pricing posture intact.
+- Standalone single-slide source kept at `client-implementations/Renato/Renato-Proposal-CostSlide.pptx` for future reuse / standalone send.
+- iCloud-eviction note: the deck had been evicted to cloud-only (1.18MB metadata, zero local blocks) and required `brctl download` from Joao's Terminal before the sandbox could read it. Pattern worth remembering for any future binary edit where the file appears locked.
+
+---
+
 ## 2026-05-19 — Renato — per-customer requirements workbook v1 adapted from template
 
 - Copied the canonical "Claude Coworker Requirements Blueprint" from `Discovery Docs/` (template left untouched) and adapted it for Renato/Incotin: `client-implementations/Renato/Renato-Requirements-v1.xlsx`.
