@@ -18,6 +18,37 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-20 — Renato pilot — Use Cases deck shipped alongside proposal
+
+- Renato gets a two-part deliverable for the 2026-06-15 follow-up: (1) `Renato-Proposal.pptx` — 8 slides, what we propose; (2) `Renato-Use-Cases.pptx` — 13 slides, how every flow actually runs through Cowork.
+- Use Cases deck covers 11 process flows: online strategy · CRM strategy · website build · consumer-into-CRM funnel · inbound triage · content engine · visuals + scheduling · Google Ads · GMB · weekly review · escalation. Each one shows the schedule → plugin → draft → approve → publish → log loop.
+- Both decks copied to dashboard repo (`clients/renato/`) and Airtable Deliverables. Renato Plan excalidraw (already pushed) remains the integrated canvas view.
+
+---
+
+
+## 2026-05-20 — Project-wide sweep — OpenClaw → Hermes (Nous Research) across artifacts
+
+- **Decision being landed**: Tier 2 / Autopilot runtime is **Hermes** (Nous Research, [hermes-agent.nousresearch.com](https://hermes-agent.nousresearch.com)), not OpenClaw. Hermes is open-source, MIT, with built-in persistent memory + a learning loop, MCP support, native messaging across 20+ platforms, scheduled automations, subagents, sandboxing on six backends (including serverless Modal), and a skills format compatible with Claude's. Hugo brand survives — it's the OBLQAI-curated marketing product that runs on top of Hermes.
+- **What changed today**: 163 OpenClaw → Hermes replacements across 28 files. Hit list:
+  - `CLAUDE.md` (root, 1) + `.claude/CLAUDE.md` (13)
+  - `claude-cowork-service-blueprint-v2.docx` (33 — the canonical service definition)
+  - `claude-cowork-README.md` (13)
+  - `Comercial/Demos/Advogado-Contratos-*` (33 across 6 files)
+  - `Context/active-pilots.md` (3), `Context/verticals.md` (4), `Brand/brand-identity-brief.md` (1)
+  - `Website/whyai-consulting/src/data/blogPosts.ts` (2) + `pt-translator.md` agent prompt (1)
+  - `Discovery Docs/Vertical Checklists/Law-Firms.md` (4), `Consulting/05-Claude-Cowork-Command-Center-Blueprint.md` (1)
+  - `client-implementations/Sara/Sara-Architecture-Diagram-PROMPT.md` (1)
+  - All Renato deliverables: discovery call summary (5), requirements summary (1), proposal draft markdown (5), proposal `.pptx` (1), requirements `.xlsx` (4), master plan `.excalidraw` (26), CRM card markdown (3)
+  - `oblqai-dashboard/src/data/snapshot.json` deliverable descriptions only (6 — historical updates array preserved unchanged)
+  - `tasks.md` (1), `memory.md` (5)
+- **Two manual cleanups after the automated pass**: the "Key Terminology" Hermes entry in `.claude/CLAUDE.md` had been mangled into a self-contradiction (Hermes was both "ours" and "Nous's"); rewritten to make clear Hermes is Nous Research's open-source agent used as our Tier 2 runtime. The tech-stack "Agent orchestration" line was clarified the same way. Hugo is consistently framed as the OBLQAI marketing product *running on* Hermes.
+- **What was deliberately NOT touched**: this `UPDATES.md` log itself (historical entries describe what was true on each entry's date), the `updates` array in `snapshot.json` (same logic), the `Comercial/_pre-logo-backup-2026-05-14/` backup pptx, and Drive text-mirror Doc copies of binaries — those still carry the older OpenClaw wording and will be regenerated next time a deliverable goes out the door.
+- **Verified clean**: zero `OpenClaw` mentions remain in any active artifact across the project (only residual mentions are inside historical log entries in `UPDATES.md` and `snapshot.json`, where they correctly describe past state).
+- Memory: `project_hermes_replaces_openclaw.md` records the architecture decision; `reference_hermes_docs_key_facts.md` carries the official-docs verification of MCP + Skills compatibility; `reference_hermes_vs_openclaw.md` and `reference_hugo_product_name.md` updated to resolved-state.
+
+---
+
 ## 2026-05-20 — Renato — proposal deck v3 — added cost-savings slide (PT-anchored)
 
 - `Renato-Proposal.pptx` is now 8 slides (was 7). The new slide 3 — **"The alternative cost picture — Portugal"** — sits between the scope/kits slide and the open-questions sequence, four columns wide: **PEOPLE** (operator you don't pay — agency OR junior + freelance), **BUILDS** (configurator + the cheap shortcuts a PT SMB would actually approve), **STACK** (SaaS subscriptions Cowork displaces), **MISTAKES** (wasted ad spend, delayed B2C entry, RGPD risk, the ~€80k–240k/season ES-reference market). Brand standard (cream + copper + Georgia/Calibri).

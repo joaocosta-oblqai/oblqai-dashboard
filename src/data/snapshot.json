@@ -13,7 +13,7 @@
       "market": "Portugal",
       "nextAction": "Follow up with Sergio on his answer to the proposal",
       "lastTouch": "2026-05-14",
-      "notes": "Law firm — Alpaca Law. Formal proposal already drafted. MRR cleared — Legal Efficiency Suite pricing not yet finalized (per costs/clients/sergio-lawyer.md). Setup fee range €3,000–5,000 — confirm at proposal stage. Law firms never get OpenClaw.",
+      "notes": "Law firm — Alpaca Law. Formal proposal already drafted. MRR cleared — Legal Efficiency Suite pricing not yet finalized (per costs/clients/sergio-lawyer.md). Setup fee range €3,000–5,000 — confirm at proposal stage. Law firms never get Hermes.",
       "deliverables": [
         {
           "title": "Meeting Notes",
@@ -103,8 +103,22 @@
       "nextAction": "Awaiting Renato's channels & tools list (committed on 2026-05-19 call, due 2026-06-15). Cowork scheduled task fires 2026-06-16 morning to chase if not delivered.",
       "nextActionDate": "2026-06-15",
       "lastTouch": "2026-05-19",
-      "notes": "Incotin (incotin.com.pt) — paint manufacturer based in Lavra, Matosinhos. Construction + furniture/metalmecânica paints; INCOMIX color-matching as their differentiator. Markets: PT/ES/FR + Lusophone Africa. Concrete ask is a B2C section + paint configurator on their existing brochure site (built by BrightWeb). Engagement positioned as Tier 1 Cowork anchored on that website rebuild, with Hugo / OpenClaw marketing-autopilot as a Phase 2 upgrade once the consumer funnel is live and producing data. Off-blueprint vertical — pricing model TBD with Joao before any number goes in writing.",
+      "notes": "Incotin (incotin.com.pt) — paint manufacturer based in Lavra, Matosinhos. Construction + furniture/metalmecânica paints; INCOMIX color-matching as their differentiator. Markets: PT/ES/FR + Lusophone Africa. Concrete ask is a B2C section + paint configurator on their existing brochure site (built by BrightWeb). Engagement positioned as Tier 1 Cowork anchored on that website rebuild, with Hugo / Hermes marketing-autopilot as a Phase 2 upgrade once the consumer funnel is live and producing data. Off-blueprint vertical — pricing model TBD with Joao before any number goes in writing.",
       "deliverables": [
+        {
+          "title": "Pilot Proposal — Claude Cowork Setup",
+          "filename": "Renato-Proposal.pptx",
+          "type": "pptx",
+          "url": "https://github.com/jccosta94/oblqai-dashboard/blob/main/clients/renato/Renato-Proposal.pptx",
+          "description": "Current 8-slide proposal: what we're building (16 capabilities, 4 groups), why two phases, open questions, working sessions, future iterations, next steps. No pricing — pilot framing (2 months free)."
+        },
+        {
+          "title": "Use Cases Deck — How Cowork Runs in Practice",
+          "filename": "Renato-Use-Cases.pptx",
+          "type": "pptx",
+          "url": "https://github.com/jccosta94/oblqai-dashboard/blob/main/clients/renato/Renato-Use-Cases.pptx",
+          "description": "13-slide companion deck to the proposal. 11 process-flow slides (Strategy · CRM · Website · Consumer funnel · Triage · Content · Visuals · Ads · GMB · Weekly review · Escalation) + cover + closer. Sent alongside Renato-Proposal.pptx for the 2026-06-15 follow-up."
+        },
         {
           "title": "Discovery Call Summary — 2026-05-19",
           "filename": "Renato (Incotin) — 2026-05-19 Discovery Call Summary",
@@ -158,7 +172,7 @@
       "tier": "Claude Cowork Setup (Tier 1)",
       "stage": "Lead",
       "market": "Portugal",
-      "notes": "Potential law firm client. Pre-pilot / lead. Legal Efficiency Suite — Claude Cowork Setup only (no OpenClaw for law firms).",
+      "notes": "Potential law firm client. Pre-pilot / lead. Legal Efficiency Suite — Claude Cowork Setup only (no Hermes for law firms).",
       "deliverables": [
         {
           "title": "Implementation Proposal",
@@ -205,7 +219,7 @@
           "filename": "Ze-Maria-Proposta-v0.2-PT.pptx",
           "type": "gdoc",
           "url": "https://docs.google.com/document/d/1D3bt24GgwHawaMRnGVSTnTw9K3Yu7UV8FFKOcqh7mfA/edit",
-          "description": "9-slide PT proposal — agency 4 flows + construction 6 flows, 2-month free trial framing, Cowork-first with OpenClaw as a later option, open questions to close. Source .pptx in client-implementations/Ze Maria/."
+          "description": "9-slide PT proposal — agency 4 flows + construction 6 flows, 2-month free trial framing, Cowork-first with Hermes as a later option, open questions to close. Source .pptx in client-implementations/Ze Maria/."
         },
         {
           "title": "Example Agency — reference deck (PT, competitor benchmark)",
@@ -214,238 +228,6 @@
           "url": "https://docs.google.com/document/d/10dByqqJ-3WSP0-ktWynOJEamvnpdaRN0UwK-_2HILBI/edit",
           "description": "NOT a Zé Maria deliverable — a Portuguese marketing-agency proposal from 'Example Agency' kept here as benchmark for the PT marketing-agency vertical (pricing reference, format reference). Their pricing, not OBLQAI's. Source PDF in client-implementations/Ze Maria/."
         }
-      ]
-    }
-  ],
-  "updates": [
-    {
-      "date": "2026-05-20",
-      "headline": "Renato — proposal deck v3 — added cost-savings slide (PT-anchored)",
-      "bullets": [
-        "Renato-Proposal.pptx now 8 slides. New slide 3: 'The alternative cost picture — Portugal' — four columns showing what Incotin would spend to stand up the same B2C surface any other way.",
-        "Ranges re-anchored from CH/UK-coded benchmarks to PT SMB reality after Joao's first pass: PEOPLE column reframed as 'agency OR junior + freelance' (not a five-person team); BUILDS pared to just the configurator (€4-12k) plus the cheap shortcuts a PT SMB would actually approve; STACK kept as global SaaS list pricing for now.",
-        "No OBLQAI price on the slide — explicit footer states it's an alternative-cost reference, not a quote. Pricing stays as a proposal-call conversation.",
-        "Standalone single-slide source kept at Renato-Proposal-CostSlide.pptx for future reuse / standalone send.",
-        "Diagnosed and noted: the deck was iCloud-evicted (size 1.18MB local metadata but zero blocks). Required 'brctl download' from Joao's Terminal before the sandbox could read it. Worth remembering for next iCloud-locked binary."
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "Renato — per-customer requirements workbook v1 adapted from template",
-      "bullets": [
-        "Copied the canonical 'Claude Coworker Requirements Blueprint' from Discovery Docs/ (template untouched) and pre-filled 16 sheets for Renato/Incotin.",
-        "Captured 8 workflows (configurator, B2C inbound triage, content & ads, GMB, strategy plugin, headless CRM, B2C site updates, performance review), 6 Claude role cards, 6 skills, 17 MCP/connector entries, 14 actions+permissions rows, 7 plugin specs (Phase 1 + Hugo Phase 2).",
-        "Every unresolved item marked TBD with a target resolution date — most close out when Renato delivers his channels/tools list on 2026-06-15.",
-        "Companion summary uploaded to Drive (Renato folder); binary xlsx lives in the iCloud-synced repo at client-implementations/Renato/Renato-Requirements-v1.xlsx.",
-        "Airtable Deliverables row created and linked to Renato customer record."
-      ]
-    },
-    {
-      "date": "2026-05-20",
-      "headline": "Renato — proposal deck shipped (with OBLQAI logo + weekly cadence) + master plan + refreshed notes wired to Drive, Airtable, and dashboard",
-      "body": [
-        "Three new artifacts pushed for Renato: (a) the 7-slide proposal-mode deck Renato-Proposal.pptx now carries the OBLQAI wordmark on every slide and drops the 'Internal draft' caption — review cadence stated as weekly with Joao or Tiago Fernandes for the first 2 months (settling to monthly after the pilot); (b) the master plan diagram Joao compiled (Renato_Plan.excalidraw, 2,364 elements, 2.1 MB) combining the Capabilities Map + Scope Summary + Process Flow 1 (Consumer Acquisition) + Process Flow 3 (Inbound Triage) + the Still-in-Motion panel into a single canvas; (c) a refreshed Drive copy of the discovery call notes with cleaner formatting.",
-        "All three are now linked from the Renato CRM card on this dashboard and recorded as Deliverable rows in the OBLQAI Ops Airtable (linked to the Renato customer record).",
-        "Drive limitation noted: the GDrive MCP can't ingest binary uploads larger than ~265KB inline per tool call. The proposal .pptx (1.2MB) and the master plan .excalidraw (2.1MB) stay as canonical files in client-implementations/Renato/; their Drive entries are searchable content mirrors / pointer docs. If clean Drive copies of the binaries matter, Joao can upload them through the Drive UI directly.",
-        "Process Flows 4-7 (E-commerce model · Checkout & Payment · Customer Service Window · Escalation Playbook) are NOT in this round of uploads — flagged earlier for Joao to review before sharing further."
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "Sergio + Sara + Zé Maria deliverables uploaded to Drive — every CRM card's deliverable now opens a working Google Doc",
-      "body": [
-        "Created OBLQAI → Clients → Sergio — Alpaca Law, OBLQAI → Clients → Sara — Beauty Clinic, and OBLQAI → Clients → Zé Maria — Agency + Construction in Drive. Uploaded 10 deliverables total: 7 Sergio docs (Meeting Notes, Alpaca research brief, Use-Case recommendations, Next-Steps plan, Alpaca-vs-Cowork plain-language EN + PT, formal proposal), Sara's 16-slide aesthetic-clinic deck, Zé Maria's v0.2 proposal, and the Example Agency reference deck Zé Maria used as a benchmark. Every customer's deliverables array in snapshot.json now has working URLs.",
-        "Conversion path: the GDrive MCP still rejects docx/pptx/pdf binary uploads (same error as prior rounds), so docs were converted server-side — pandoc for the 7 Sergio .docx files, python-pptx text extraction for Sara's and Zé Maria's .pptx decks, pdftotext for the Example reference. Each Drive copy is a Markdown/text mirror; the canonical formatted source files remain in the project repo under client-implementations/.",
-        "Two staleness flags surfaced inline: (a) Sara's deck slide 3 still carries the pre-2026-05-14 Practice Command pricing (Tier 1 €2.000–2.500 / €1.299/mo; Tier 2 €3.000–4.000 / €2.299/mo); current canonical is PT €8.000 / €950/mo. The .pptx source needs revising before any further client send. (b) Sergio's Next-Steps Plan internal pricing note references the parked Legal Efficiency Suite numbers — flagged inline.",
-        "Operations board: 'Jo to add all updated docs to company Google Drive + share links on dashboard' moved from Todo → In progress; description updated to reflect what's done and what's still outstanding. Outstanding for the next pass: Miranda — she has 4 deliverables on file (Implementation Proposal pdf, Pitch Deck pptx, Live Demo html, Demo Video Script md) that were NOT requested in this round; her stage is still Lead so this may be intentional but flagging for explicit Joao decision.",
-        "Sergio activity entries (proposal sent, etc.) and Sara/Zé Maria touches are NOT yet logged in the Activities section — offered separately, awaiting Joao's call on whether to backfill from history or only log new touches going forward."
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "Global Docs uploaded to Drive — all six dashboard globalDocs links now live; staleness flags surfaced inline",
-      "body": [
-        "Created OBLQAI → General Docs in Drive and uploaded all six globalDocs as Google Docs (the GDrive MCP doesn't accept docx/pdf binary uploads in this session — the canonical .docx and .pdf source files remain in the project repo and are referenced from each Drive doc). Every dashboard globalDoc URL is now wired to a live Drive link.",
-        "Service Blueprint v2 uploaded as a Markdown-converted searchable mirror with a clear pointer back to the canonical .docx in repo. Practice Command Pricing Canon written fresh from memory + CLAUDE.md and uploaded as a new standalone doc — supersedes the Healthcare row of the Service Blueprint. Discovery Process Overview, ROI Scoring Framework, Brand Identity House Standard, and the four Vertical Checklists files (README + Home Services + Healthcare Clinics + Law Firms) uploaded into a Vertical Checklists subfolder.",
-        "Three staleness flags surfaced inline at the top of each affected doc and noted in the dashboard descriptions: (a) Discovery Process Overview still references the deprecated €1,500 audit and the old 4-vertical list (restaurants / health & beauty / real estate are out of scope); (b) Vertical Checklists README still links to those out-of-scope vertical files; (c) Healthcare Clinics checklist still carries the pre-2026-05-14 Practice Command monthly numbers (€1,870 / €2,805 / CHF 3,740 — current canonical is €950 / €1,425 / CHF 1,900); (d) Home Services checklist contains unfinalized Field Service Command pricing ranges in writing (€5-12k / €15-30k / €1,500-3,500/mo). Drive docs include warnings; source files on disk need revising before treating as canonical.",
-        "The Service Blueprint .docx itself also carries the OLD Healthcare pricing row (€2,000–2,500 setup / €1,299 monthly) — the Drive doc flags this; revising the actual .docx is a separate task on the board if/when the blueprint is next revved."
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "Renato proposal v2 (CRM + email added); Brand Standard approved; Legal Efficiency pricing task parked; June 15 follow-up queued",
-      "body": [
-        "Renato proposal updated to v2 — added a fourth Phase-1 bundle: headless Airtable CRM (Contacts / Conversations / Stores / Products, manipulated through Claude, no Airtable UI for Renato's team) and an email connector (inbound triage into the same CRM, pt-PT reply drafts, weekly digest). Reasoning: Joao flagged on the discovery call that Renato is likely to want both, and they sit beneath everything else in the proposal — better to surface them as scoped from Day 1 than to land them as a surprise later. The email provider stays dependent on Renato's 2026-06-15 tools-list decision. v2 doc is now linked from the Renato CRM card; v1 remains in Drive as history.",
-        "Operations board changes: 'Set date for initial call with Renato' marked Done (call completed 2026-05-19). 'Approve OBLQAI Brand Standard v1.0 §01-§03' marked Done (approved by Joao 2026-05-19; was previously overdue against its 2026-05-16 due date). 'Finalize Legal Efficiency Suite pricing' removed from the board for now — parking the work, will re-add when Sergio's deal forces the question.",
-        "New task added for Joao with a 2026-06-15 due date: follow up with Renato on the channels & tools list. Pairs with the Cowork scheduled task that fires 2026-06-16 morning to either summarize what arrived or draft a pt-PT chase email.",
-        "Internal note: the discovery workbook (Discovery Docs/claude_coworker_requirements_blueprint_with_workflow_map.xlsx) was checked for coverage of per-client CLAUDE.md / memory.md / tasks.md / Context/ scaffolding. Result: not covered. The workbook addresses the Anthropic-side architecture (skills, MCP, connectors, plugins, agents) but nothing about the project-files structure Jo's global CLAUDE.md mandates. Worth a follow-up to either add a sheet or extend one of the discovery markdowns."
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "Renato (Incotin) discovery call complete — Cowork pilot anchored on B2C website + configurator; cost line correction on Upload-Post",
-      "body": [
-        "Renato is Incotin (incotin.com.pt), a paint manufacturer based in Lavra/Matosinhos. Construction + furniture/metalmecânica products, INCOMIX color-matching as the differentiator, markets across PT/ES/FR + Lusophone Africa. Strong B2B trade backbone, near-zero on AI and consumer marketing. Concrete ask is opening a B2C channel for end consumers (particulares), anchored on a new B2C section of their website with a guided paint configurator that helps consumers pick the right product for their job.",
-        "Engagement positioned as Tier 1 Claude Cowork Setup using the website rebuild as the natural entry use case, with Hugo (OpenClaw marketing autopilot, Tier 2) as a Phase 2 upgrade once the consumer funnel is live and producing data. CRM record updated to reflect this — Renato was previously marked as a Tier 2 OpenClaw lead; that has been corrected to Cowork-first with Hugo as the upgrade path, consistent with the house rule.",
-        "Renato committed to deliver his final decisions on B2C channels (own webshop vs. marketplaces vs. retail-led vs. hybrid) and operating tool stack by 2026-06-15. Proposal is therefore a roadmap, not a fixed scope, until that list lands. A Cowork scheduled task fires 2026-06-16 morning to either summarize what arrived or draft a polite pt-PT chase email for Joao's review.",
-        "Two new deliverables now in Drive and linked from the Renato CRM card: the full discovery-call summary and the Cowork roadmap proposal draft. Both live in OBLQAI → Clients → Renato — Incotin. The proposal includes an Internal Notes section that needs stripping before any client-facing version is sent, and carries no pricing — off-blueprint vertical, Joao to set the model before any number goes in writing.",
-        "Cost correction: Upload-Post monthly subscription updated from €15 → €25 (the €15 figure was entered in error on 2026-05-14; €25 is the actual billing). Monthly burn moves from €315.90 → €325.90. No other cost-line changes."
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "oblqai.com goes bilingual — EN + pt-PT live with header toggle",
-      "body": [
-        "The marketing site at oblqai.com now ships in English and European Portuguese. A copper-accented PT | EN toggle in the top bar (desktop and mobile) switches the whole site — chrome, marketing copy, the three blog posts, and the SEO meta. URL strategy is path-prefix (`/pt/...` for Portuguese, `/...` for English) so both languages are independently crawlable. Language choice persists across reload and route navigation.",
-        "Business meaning: we can now run paid and organic acquisition in Portuguese without sending prospects to an English page. The GDPR-compliant-AI post and the founder-POV post on lawyer supervision both rank for queries Portuguese clinic owners and lawyers actually type — the Portuguese version unlocks that surface directly. Same infrastructure is extensible to German (1.5x PT market multiplier) when we decide to lean into DE acquisition.",
-        "Process note for partners: this was shipped via a sub-agent pipeline inside Claude Code — i18n-architect → pt-translator → react-implementer → playwright-qa → brand-qa. The Playwright behavioral suite (15 assertions, all green) caught three runtime bugs that static tooling missed: i18next resolution overreach, a LangGuard re-render race, and a featured-post filter regression. Static QA alone would have shipped them. Lesson institutionalized: behavioral testing is now mandatory for user-visible UI features.",
-        "Scope-excluded by design: Pricing.tsx remains dormant with v1-era pricing copy in both languages — component is unmounted so not visible, content debt for when we remount it with Practice Command canonical numbers. Blog post bodies stay translated only to pt-PT; further languages are a future decision.",
-        "Technical follow-ups parked deliberately: production JS bundle is 735KB in a single chunk (Vite warns past 500KB). Route-level code-splitting is the standard fix, but we are deferring until real-world TTI data from PT/DE traffic justifies the work — premature optimization without measurement is the wrong tradeoff for a B2B marketing surface that mostly converts on desktop. Will revisit if a mobile-heavy paid acquisition campaign launches."
-      ]
-    },
-    {
-      "date": "2026-05-18",
-      "headline": "Weekly recap: no material changes to CRM or costs",
-      "body": [
-        "Pipeline holds steady since 2026-05-16: Sergio (Proposal), Sara / Renato / Zé Maria (Discovery), Miranda (Lead). Five active records — no new leads, no stage moves, no MRR or setup-fee changes, no package/tier/market changes.",
-        "No new or changed cost lines. Monthly burn unchanged at €315.90/mo (Anthropic Claude Pro Max €221.40 still dominant; Codex €25, Google AI €22, Hostinger VPS €20.50, Upload-Post €15, Google Workspace €12; Firebase, GitHub, Cowork, n8n at €0).",
-        "Tasks board: 4 In progress, 4 Todo, 2 Done. Brand Standard v1.0 §01-§03 approval (Jo) slipped past its 2026-05-16 due date over the weekend and is now overdue. Three tasks land their due date today (2026-05-18): chatbot tuning (Jo), Drive doc upload (Jo), social content strategy (Miguel).",
-        "Two pilots still gated on prospect availability: Renato (first OpenClaw pilot) and Zé Maria (rescheduling the missed initial call). Sergio's proposal response is the other open thread — follow-up due 2026-05-19.",
-        "Nothing to escalate this week — system checked, state is intentionally unchanged."
-      ]
-    },
-    {
-      "date": "2026-05-16",
-      "headline": "Site repositioned as Claude Cowork implementation partner",
-      "body": [
-        "Homepage rewritten end-to-end to lead with Claude Cowork, not generic AI automation. New hero: \"Claude Cowork, implemented for European SMBs.\" Eyebrow, subhead, footer tagline, methodology, and differentiators all updated to lead on the implementation-partner role rather than the prior \"integration layer / productized AI operating layer\" framing.",
-        "New \"Bringing Claude Cowork into your office\" section on the homepage. Stylized Cowork desktop mockup matching the real app's three-pane layout (Chat / Cowork / Code mode tabs, left nav + Recents, center thread with Act / Opus / Queue composer, right Progress + workspace + Context panels) running a live Q1-supplier-audit demo task with a copper human-in-the-loop review banner. Five floating connector tiles (QuickBooks · HubSpot · Google Drive · Airtable · Gmail) ring the mockup with Connected status badges so the integration story reads at a glance.",
-        "Five hero outcome cards replaced with Cowork-anchored copy: An autonomous operations engine · A tireless executive assistant · Bespoke proposals in minutes · Absorb growth without adding headcount · Shift from builder to editor.",
-        "Services section rewritten as \"Four pieces of work, one Cowork install\" — Cowork Install & Configure / MCP & Connector Engineering / Agentic Workflow Design / Team Adoption & Managed Service. Differentiators rewritten as \"The Cowork implementation partner\" — Anthropic's official agent / We live in the agent / Live in 30 days / Stay on the line after launch.",
-        "Use Cases page: five Aha! cards now carry Cowork-specific narratives across Legal, E-commerce, Marketing, Healthcare, SaaS. Slider labels swapped from \"Before AI / After AI\" to \"Before Claude / With Claude Cowork\", and a per-industry \"Drafted / Analyzed / Recommended / Triaged by Claude\" badge now sits on the After side of every comparison.",
-        "Live at https://oblqai.com — deployed via Firebase Hosting (claude-cowork-consulting project)."
-      ]
-    },
-    {
-      "date": "2026-05-15",
-      "headline": "Website refresh shipped — new Use Cases page + blog repositioned",
-      "body": [
-        "New /use-cases page is live on oblqai.com — an interactive Before/After slider paired with a 5-industry tile picker (Legal, E-Commerce, Marketing, Healthcare, Software). Each scenario is anchored to a concrete operational outcome: €2.4M risk surfaced on a 247-contract M&A diligence, €340k/mo margin from pricing intelligence, a complete multi-channel launch kit in 4 hours vs. a 6-week agency cycle, €58,200 recovered from a denied-claims backlog, support backlog cut 71% with first-response time down from 14h to 4m.",
-        "Blog rewritten and repositioned. The prior set of fictional client case studies has been removed — composites that read as real are a credibility risk for the brand. Replaced with three new posts spanning three angles: SEO authority (GDPR-compliant AI for clinics in CH/DE/PT), founder POV (why we don't sell autonomous AI to law firms — bylined Joao), and operational walkthrough (what Practice Command actually replaces in a clinic by week 1, 4, 12). Seven more posts queued in the editorial slate.",
-        "Header navigation now exposes Use Cases as a top-level link alongside Services, Process, ROI Calculator, and Blog.",
-        "House standard preserved end-to-end: cream-on-cream layout with a single dark CTA band at the bottom (sandwich rule), Georgia editorial headers, copper as the sole accent."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Practice Command monthly halved (multiplier re-tune, two passes)",
-      "body": [
-        "Internal pricing stack re-tuned in two passes today. Pass 1: Intelligence / Compliance / Integrations 10x → 5x each. Pass 2: Compute 5x → 2x and Messaging 3x → 2x. Total stack moves from 38x → 19x — exactly half.",
-        "Monthly Practice Command prices drop accordingly: PT €1,870 → €950/mo, DE €2,805 → €1,425/mo, CH CHF 3,740 → CHF 1,900/mo. That's a ~50% cut to monthly recurring revenue per Practice Command client vs. where we started the day.",
-        "One-time build is unchanged (PT €8,000, DE €12,000, CH CHF 16,000) — implementation effort is the same; only ongoing operational load is lighter, reflecting maturing tooling (cheaper Claude usage, pre-built MCPs, productized RGPD templates, VPS consolidation, standardized messaging infra) and a more aggressive pilot entry price.",
-        "All open Healthcare quotes (Sara) and any Healthcare prospects should re-quote off the new monthly. Canonical pricing memory and project CLAUDE.md updated to match."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Upload-Post added to internal costs (€15/month)",
-      "body": [
-        "New cost line: Upload-Post at €15/month (multi-platform social media scheduler, supports the organic content strategy Miguel is putting together).",
-        "Monthly burn moves from €300.90 → €315.90."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Kanban columns now cap their height",
-      "body": [
-        "Each column on the Operations board (To do / In progress / Done) is now capped at ~24rem with internal vertical scroll.",
-        "Column header shows the count and a small \"· scroll\" hint once a column has more than 3 cards. Keeps the dashboard footprint stable no matter how Done grows."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Three new tasks on the board, all due 18 May",
-      "body": [
-        "Jo — configure the website chatbot for our purpose (tune the system prompt + knowledge base to land on-brand).",
-        "Jo — add all updated docs to company Google Drive and share the links so dashboard deliverables become clickable (replaces the earlier Drive task on the board).",
-        "Miguel — define the social media organic content strategy (channels, cadence, pillars, examples, KPIs)."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Operations board (internal kanban) added",
-      "body": [
-        "New section at the bottom of the dashboard: an internal To do / In progress / Done kanban.",
-        "Each card shows the task title, owner chip, one-line description, due date (turns orange when due in ≤3 days), and a linked-customer tag when applicable.",
-        "Data lives in Airtable (Tasks table). Add a row with Title, Status, Owner, Description, Due Date and the dashboard picks it up on the next snapshot.",
-        "Seeded with 8 tasks summarizing current open work."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Pipeline view is now compact",
-      "body": [
-        "Customer cards in the pipeline shrunk to one-glance: name + vertical + market + a two-line \"Next\" excerpt. Full details still one click away on the customer page.",
-        "Active stage columns narrowed from 256px → 208px. Empty stage columns shrank to 112px with a discrete em-dash placeholder.",
-        "Net effect: the pipeline section is roughly half as tall."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Recent updates + Activity log: cap to 2, expand for history",
-      "body": [
-        "Both sections now show the 2 most recent entries by default with a \"View N older\" toggle that reveals the rest inside a max-height scrollable container.",
-        "Keeps the page short and partners focused on what changed this week, without losing the historical log."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Website + dashboard aligned to House Standard v1.0",
-      "body": [
-        "Applied the OBLQAI Brand Identity (House Standard v1.0) across both surfaces. The three hard locks are now codified everywhere: one accent (orange #FF8449), two type families (Inter + Georgia), no AI tropes.",
-        "Website (oblqai.com): hero rewritten with Georgia Bold display headline + italic orange accent, cream ground replaces the old cool gradient, sand-paper case-study card replaces the cyan blob. Header on cream-tinted blur. Footer is now ink-ground with the typeset OBLQ·AI wordmark.",
-        "Dashboard: footer now carries the typeset OBLQ·AI wordmark per the placement rule (header carries the mark, footer carries the typeset wordmark — never both). Added the full gray-ramp tokens.",
-        "Promoted section headlines on the website to Georgia across Services, Pricing, Calculator, Methodology, Differentiators, Contact, BlogSection, and DiscoveryCTA."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Dashboard branding now matches the OBLQAI logo",
-      "body": [
-        "Replaced the text wordmark in the header with the actual OBLQAI logo image (black 'oblq' + orange 'Ai'). Also appears small in the footer.",
-        "Retuned the accent color from the copper editorial tone (#C27C4E) to the website orange (#FF8449) so the dashboard reads as the same brand as oblqai.com.",
-        "New favicon — black square + orange dot — to match."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Customer detail pages + Global docs section",
-      "body": [
-        "Customer cards on the pipeline are now clickable — each opens a detail page with the customer's full notes, key fields, and a list of every deliverable we have on file (proposals, decks, demos, research briefs).",
-        "Added a Global / General docs section at the bottom of the main page for reference materials partners might want (Service Blueprint v2, pricing canon, discovery process).",
-        "Moved the Recent updates section down so the main page flow is now: KPIs → Pipeline → Costs → Updates → Activities → Global docs.",
-        "Deliverables are listed by title + filename + type for now. Actual clickable file links depend on where we host the files (see next steps with Joao)."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Full pipeline now visible on the dashboard",
-      "body": [
-        "The \"Customers by stage\" section now shows all 11 planned stages as columns (Lead, Qualified, Discovery, Audit, Proposal, Negotiation, Won, Onboarding, Live, Churned, Lost), not just the ones with active customers.",
-        "Empty stages render as dashed placeholders so partners can see how the pipeline is structured end-to-end.",
-        "Layout switched to a horizontal scroll so the whole flow stays in one row at any screen width."
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Dashboard goes live; partner change log begins",
-      "body": [
-        "Launched the partner operations dashboard at jccosta94.github.io/oblqai-dashboard.",
-        "Reconciled Airtable CRM + costs with GitHub ops so all three surfaces agree. Stage vocabulary now matches the ObliqAI Ops project board: Lead / Qualified / Discovery / Audit / Proposal / Negotiation / Won / Onboarding / Live / Churned / Lost.",
-        "Added OpenAI Codex to internal costs at €25/month (will scale to €100 once usage steps up). Monthly burn now €300.90.",
-        "Cleared the stale €2,499 MRR on Sergio's record — Legal Efficiency Suite pricing hasn't been finalized; old per-vertical pricing no longer applies.",
-        "Pipeline now: Sergio Proposal · Sara/Renato/Zé Maria Discovery · Miranda Lead.",
-        "Next moves: Sergio follow-up · Renato + Zé Maria initial call dates pending."
       ]
     }
   ],
@@ -459,7 +241,7 @@
       "date": "2026-05-19",
       "type": "Discovery call",
       "status": "Completed",
-      "details": "Walked Renato through the 4 Levels of AI. Established Incotin's B2C ambition (reaching particulares with their paint products, anchored on Spain ~4k-unit-per-season reference) and pinned the concrete entry use case: a B2C section on incotin.com.pt plus a guided paint configurator. Engagement positioned as Tier 1 Claude Cowork Setup with Hugo (OpenClaw marketing autopilot) as a Phase 2 upgrade. Headless Airtable CRM and email connector added to Phase 1 scope in the v2 proposal draft.",
+      "details": "Walked Renato through the 4 Levels of AI. Established Incotin's B2C ambition (reaching particulares with their paint products, anchored on Spain ~4k-unit-per-season reference) and pinned the concrete entry use case: a B2C section on incotin.com.pt plus a guided paint configurator. Engagement positioned as Tier 1 Claude Cowork Setup with Hugo (Hermes-based marketing autopilot) as a Phase 2 upgrade. Headless Airtable CRM and email connector added to Phase 1 scope in the v2 proposal draft.",
       "nextStep": "Renato delivers his B2C channels mix + operating-tools list",
       "nextStepDue": "2026-06-15"
     }
@@ -485,7 +267,7 @@
       "vendor": "Hostinger",
       "amountEur": 20.5,
       "cadence": "monthly",
-      "notes": "Hosts OpenClaw, n8n, future Hermes. Cost re-allocates across active customer engagements in monthly review."
+      "notes": "Hosts Hermes, n8n, future Hermes. Cost re-allocates across active customer engagements in monthly review."
     },
     {
       "id": "recwXQFqalk4vtGcQ",
@@ -718,6 +500,258 @@
       "type": "gdoc",
       "url": "https://docs.google.com/document/d/1QuendVdhjldq_TJNN0JyeR_p6y2Q5A2eqtS_4S0Qebk/edit",
       "description": "v1.0 of the house brand standard: logo system, palette (orange #FF8449 + cream/sand/ink + gray ramp), typography (Inter + Georgia). The 26-page formatted PDF lives in the project repo at Brand/OBLQAI-Brand-Identity-House-Standard-v1.pdf — this Drive doc is the searchable Markdown mirror."
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-05-20",
+      "headline": "Renato pilot — Use Cases deck shipped alongside proposal",
+      "bullets": [
+        "Renato gets a two-part deliverable for the 2026-06-15 follow-up: (1) Renato-Proposal.pptx — 8 slides, what we propose; (2) Renato-Use-Cases.pptx — 13 slides, how every flow actually runs through Cowork.",
+        "Use Cases deck covers 11 process flows: online strategy · CRM strategy · website build · consumer-into-CRM funnel · inbound triage · content engine · visuals + scheduling · Google Ads · GMB · weekly review · escalation. Each one shows the schedule → plugin → draft → approve → publish → log loop.",
+        "Both decks copied to dashboard repo (clients/renato/) and Airtable Deliverables. Renato Plan excalidraw (already pushed) remains the integrated canvas view."
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "headline": "Project-wide sweep — OpenClaw → Hermes (Nous Research) across artifacts",
+      "bullets": [
+        "Tier 2 / Autopilot runtime narrative updated everywhere: Hermes (Nous Research, hermes-agent.nousresearch.com) replaces OpenClaw. Hugo brand survives as the OBLQAI-curated marketing product running on top of Hermes.",
+        "163 replacements across 28 files: CLAUDE.md (both root + .claude), claude-cowork-service-blueprint-v2.docx (33 hits), claude-cowork-README.md (13), Comercial/Demos/Advogado-Contratos-* (33 across 6 files), Context/active-pilots.md + verticals.md, all in-flight Renato deliverables (proposal markdown, .pptx, requirements .xlsx, master plan .excalidraw, discovery call summary, requirements summary), the website blogPosts.ts + translator agent prompt, the Law-Firms vertical checklist, and the snapshot.json deliverable descriptions (the historical updates array is preserved unchanged).",
+        "Two manual cleanups after the automated sweep: the 'Key Terminology' Hermes entry in .claude/CLAUDE.md rewrote itself into a self-contradiction (Hermes was both ours and Nous's); rewritten to clarify Hermes is Nous Research's open-source agent used as our Tier 2 runtime. The 'Agent orchestration' tech-stack line was similarly clarified.",
+        "Drive text mirrors NOT refreshed in this sweep — canonical files live in the iCloud-synced repo and are now consistent; Drive Doc copies still carry the older OpenClaw wording. To be regenerated next time a deliverable goes out the door.",
+        "UPDATES.md historical entries deliberately preserved as written — they describe what was true on the day of each entry."
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "headline": "Renato — proposal deck v3 — added cost-savings slide (PT-anchored)",
+      "bullets": [
+        "Renato-Proposal.pptx now 8 slides. New slide 3: 'The alternative cost picture — Portugal' — four columns showing what Incotin would spend to stand up the same B2C surface any other way.",
+        "Ranges re-anchored from CH/UK-coded benchmarks to PT SMB reality after Joao's first pass: PEOPLE column reframed as 'agency OR junior + freelance' (not a five-person team); BUILDS pared to just the configurator (€4-12k) plus the cheap shortcuts a PT SMB would actually approve; STACK kept as global SaaS list pricing for now.",
+        "No OBLQAI price on the slide — explicit footer states it's an alternative-cost reference, not a quote. Pricing stays as a proposal-call conversation.",
+        "Standalone single-slide source kept at Renato-Proposal-CostSlide.pptx for future reuse / standalone send.",
+        "Diagnosed and noted: the deck was iCloud-evicted (size 1.18MB local metadata but zero blocks). Required 'brctl download' from Joao's Terminal before the sandbox could read it. Worth remembering for next iCloud-locked binary."
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "Renato — per-customer requirements workbook v1 adapted from template",
+      "bullets": [
+        "Copied the canonical 'Claude Coworker Requirements Blueprint' from Discovery Docs/ (template untouched) and pre-filled 16 sheets for Renato/Incotin.",
+        "Captured 8 workflows (configurator, B2C inbound triage, content & ads, GMB, strategy plugin, headless CRM, B2C site updates, performance review), 6 Claude role cards, 6 skills, 17 MCP/connector entries, 14 actions+permissions rows, 7 plugin specs (Phase 1 + Hugo Phase 2).",
+        "Every unresolved item marked TBD with a target resolution date — most close out when Renato delivers his channels/tools list on 2026-06-15.",
+        "Companion summary uploaded to Drive (Renato folder); binary xlsx lives in the iCloud-synced repo at client-implementations/Renato/Renato-Requirements-v1.xlsx.",
+        "Airtable Deliverables row created and linked to Renato customer record."
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "headline": "Renato — proposal deck shipped (with OBLQAI logo + weekly cadence) + master plan + refreshed notes wired to Drive, Airtable, and dashboard",
+      "body": [
+        "Three new artifacts pushed for Renato: (a) the 7-slide proposal-mode deck Renato-Proposal.pptx now carries the OBLQAI wordmark on every slide and drops the 'Internal draft' caption — review cadence stated as weekly with Joao or Tiago Fernandes for the first 2 months (settling to monthly after the pilot); (b) the master plan diagram Joao compiled (Renato_Plan.excalidraw, 2,364 elements, 2.1 MB) combining the Capabilities Map + Scope Summary + Process Flow 1 (Consumer Acquisition) + Process Flow 3 (Inbound Triage) + the Still-in-Motion panel into a single canvas; (c) a refreshed Drive copy of the discovery call notes with cleaner formatting.",
+        "All three are now linked from the Renato CRM card on this dashboard and recorded as Deliverable rows in the OBLQAI Ops Airtable (linked to the Renato customer record).",
+        "Drive limitation noted: the GDrive MCP can't ingest binary uploads larger than ~265KB inline per tool call. The proposal .pptx (1.2MB) and the master plan .excalidraw (2.1MB) stay as canonical files in client-implementations/Renato/; their Drive entries are searchable content mirrors / pointer docs. If clean Drive copies of the binaries matter, Joao can upload them through the Drive UI directly.",
+        "Process Flows 4-7 (E-commerce model · Checkout & Payment · Customer Service Window · Escalation Playbook) are NOT in this round of uploads — flagged earlier for Joao to review before sharing further."
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "Sergio + Sara + Zé Maria deliverables uploaded to Drive — every CRM card's deliverable now opens a working Google Doc",
+      "body": [
+        "Created OBLQAI → Clients → Sergio — Alpaca Law, OBLQAI → Clients → Sara — Beauty Clinic, and OBLQAI → Clients → Zé Maria — Agency + Construction in Drive. Uploaded 10 deliverables total: 7 Sergio docs (Meeting Notes, Alpaca research brief, Use-Case recommendations, Next-Steps plan, Alpaca-vs-Cowork plain-language EN + PT, formal proposal), Sara's 16-slide aesthetic-clinic deck, Zé Maria's v0.2 proposal, and the Example Agency reference deck Zé Maria used as a benchmark. Every customer's deliverables array in snapshot.json now has working URLs.",
+        "Conversion path: the GDrive MCP still rejects docx/pptx/pdf binary uploads (same error as prior rounds), so docs were converted server-side — pandoc for the 7 Sergio .docx files, python-pptx text extraction for Sara's and Zé Maria's .pptx decks, pdftotext for the Example reference. Each Drive copy is a Markdown/text mirror; the canonical formatted source files remain in the project repo under client-implementations/.",
+        "Two staleness flags surfaced inline: (a) Sara's deck slide 3 still carries the pre-2026-05-14 Practice Command pricing (Tier 1 €2.000–2.500 / €1.299/mo; Tier 2 €3.000–4.000 / €2.299/mo); current canonical is PT €8.000 / €950/mo. The .pptx source needs revising before any further client send. (b) Sergio's Next-Steps Plan internal pricing note references the parked Legal Efficiency Suite numbers — flagged inline.",
+        "Operations board: 'Jo to add all updated docs to company Google Drive + share links on dashboard' moved from Todo → In progress; description updated to reflect what's done and what's still outstanding. Outstanding for the next pass: Miranda — she has 4 deliverables on file (Implementation Proposal pdf, Pitch Deck pptx, Live Demo html, Demo Video Script md) that were NOT requested in this round; her stage is still Lead so this may be intentional but flagging for explicit Joao decision.",
+        "Sergio activity entries (proposal sent, etc.) and Sara/Zé Maria touches are NOT yet logged in the Activities section — offered separately, awaiting Joao's call on whether to backfill from history or only log new touches going forward."
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "Global Docs uploaded to Drive — all six dashboard globalDocs links now live; staleness flags surfaced inline",
+      "body": [
+        "Created OBLQAI → General Docs in Drive and uploaded all six globalDocs as Google Docs (the GDrive MCP doesn't accept docx/pdf binary uploads in this session — the canonical .docx and .pdf source files remain in the project repo and are referenced from each Drive doc). Every dashboard globalDoc URL is now wired to a live Drive link.",
+        "Service Blueprint v2 uploaded as a Markdown-converted searchable mirror with a clear pointer back to the canonical .docx in repo. Practice Command Pricing Canon written fresh from memory + CLAUDE.md and uploaded as a new standalone doc — supersedes the Healthcare row of the Service Blueprint. Discovery Process Overview, ROI Scoring Framework, Brand Identity House Standard, and the four Vertical Checklists files (README + Home Services + Healthcare Clinics + Law Firms) uploaded into a Vertical Checklists subfolder.",
+        "Three staleness flags surfaced inline at the top of each affected doc and noted in the dashboard descriptions: (a) Discovery Process Overview still references the deprecated €1,500 audit and the old 4-vertical list (restaurants / health & beauty / real estate are out of scope); (b) Vertical Checklists README still links to those out-of-scope vertical files; (c) Healthcare Clinics checklist still carries the pre-2026-05-14 Practice Command monthly numbers (€1,870 / €2,805 / CHF 3,740 — current canonical is €950 / €1,425 / CHF 1,900); (d) Home Services checklist contains unfinalized Field Service Command pricing ranges in writing (€5-12k / €15-30k / €1,500-3,500/mo). Drive docs include warnings; source files on disk need revising before treating as canonical.",
+        "The Service Blueprint .docx itself also carries the OLD Healthcare pricing row (€2,000–2,500 setup / €1,299 monthly) — the Drive doc flags this; revising the actual .docx is a separate task on the board if/when the blueprint is next revved."
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "Renato proposal v2 (CRM + email added); Brand Standard approved; Legal Efficiency pricing task parked; June 15 follow-up queued",
+      "body": [
+        "Renato proposal updated to v2 — added a fourth Phase-1 bundle: headless Airtable CRM (Contacts / Conversations / Stores / Products, manipulated through Claude, no Airtable UI for Renato's team) and an email connector (inbound triage into the same CRM, pt-PT reply drafts, weekly digest). Reasoning: Joao flagged on the discovery call that Renato is likely to want both, and they sit beneath everything else in the proposal — better to surface them as scoped from Day 1 than to land them as a surprise later. The email provider stays dependent on Renato's 2026-06-15 tools-list decision. v2 doc is now linked from the Renato CRM card; v1 remains in Drive as history.",
+        "Operations board changes: 'Set date for initial call with Renato' marked Done (call completed 2026-05-19). 'Approve OBLQAI Brand Standard v1.0 §01-§03' marked Done (approved by Joao 2026-05-19; was previously overdue against its 2026-05-16 due date). 'Finalize Legal Efficiency Suite pricing' removed from the board for now — parking the work, will re-add when Sergio's deal forces the question.",
+        "New task added for Joao with a 2026-06-15 due date: follow up with Renato on the channels & tools list. Pairs with the Cowork scheduled task that fires 2026-06-16 morning to either summarize what arrived or draft a pt-PT chase email.",
+        "Internal note: the discovery workbook (Discovery Docs/claude_coworker_requirements_blueprint_with_workflow_map.xlsx) was checked for coverage of per-client CLAUDE.md / memory.md / tasks.md / Context/ scaffolding. Result: not covered. The workbook addresses the Anthropic-side architecture (skills, MCP, connectors, plugins, agents) but nothing about the project-files structure Jo's global CLAUDE.md mandates. Worth a follow-up to either add a sheet or extend one of the discovery markdowns."
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "Renato (Incotin) discovery call complete — Cowork pilot anchored on B2C website + configurator; cost line correction on Upload-Post",
+      "body": [
+        "Renato is Incotin (incotin.com.pt), a paint manufacturer based in Lavra/Matosinhos. Construction + furniture/metalmecânica products, INCOMIX color-matching as the differentiator, markets across PT/ES/FR + Lusophone Africa. Strong B2B trade backbone, near-zero on AI and consumer marketing. Concrete ask is opening a B2C channel for end consumers (particulares), anchored on a new B2C section of their website with a guided paint configurator that helps consumers pick the right product for their job.",
+        "Engagement positioned as Tier 1 Claude Cowork Setup using the website rebuild as the natural entry use case, with Hugo (OpenClaw marketing autopilot, Tier 2) as a Phase 2 upgrade once the consumer funnel is live and producing data. CRM record updated to reflect this — Renato was previously marked as a Tier 2 OpenClaw lead; that has been corrected to Cowork-first with Hugo as the upgrade path, consistent with the house rule.",
+        "Renato committed to deliver his final decisions on B2C channels (own webshop vs. marketplaces vs. retail-led vs. hybrid) and operating tool stack by 2026-06-15. Proposal is therefore a roadmap, not a fixed scope, until that list lands. A Cowork scheduled task fires 2026-06-16 morning to either summarize what arrived or draft a polite pt-PT chase email for Joao's review.",
+        "Two new deliverables now in Drive and linked from the Renato CRM card: the full discovery-call summary and the Cowork roadmap proposal draft. Both live in OBLQAI → Clients → Renato — Incotin. The proposal includes an Internal Notes section that needs stripping before any client-facing version is sent, and carries no pricing — off-blueprint vertical, Joao to set the model before any number goes in writing.",
+        "Cost correction: Upload-Post monthly subscription updated from €15 → €25 (the €15 figure was entered in error on 2026-05-14; €25 is the actual billing). Monthly burn moves from €315.90 → €325.90. No other cost-line changes."
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "oblqai.com goes bilingual — EN + pt-PT live with header toggle",
+      "body": [
+        "The marketing site at oblqai.com now ships in English and European Portuguese. A copper-accented PT | EN toggle in the top bar (desktop and mobile) switches the whole site — chrome, marketing copy, the three blog posts, and the SEO meta. URL strategy is path-prefix (`/pt/...` for Portuguese, `/...` for English) so both languages are independently crawlable. Language choice persists across reload and route navigation.",
+        "Business meaning: we can now run paid and organic acquisition in Portuguese without sending prospects to an English page. The GDPR-compliant-AI post and the founder-POV post on lawyer supervision both rank for queries Portuguese clinic owners and lawyers actually type — the Portuguese version unlocks that surface directly. Same infrastructure is extensible to German (1.5x PT market multiplier) when we decide to lean into DE acquisition.",
+        "Process note for partners: this was shipped via a sub-agent pipeline inside Claude Code — i18n-architect → pt-translator → react-implementer → playwright-qa → brand-qa. The Playwright behavioral suite (15 assertions, all green) caught three runtime bugs that static tooling missed: i18next resolution overreach, a LangGuard re-render race, and a featured-post filter regression. Static QA alone would have shipped them. Lesson institutionalized: behavioral testing is now mandatory for user-visible UI features.",
+        "Scope-excluded by design: Pricing.tsx remains dormant with v1-era pricing copy in both languages — component is unmounted so not visible, content debt for when we remount it with Practice Command canonical numbers. Blog post bodies stay translated only to pt-PT; further languages are a future decision.",
+        "Technical follow-ups parked deliberately: production JS bundle is 735KB in a single chunk (Vite warns past 500KB). Route-level code-splitting is the standard fix, but we are deferring until real-world TTI data from PT/DE traffic justifies the work — premature optimization without measurement is the wrong tradeoff for a B2B marketing surface that mostly converts on desktop. Will revisit if a mobile-heavy paid acquisition campaign launches."
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "headline": "Weekly recap: no material changes to CRM or costs",
+      "body": [
+        "Pipeline holds steady since 2026-05-16: Sergio (Proposal), Sara / Renato / Zé Maria (Discovery), Miranda (Lead). Five active records — no new leads, no stage moves, no MRR or setup-fee changes, no package/tier/market changes.",
+        "No new or changed cost lines. Monthly burn unchanged at €315.90/mo (Anthropic Claude Pro Max €221.40 still dominant; Codex €25, Google AI €22, Hostinger VPS €20.50, Upload-Post €15, Google Workspace €12; Firebase, GitHub, Cowork, n8n at €0).",
+        "Tasks board: 4 In progress, 4 Todo, 2 Done. Brand Standard v1.0 §01-§03 approval (Jo) slipped past its 2026-05-16 due date over the weekend and is now overdue. Three tasks land their due date today (2026-05-18): chatbot tuning (Jo), Drive doc upload (Jo), social content strategy (Miguel).",
+        "Two pilots still gated on prospect availability: Renato (first OpenClaw pilot) and Zé Maria (rescheduling the missed initial call). Sergio's proposal response is the other open thread — follow-up due 2026-05-19.",
+        "Nothing to escalate this week — system checked, state is intentionally unchanged."
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "headline": "Site repositioned as Claude Cowork implementation partner",
+      "body": [
+        "Homepage rewritten end-to-end to lead with Claude Cowork, not generic AI automation. New hero: \"Claude Cowork, implemented for European SMBs.\" Eyebrow, subhead, footer tagline, methodology, and differentiators all updated to lead on the implementation-partner role rather than the prior \"integration layer / productized AI operating layer\" framing.",
+        "New \"Bringing Claude Cowork into your office\" section on the homepage. Stylized Cowork desktop mockup matching the real app's three-pane layout (Chat / Cowork / Code mode tabs, left nav + Recents, center thread with Act / Opus / Queue composer, right Progress + workspace + Context panels) running a live Q1-supplier-audit demo task with a copper human-in-the-loop review banner. Five floating connector tiles (QuickBooks · HubSpot · Google Drive · Airtable · Gmail) ring the mockup with Connected status badges so the integration story reads at a glance.",
+        "Five hero outcome cards replaced with Cowork-anchored copy: An autonomous operations engine · A tireless executive assistant · Bespoke proposals in minutes · Absorb growth without adding headcount · Shift from builder to editor.",
+        "Services section rewritten as \"Four pieces of work, one Cowork install\" — Cowork Install & Configure / MCP & Connector Engineering / Agentic Workflow Design / Team Adoption & Managed Service. Differentiators rewritten as \"The Cowork implementation partner\" — Anthropic's official agent / We live in the agent / Live in 30 days / Stay on the line after launch.",
+        "Use Cases page: five Aha! cards now carry Cowork-specific narratives across Legal, E-commerce, Marketing, Healthcare, SaaS. Slider labels swapped from \"Before AI / After AI\" to \"Before Claude / With Claude Cowork\", and a per-industry \"Drafted / Analyzed / Recommended / Triaged by Claude\" badge now sits on the After side of every comparison.",
+        "Live at https://oblqai.com — deployed via Firebase Hosting (claude-cowork-consulting project)."
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "headline": "Website refresh shipped — new Use Cases page + blog repositioned",
+      "body": [
+        "New /use-cases page is live on oblqai.com — an interactive Before/After slider paired with a 5-industry tile picker (Legal, E-Commerce, Marketing, Healthcare, Software). Each scenario is anchored to a concrete operational outcome: €2.4M risk surfaced on a 247-contract M&A diligence, €340k/mo margin from pricing intelligence, a complete multi-channel launch kit in 4 hours vs. a 6-week agency cycle, €58,200 recovered from a denied-claims backlog, support backlog cut 71% with first-response time down from 14h to 4m.",
+        "Blog rewritten and repositioned. The prior set of fictional client case studies has been removed — composites that read as real are a credibility risk for the brand. Replaced with three new posts spanning three angles: SEO authority (GDPR-compliant AI for clinics in CH/DE/PT), founder POV (why we don't sell autonomous AI to law firms — bylined Joao), and operational walkthrough (what Practice Command actually replaces in a clinic by week 1, 4, 12). Seven more posts queued in the editorial slate.",
+        "Header navigation now exposes Use Cases as a top-level link alongside Services, Process, ROI Calculator, and Blog.",
+        "House standard preserved end-to-end: cream-on-cream layout with a single dark CTA band at the bottom (sandwich rule), Georgia editorial headers, copper as the sole accent."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Practice Command monthly halved (multiplier re-tune, two passes)",
+      "body": [
+        "Internal pricing stack re-tuned in two passes today. Pass 1: Intelligence / Compliance / Integrations 10x → 5x each. Pass 2: Compute 5x → 2x and Messaging 3x → 2x. Total stack moves from 38x → 19x — exactly half.",
+        "Monthly Practice Command prices drop accordingly: PT €1,870 → €950/mo, DE €2,805 → €1,425/mo, CH CHF 3,740 → CHF 1,900/mo. That's a ~50% cut to monthly recurring revenue per Practice Command client vs. where we started the day.",
+        "One-time build is unchanged (PT €8,000, DE €12,000, CH CHF 16,000) — implementation effort is the same; only ongoing operational load is lighter, reflecting maturing tooling (cheaper Claude usage, pre-built MCPs, productized RGPD templates, VPS consolidation, standardized messaging infra) and a more aggressive pilot entry price.",
+        "All open Healthcare quotes (Sara) and any Healthcare prospects should re-quote off the new monthly. Canonical pricing memory and project CLAUDE.md updated to match."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Upload-Post added to internal costs (€15/month)",
+      "body": [
+        "New cost line: Upload-Post at €15/month (multi-platform social media scheduler, supports the organic content strategy Miguel is putting together).",
+        "Monthly burn moves from €300.90 → €315.90."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Kanban columns now cap their height",
+      "body": [
+        "Each column on the Operations board (To do / In progress / Done) is now capped at ~24rem with internal vertical scroll.",
+        "Column header shows the count and a small \"· scroll\" hint once a column has more than 3 cards. Keeps the dashboard footprint stable no matter how Done grows."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Three new tasks on the board, all due 18 May",
+      "body": [
+        "Jo — configure the website chatbot for our purpose (tune the system prompt + knowledge base to land on-brand).",
+        "Jo — add all updated docs to company Google Drive and share the links so dashboard deliverables become clickable (replaces the earlier Drive task on the board).",
+        "Miguel — define the social media organic content strategy (channels, cadence, pillars, examples, KPIs)."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Operations board (internal kanban) added",
+      "body": [
+        "New section at the bottom of the dashboard: an internal To do / In progress / Done kanban.",
+        "Each card shows the task title, owner chip, one-line description, due date (turns orange when due in ≤3 days), and a linked-customer tag when applicable.",
+        "Data lives in Airtable (Tasks table). Add a row with Title, Status, Owner, Description, Due Date and the dashboard picks it up on the next snapshot.",
+        "Seeded with 8 tasks summarizing current open work."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Pipeline view is now compact",
+      "body": [
+        "Customer cards in the pipeline shrunk to one-glance: name + vertical + market + a two-line \"Next\" excerpt. Full details still one click away on the customer page.",
+        "Active stage columns narrowed from 256px → 208px. Empty stage columns shrank to 112px with a discrete em-dash placeholder.",
+        "Net effect: the pipeline section is roughly half as tall."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Recent updates + Activity log: cap to 2, expand for history",
+      "body": [
+        "Both sections now show the 2 most recent entries by default with a \"View N older\" toggle that reveals the rest inside a max-height scrollable container.",
+        "Keeps the page short and partners focused on what changed this week, without losing the historical log."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Website + dashboard aligned to House Standard v1.0",
+      "body": [
+        "Applied the OBLQAI Brand Identity (House Standard v1.0) across both surfaces. The three hard locks are now codified everywhere: one accent (orange #FF8449), two type families (Inter + Georgia), no AI tropes.",
+        "Website (oblqai.com): hero rewritten with Georgia Bold display headline + italic orange accent, cream ground replaces the old cool gradient, sand-paper case-study card replaces the cyan blob. Header on cream-tinted blur. Footer is now ink-ground with the typeset OBLQ·AI wordmark.",
+        "Dashboard: footer now carries the typeset OBLQ·AI wordmark per the placement rule (header carries the mark, footer carries the typeset wordmark — never both). Added the full gray-ramp tokens.",
+        "Promoted section headlines on the website to Georgia across Services, Pricing, Calculator, Methodology, Differentiators, Contact, BlogSection, and DiscoveryCTA."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Dashboard branding now matches the OBLQAI logo",
+      "body": [
+        "Replaced the text wordmark in the header with the actual OBLQAI logo image (black 'oblq' + orange 'Ai'). Also appears small in the footer.",
+        "Retuned the accent color from the copper editorial tone (#C27C4E) to the website orange (#FF8449) so the dashboard reads as the same brand as oblqai.com.",
+        "New favicon — black square + orange dot — to match."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Customer detail pages + Global docs section",
+      "body": [
+        "Customer cards on the pipeline are now clickable — each opens a detail page with the customer's full notes, key fields, and a list of every deliverable we have on file (proposals, decks, demos, research briefs).",
+        "Added a Global / General docs section at the bottom of the main page for reference materials partners might want (Service Blueprint v2, pricing canon, discovery process).",
+        "Moved the Recent updates section down so the main page flow is now: KPIs → Pipeline → Costs → Updates → Activities → Global docs.",
+        "Deliverables are listed by title + filename + type for now. Actual clickable file links depend on where we host the files (see next steps with Joao)."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Full pipeline now visible on the dashboard",
+      "body": [
+        "The \"Customers by stage\" section now shows all 11 planned stages as columns (Lead, Qualified, Discovery, Audit, Proposal, Negotiation, Won, Onboarding, Live, Churned, Lost), not just the ones with active customers.",
+        "Empty stages render as dashed placeholders so partners can see how the pipeline is structured end-to-end.",
+        "Layout switched to a horizontal scroll so the whole flow stays in one row at any screen width."
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Dashboard goes live; partner change log begins",
+      "body": [
+        "Launched the partner operations dashboard at jccosta94.github.io/oblqai-dashboard.",
+        "Reconciled Airtable CRM + costs with GitHub ops so all three surfaces agree. Stage vocabulary now matches the ObliqAI Ops project board: Lead / Qualified / Discovery / Audit / Proposal / Negotiation / Won / Onboarding / Live / Churned / Lost.",
+        "Added OpenAI Codex to internal costs at €25/month (will scale to €100 once usage steps up). Monthly burn now €300.90.",
+        "Cleared the stale €2,499 MRR on Sergio's record — Legal Efficiency Suite pricing hasn't been finalized; old per-vertical pricing no longer applies.",
+        "Pipeline now: Sergio Proposal · Sara/Renato/Zé Maria Discovery · Miranda Lead.",
+        "Next moves: Sergio follow-up · Renato + Zé Maria initial call dates pending."
+      ]
     }
   ]
 }
