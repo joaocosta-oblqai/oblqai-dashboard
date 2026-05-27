@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T00:00:00Z",
+  "generatedAt": "2026-05-27T19:59:54Z",
   "customers": [
     {
       "id": "rect4kxOi5Xzv7eSK",
@@ -67,26 +67,54 @@
       ]
     },
     {
-      "id": "recFSvcEJmF9r10Gg",
+      "id": "recXeoNJzHKc8Xu0N",
       "slug": "sara",
       "name": "Sara — Beauty Clinic",
       "contact": "Sara",
       "vertical": "Healthcare Clinics",
       "verticalPackage": "Practice Command",
-      "tier": "TBD",
-      "stage": "Discovery",
+      "tier": "Claude Cowork Setup (Tier 1) — Practice Command",
+      "stage": "Proposal",
       "market": "Portugal",
-      "nextAction": "Discovery call — 15 May 2026, 18:00",
-      "nextActionDate": "2026-05-15",
-      "lastTouch": "2026-05-02",
-      "notes": "Aesthetic clinic, Portugal. Practice Command pilot. GDPR Article 9 (special-category health data) handling rules apply. Confirm market, language, scope on discovery call.",
+      "nextAction": "Send PT-translated proposal (DRAFT signed off, .pptx delivery) — Fri 2026-05-29. After review, joint scope sign-off, then Phase 1 kick-off.",
+      "nextActionDate": "2026-05-29",
+      "lastTouch": "2026-05-27",
+      "notes": "Aesthetic clinic, Portugal. Practice Command pilot. Introductory call held 2026-05-27 (not a formal discovery). Four candidate priorities surfaced: P1 patient journey messaging, P2 AI next-best-action suggestions, P3 digital pacote tracking, P4 pre-consultation briefing. Cowork-first; Tier 2 not pre-promised. GDPR Article 9 (special-category health data) handling applies. Booking platform (BUK or book.pt) and exact perimeter of existing automation [TBC] in next conversation. Practice Command canonical pricing applies (PT €8k setup / €950 monthly) but no number in writing until Joao signs off.",
       "deliverables": [
         {
-          "title": "Aesthetic Clinic — 10 Use Cases (PT)",
+          "title": "[SUPERSEDED] Aesthetic Clinic — 10 Use Cases (PT)",
           "filename": "10-casos-de-uso-clinica-estetica.pptx",
           "type": "gdoc",
           "url": "https://docs.google.com/document/d/1mbOe7aSCw6yrzH-PAov-UawVpp_JgendyK9jXgg0-d0/edit",
-          "description": "16-slide PT pitch deck for Sara — context, two-tier approach, 10 use-case catalogue, next steps. STALE pricing on slide 3 (carries pre-2026-05-14 Practice Command numbers); flagged inline in the Drive doc. Source .pptx in client-implementations/Sara/."
+          "description": "[SUPERSEDED 2026-05-27] Earlier 16-slide PT pitch deck used pre-discovery. Carries STALE pre-2026-05-14 pricing on slide 3. Replaced by Sara-Proposal.pptx (Claude Cowork Setup proposal, 8 slides, no pricing) and the Cowork-pilot-proposal-DRAFT.md markdown source. Kept for audit trail."
+        },
+        {
+          "title": "Pilot Proposal — Claude Cowork Setup (deck)",
+          "filename": "Sara-Proposal.pptx",
+          "type": "pptx",
+          "url": "https://github.com/jccosta94/oblqai-dashboard/blob/main/clients/sara/Sara-Proposal.pptx",
+          "description": "Current 8-slide PT proposal deck on the v8 (20x11.25, white + cream + one black CTA) visual template. Renato skeleton, ClinicaEstetica v8 theme. Sections: Cover · O que propomos (4 prioridades) · Arquitetura loop · Fora da Fase 1 · Perguntas em aberto · Como chegamos lá · Iterações futuras · Próximo passo (black CTA). No pricing. Source .pptx in client-implementations/Sara/; markdown source in Cowork-pilot-proposal-DRAFT.md."
+        },
+        {
+          "title": "Pilot Proposal — Claude Cowork Setup (deck, GDrive)",
+          "filename": "Sara-Proposal.pptx (text)",
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/19FZiwy4byFsCnHlklFuTkJTHTcGtusG11wVGydR_eqQ/edit",
+          "description": "Text-extracted GDrive mirror of Sara-Proposal.pptx — opens directly in Drive; formatting lives in the .pptx."
+        },
+        {
+          "title": "Introductory Meeting Summary — 2026-05-27",
+          "filename": "2026-05-27-introductory-call-summary.md",
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/19cKq8kFYBn6gO_rn9d2uZ4RBKkXWq_gcNypA9V1i6HI/edit",
+          "description": "Renato-pattern call summary (9 sections: Prospect snapshot · What Sara wants · What I walked her through · What we confirmed · Verification flags · Open questions · Diagnostic read · Action items table · Risks). Source .md in client-implementations/Sara/."
+        },
+        {
+          "title": "Cowork Pilot Proposal — DRAFT (markdown working draft)",
+          "filename": "Cowork-pilot-proposal-DRAFT.md",
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1abAiNFKI2wIj53KmuFpSo5aFm3W3MsrDelsIjoL8ptI/edit",
+          "description": "11-section markdown working draft following the Renato Cowork-roadmap-proposal-DRAFT.md framework. READ ME FIRST callout at top. Section 5 = self-improving-loop architecture (3 persistent layers + 5-step closed loop + Day-30 production walkthrough). Internal notes at bottom (strip for client). EN only; pt-PT translation pass pending Joao sign-off. No pricing."
         }
       ]
     },
@@ -134,11 +162,11 @@
           "description": "Tier 1 Cowork roadmap anchored on B2C website + Claude-powered configurator + headless Airtable CRM + email connector. Hugo as Phase 2. No pricing — Joao to set once 2026-06-15 list lands. Includes Internal Notes section to strip before any client send. v1 doc still in Drive as history."
         },
         {
-          "title": "Renato Proposal — B2C Pilot (deck)",
+          "title": "Pilot Proposal — Claude Cowork Setup (deck, GDrive 2026-05-20)",
           "filename": "Renato-Proposal.pptx",
           "type": "pptx",
-          "url": "https://docs.google.com/document/d/1E8v-roLUyQ6V7EqtKbvK3lOTB4z0IwggsfVnQ7DdxN8/edit",
-          "description": "8-slide proposal deck (was 7). Adds 'The alternative cost picture — Portugal' as slide 3: four columns (PEOPLE / BUILDS / STACK / MISTAKES) showing what Incotin would spend any other way, anchored on PT SMB ranges (agency or junior + freelance for headcount; configurator as the one realistic build; freemium-tier-aware SaaS; opportunity cost of delayed B2C entry). Brand standard (cream + copper + Georgia/Calibri); no OBLQAI pricing claim on the slide — alternative-cost reference only."
+          "url": "https://docs.google.com/document/d/1DBug7277oIsPB6S8RyHsNpo9MZ7fog5fW65AeX-Wnzc/edit",
+          "description": "Text-extracted GDrive mirror of the current Renato-Proposal.pptx (2026-05-20, 8 slides). Replaces the earlier 2026-05-19 conversion. Formatting lives in the .pptx."
         },
         {
           "title": "Discovery Call Notes — 2026-05-19 (refreshed)",
@@ -160,6 +188,13 @@
           "type": "xlsx",
           "url": "https://docs.google.com/document/d/1iT-VZxOEi1VlnwLt35De6inq097RzDdP9U8Zs6vlhGM/edit",
           "description": "Per-customer adaptation of the canonical discovery/requirements workbook. 16 sheets pre-filled for Renato/Incotin (customer context, 8 workflows, current/future workflow maps, role cards, 6 skills, 17 MCP/connectors, 14 action/permission rows, 7 plugin specs). Every unresolved item marked TBD — most resolve when Renato delivers channels/tools on 2026-06-15. Binary xlsx lives in the iCloud-synced repo; the Drive link is a companion Markdown summary."
+        },
+        {
+          "title": "Use Cases — How Cowork Runs in Practice (deck, GDrive 2026-05-20)",
+          "filename": "Renato-Use-Cases.pptx (text)",
+          "type": "gdoc",
+          "url": "https://docs.google.com/document/d/1TAWanzp6p5WAYUhuv5CPzRRAHZV4deROrsrcZmoA7K8/edit",
+          "description": "13-slide companion deck text-extracted to GDrive. 11 process flows: Consumer-to-CRM · Inbound triage · Content · Escalation · Visuals · Weekly plan · Google Ads · GMB · Website updates · Strategy · CRM strategy. Formatting lives in the .pptx."
         }
       ]
     },
@@ -503,6 +538,18 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-27",
+      "headline": "Sara introductory call held — proposal due Friday; Renato/Sara files all wired to dashboard + GDrive",
+      "body": [
+        "Sara introductory call (NOT a formal discovery) held 2026-05-27. Four candidate priorities surfaced: P1 patient journey messaging, P2 AI next-best-action suggestions, P3 digital pacote tracking, P4 pre-consultation briefing. Cowork-first; Tier 2 not pre-promised. Sara expects written proposal by Fri 2026-05-29.",
+        "Adopted the Renato two-file markdown framework as the default for every client engagement: `YYYY-MM-DD-<meeting-type>-call-summary.md` + `Cowork-<purpose>-proposal-DRAFT.md` per client, .docx/.pptx only after Joao signs off and pt-PT translation pass runs. Spec codified in Context/client-doc-framework.md.",
+        "Sara deliverables shipped this round: Sara-Proposal.pptx (8 slides, v8 visual theme — mostly white + cream + one black CTA), 2026-05-27-introductory-call-summary.md (Renato-pattern 9 sections), Cowork-pilot-proposal-DRAFT.md (11-section proposal with self-improving-loop architecture as Section 5). All three mirrored to oblqai-dashboard/clients/sara/ and uploaded as Google Docs to OBLQAI → Clients → Sara — Beauty Clinic.",
+        "Renato GDrive refreshed: Use-Cases deck (was missing) + 2026-05-20 proposal deck both now have GDrive mirrors. Dashboard mirror at oblqai-dashboard/clients/renato/ was already complete.",
+        "Sara customer record updated: stage Discovery → Proposal, tier set to Tier 1 Practice Command, lastTouch 2026-05-27, nextAction \"send PT-translated proposal Fri 2026-05-29\". Older 16-slide \"10 casos de uso\" deck flagged as SUPERSEDED (carries stale pre-2026-05-14 pricing).",
+        "Sara-Use-Cases.pptx still to build — v8 visual theme on Renato use-cases skeleton (one process flow per priority). Next session if proposal deck visual lands well."
+      ]
+    },
     {
       "date": "2026-05-21",
       "headline": "Renato pilot — proposal + use cases sent, awaiting feedback",

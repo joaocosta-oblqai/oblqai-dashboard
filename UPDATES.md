@@ -18,6 +18,17 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-27 — Sara introductory call held — proposal due Friday; Renato/Sara files all wired to dashboard + GDrive
+
+- **Sara introductory call (NOT a formal discovery) held 2026-05-27.** Four candidate priorities surfaced: P1 patient journey messaging, P2 AI next-best-action suggestions, P3 digital pacote tracking, P4 pre-consultation briefing. Cowork-first; Tier 2 not pre-promised. Sara expects written proposal by Fri 2026-05-29.
+- **Adopted the Renato two-file markdown framework as the default for every client engagement:** `YYYY-MM-DD-<meeting-type>-call-summary.md` + `Cowork-<purpose>-proposal-DRAFT.md` per client, .docx/.pptx only after Joao signs off and pt-PT translation pass runs. Spec codified in `Context/client-doc-framework.md`.
+- **Sara deliverables shipped this round:** `Sara-Proposal.pptx` (8 slides, v8 visual theme — mostly white + cream + one black CTA), `2026-05-27-introductory-call-summary.md` (Renato-pattern 9 sections), `Cowork-pilot-proposal-DRAFT.md` (11-section proposal with self-improving-loop architecture as Section 5). All three mirrored to `oblqai-dashboard/clients/sara/` and uploaded as Google Docs to OBLQAI → Clients → Sara — Beauty Clinic.
+- **Renato GDrive refreshed:** Use-Cases deck (was missing on GDrive) + 2026-05-20 proposal deck both now have GDrive mirrors. Dashboard mirror at `oblqai-dashboard/clients/renato/` was already complete.
+- **Sara customer record updated:** stage Discovery → Proposal, tier set to Tier 1 Practice Command, lastTouch 2026-05-27, nextAction "send PT-translated proposal Fri 2026-05-29". Older 16-slide "10 casos de uso" deck flagged as SUPERSEDED (carries stale pre-2026-05-14 pricing).
+- **Sara-Use-Cases.pptx still to build** — v8 visual theme on Renato use-cases skeleton (one process flow per priority). Next session if the proposal-deck visual lands well.
+
+---
+
 ## 2026-05-21 — Renato pilot — proposal + use cases sent, awaiting feedback
 
 - Sent the two-deck deliverable to Renato (Incotin): `Renato-Proposal.pptx` + `Renato-Use-Cases.pptx`. He reviews, then we schedule an alignment call before his 2026-06-15 channels & tools deliverable.
