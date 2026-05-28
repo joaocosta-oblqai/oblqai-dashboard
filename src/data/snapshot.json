@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T01:30:33Z",
+  "generatedAt": "2026-05-28T08:12:53Z",
   "customers": [
     {
       "id": "rect4kxOi5Xzv7eSK",
@@ -79,7 +79,7 @@
       "nextAction": "Send PT-translated proposal (DRAFT signed off, .pptx delivery) — Fri 2026-05-29. After review, joint scope sign-off, then Phase 1 kick-off.",
       "nextActionDate": "2026-05-29",
       "lastTouch": "2026-05-27",
-      "notes": "Aesthetic clinic, Portugal. Practice Command pilot on the **Code + Cowork** stack — Claude Code CLI as a VPS daemon for real-time / proactive patient-facing flows (sub-minute inbound, cron-precise outbound) + Claude Cowork as Sara's owner cockpit (daily briefing, weekly learning, approval queue). Same Brain (Airtable) + same MCP set + single source of prompts. Introductory call held 2026-05-27 (NOT a formal discovery). Four candidate priorities: P1 patient journey messaging, P2 AI next-best-action suggestions, P3 digital pacote tracking, P4 pre-consultation briefing. Cowork-first; Tier 2 not pre-promised. GDPR Article 9 (special-category health data) handling applies. Booking platform (BUK or book.pt) and exact perimeter of existing automation [TBC]. Practice Command canonical pricing applies (PT €8k setup / €950 monthly) but no number in writing until Joao signs off.",
+      "notes": "Aesthetic clinic, Portugal. Practice Command pilot, EXPANDED SCOPE (2026-05-27 evening update): 8 priorities in ~45-day Phase 1. P1 patient journey messaging, P2 AI next-best-action suggestions, P3 digital pacote tracking, P4 pre-consultation briefing, P5 social media + auto-post, P6 Google Ads automated, P7 Meta Ads automated, P8 net-new website build + Cowork upkeep. Runs on Code + Cowork stack (Claude Code daemon for real-time, Cowork as owner cockpit). Cowork-first; Tier 2 not pre-promised. GDPR Article 9 applies. Booking platform (BUK or book.pt) and exact perimeter of existing automation [TBC]. Practice Command canonical pricing (PT €8k setup / €950 monthly) applies to patient-ops layer; SEPARATE website-build line item (~€4-8k PT) needed on top — Joao to set exact number. Timeline (~45 days) is ambitious; Section 7 invites Sara to stretch to ~60 days if she prefers.",
       "deliverables": [
         {
           "title": "[SUPERSEDED] Aesthetic Clinic — 10 Use Cases (PT)",
@@ -93,7 +93,7 @@
           "filename": "Sara-Proposal.pptx",
           "type": "pptx",
           "url": "https://github.com/jccosta94/oblqai-dashboard/blob/main/clients/sara/Sara-Proposal.pptx",
-          "description": "v2 (2026-05-27): Slide 3 now carries the Code + Cowork two-runtime architecture explicit — Claude Code daemon for real-time / event-driven / cron-precise patient-facing work + Claude Cowork as owner cockpit, both on the same Brain + MCP set + single source of prompts. Cover + 5-step loop + 3 persistent layers all updated. v8 visual theme (mostly white + cream + one black CTA). No pricing. Source in client-implementations/Sara/."
+          "description": "v3 (2026-05-27): EXPANDED to 8 priorities in ~45-day Phase 1. Slide 2 now shows 8 cards in a 4x2 grid (was 4 in a row). New: P5 social media + auto-post, P6 Google Ads, P7 Meta Ads, P8 net-new website + Cowork upkeep. Slide 4 (Fora da Fase 1) shrinks to paper-notes + no-show recovery only. Slide 5 (Perguntas em aberto) expands to 9 questions (3x3 grid) covering brand kit, domain, hosting, ad budgets. Slide 6 (Como chegamos lá) updated to ~45-day 4-phase timeline. Brain-free vocabulary. v8 visual theme."
         },
         {
           "title": "Pilot Proposal — Code + Cowork (deck, GDrive v2)",
@@ -114,14 +114,14 @@
           "filename": "Cowork-pilot-proposal-DRAFT.md",
           "type": "gdoc",
           "url": "https://docs.google.com/document/d/1abAiNFKI2wIj53KmuFpSo5aFm3W3MsrDelsIjoL8ptI/edit",
-          "description": "11-section markdown working draft (v2 2026-05-27): Section 4 sub-sections + Section 5 (the loop + Day-30 walkthrough) rewritten to reflect the Code + Cowork two-runtime architecture. READ ME FIRST callout at top. Internal notes at bottom (strip for client). EN only; pt-PT translation pass pending Joao sign-off. No pricing."
+          "description": "v3 (2026-05-27 evening): EXPANDED to 8 priorities. Sections 4.1-4.4 unchanged (patient-ops), new 4.5-4.8 added for social/ads/website, 4.9 renumbered as Infrastructure. Section 6 (parked) shrinks to paper-notes + no-show recovery. Section 7 timeline updated to ~45 days. Section 9 (what we need from clinic) adds 7 new dependencies (brand kit, domain, hosting, ad accounts, ad budgets, GBP ownership, marketing approval cadence). Section 10 (commercial) adds website-build separate line item placeholder."
         },
         {
           "title": "Use Cases — How Code + Cowork run in practice (deck)",
           "filename": "Sara-Use-Cases.pptx",
           "type": "pptx",
           "url": "https://github.com/joaocosta-oblqai/oblqai-dashboard/blob/main/clients/sara/Sara-Use-Cases.pptx",
-          "description": "Companion deck to Sara-Proposal.pptx. 11 slides: cover + 9 process flows + 1 black recap CTA. Each process-flow slide carries a RUNTIME chip indicating Claude Code, Claude Cowork, or both. Flows: 01 pré-consulta · 02 pós-tratamento · 03 reativação · 04 sugestão IA · 05 pacote ponta-a-ponta · 06 briefing diário · 07 triagem inbound · 08 escalação · 09 learning loop. v8 visual theme. Source in client-implementations/Sara/."
+          "description": "v2 (2026-05-27): EXPANDED to 14 slides — cover + 12 process flows + black recap CTA. New flows: 10 social media content + auto-post, 11 paid ads (Google + Meta combined, channel MCP swaps), 12 website net-new build + Cowork upkeep. Each flow tagged with RUNTIME chip. Brain-free vocabulary. v8 visual theme."
         },
         {
           "title": "Use Cases — How Code + Cowork run in practice (deck, GDrive)",
@@ -552,6 +552,28 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-27",
+      "headline": "P3 (pacote tracking) refined — patient-driven confirmation replaces equipa-stamp model; Phase 2 client portal added to roadmap",
+      "body": [
+        "Real-world refinement to Priority 3 (digital pacote tracking). The clinic today uses a physical card — patient holds it, equipa stamps after each visit. Three jobs the card does: tangible record, proof of visits, ritual confirming \"this happened.\" The digital version preserves all three but inverts the actor: the PATIENT confirms, not the equipa stamps.",
+        "Updated P3 flow: (1) consulta termina → booking platform marks completed → Code daemon picks up the event in seconds. (2) Patient receives short-link form via preferred channel — single question, single tick. (3) Patient confirms — equivalent of stamping the card. (4) Receipt back to the patient with sessions remaining + next-session window — lives in their message history. (5) CRM auto-updates. (6) Equipa fallback queue in Cowork if patient hasn't confirmed in X hours — for elderly patients, non-tech, those who didn't engage with the form.",
+        "Mirrors the existing ritual, gives the patient agency, creates a permanent message archive, reduces equipa cognitive load — the equipa only acts on the small fraction who don't self-confirm. P3 card on slide 2 of the proposal deck updated; use-cases Flow 05 fully rewritten; markdown DRAFT Section 4.3 rewritten with the new patient-driven flow + equipa-fallback contract.",
+        "Added Phase 2 patient portal to Iterações Futuras (proposal slide 7, now 4 cards: Portal · Alargar prioridades · Autonomia gradual · Capacidades adicionais). Markdown DRAFT Section 6 (parked) adds the portal as a third item with a natural-evolution narrative — the form sends the patient a receipt; the portal lets them see all receipts in one place. Managed via Cowork, no separate CMS.",
+        "All three Sara artifacts mirrored to oblqai-dashboard/clients/sara/. Brain-free vocabulary preserved."
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "headline": "Sara scope expanded — 4 priorities → 8 (added social media, Google Ads, Meta Ads, net-new website + Cowork upkeep)",
+      "body": [
+        "Sara asked for: (a) social media management — post creation/editing + auto-post; (b) Google Ads automated; (c) Facebook + Instagram Ads automated; (d) net-new website build + Cowork-managed upkeep. Pulled \"Marketing & growth\" out of \"Fora da Fase 1\" and into Phase 1 as P5–P8. Phase 1 stretches from ~30 days to ~45 days; patient-ops and acquisition build in parallel where possible. Sara invited (Section 7) to stretch to ~60 days if she prefers a less compressed timeline.",
+        "Architecturally nothing new — Renato use-cases deck already had clean flows for all 4 new asks. Sara-Use-Cases.pptx now has 12 process flows (was 9): added Flow 10 (content + social), Flow 11 (paid ads, Google + Meta with channel MCP swap), Flow 12 (website build + Cowork upkeep). Sara-Proposal.pptx slide 2 now shows 8 priorities in a 4x2 grid; slide 4 (parked) shrinks to 2 items; slide 5 expands to 9 perguntas covering the new dependencies (brand kit, domain, hosting, ad accounts, budgets, marketing approval cadence).",
+        "Pricing implication for Joao: Practice Command canonical (PT €8k setup / €950 monthly) covers the patient-ops layer. Net-new website build is a separate one-time line item (~€4-8k PT depending on complexity). Section 10 of the proposal carries the placeholder explicitly. Joao to set the exact number before any figure is put in writing.",
+        "Timeline honesty flag in proposal Section 7: ~45 days for 8 priorities + a site build is aggressive even by OBLQAI standards. The risk-mitigated alternative is ~60 days with same priority order. Both options on the table — Sara picks.",
+        "Sara client materials all refreshed: Sara-Proposal.pptx, Sara-Use-Cases.pptx, Cowork-pilot-proposal-DRAFT.md mirrored to oblqai-dashboard/clients/sara/. Sara customer notes updated. snapshot.json deliverable descriptions refreshed for all 3 files. Brain-free vocabulary preserved across the v3 rebuild."
+      ]
+    },
     {
       "date": "2026-05-27",
       "headline": "Sara decks de-jargoned — \"Brain\" replaced with plain PT across client materials",

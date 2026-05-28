@@ -4,7 +4,7 @@
 **Prepared by:** OBLQAI (Joao Costa)
 **Date:** 2026-05-27
 **Status:** Internal working draft, English. To be refined after Joao's review and any new context Sara shares this week, then translated to European Portuguese for client delivery (.docx).
-**Type:** Tier 1 — Practice Command package. Runs on a **Code + Cowork** stack: **Claude Code CLI as a VPS daemon** for real-time / proactive patient-facing flows (sub-minute inbound, cron-precise outbound) + **Claude Cowork** as Sara's owner cockpit (daily briefing, weekly learning, approval queue, ad-hoc ops). Anchored on patient journey messaging (Priority 1) + AI-driven next-best-action suggestions (Priority 2).
+**Type:** Tier 1 — Practice Command package, expanded scope. Runs on a **Code + Cowork** stack: **Claude Code CLI as a VPS daemon** for real-time / proactive patient-facing flows (sub-minute inbound, cron-precise outbound) + **Claude Cowork** as Sara's owner cockpit (daily briefing, weekly learning, approval queue, ad-hoc ops). **Eight priorities** in a ~45-day Phase 1: patient-ops (P1–P4) + content/social (P5) + Google Ads (P6) + Meta Ads (P7) + net-new website build + Cowork upkeep (P8).
 **Future-state:** Practice Command Managed Service from Day 31 onwards. Tier 2 (Hugo / Hermes-style autopilot) is **not pre-promised** — it would be a Phase 2 conversation once the loop is producing real data, per the Cowork-first house rule.
 
 > **READ ME FIRST.** This is a pilot proposal, not a fixed scope. Several Phase-1 deliverables depend on context Sara has not yet supplied — flagged inline as **[TBC com Sara]**. Pricing is intentionally omitted from this draft; Joao to confirm once scope is locked. **Do not send to Sara without Joao's review and the pt-PT translation pass.**
@@ -15,12 +15,23 @@
 
 Sara's clinic is in a familiar position for an aesthetic practice: a working booking platform doing the basics of scheduling and standard patient comms, a competent but deterministic layer of automated messages that ship with that platform, a meaningful share of patient knowledge still on paper, and no systematic way to recommend a next action per patient. Existing automations work and **do not need touching**. The opportunity is to wrap them with a layer of context-aware intelligence — a layer that reads each patient's full history, drafts personalised communication at the right moment, surfaces a next-best-action suggestion at each consultation, and learns weekly from what worked.
 
-OBLQAI proposes a **Practice Command** pilot, anchored on the two priorities that emerged most clearly from the 2026-05-27 introductory conversation:
+OBLQAI proposes an expanded **Practice Command** pilot — eight priorities running across patient-ops and acquisition in a single ~45-day Phase 1:
+
+**Patient-ops layer (P1–P4)** — the two priorities that emerged most clearly from the 2026-05-27 introductory conversation plus the two that followed:
 
 1. **Further-automated patient journey messaging** — go beyond the standard confirmations/reminders the booking platform already sends, with personalised, context-aware communication tied to each patient's actual history.
 2. **AI-driven next-best-action suggestions** — Claude analyses each patient's history and the patterns across the clinic's patient base, and surfaces concrete next-step recommendations (follow-up, maintenance, reactivation, cross-sell) into the owner's daily briefing and into the patient-facing messaging.
+3. **Digital treatment-package tracking** — replace the paper count with a digital record both clinic and patient can see and confirm.
+4. **Pre-consultation owner briefing** — short, daily, AI-compiled summary delivered to Sara before each day starts.
 
-Two further priorities follow once the first two are stable: **digital treatment-package tracking** (replacing the paper count) and a **pre-consultation owner briefing** (short, daily, AI-compiled). All four sit on top of a single architecture — described in Section 5 — built to compound. The clinic does not end Phase 1 with "a chatbot bolted onto a booking platform." It ends Phase 1 with the first layer of a **self-improving, AI-native operating system** for its patient business: a closed loop of sensors, decisions, tools, quality gates, and weekly learning, with Claude as the policy engine and Sara as the human DRI at the edge.
+**Acquisition layer (P5–P8)** — added at Sara's explicit request after the introductory conversation:
+
+5. **Social media content + auto-post** — Cowork drafts/edits, Code schedules and publishes Instagram + Facebook + GMB posts via Meta Graph + GMB APIs.
+6. **Google Ads automated** — Cowork proposes campaigns and approves; Code publishes, monitors and tunes daily. Sara never opens the Ads dashboard.
+7. **Meta Ads (Facebook + Instagram) automated** — same skill stack as Google Ads, channel MCP swapped.
+8. **Website net-new build + Cowork upkeep** — clinic site built from scratch focused on B2C conversion, then maintained through Cowork (Sara describes change in PT → Cowork drafts → staging preview → approve → live).
+
+All eight sit on top of a single architecture — described in Section 5 — built to compound. The clinic does not end Phase 1 with "a chatbot bolted onto a booking platform." It ends Phase 1 with the first layer of a **self-improving, AI-native operating system** for its entire business — patient experience plus acquisition — a closed loop of sensors, decisions, tools, quality gates, and weekly learning, with Claude as the policy engine and Sara as the human DRI at the edge.
 
 ---
 
@@ -96,14 +107,21 @@ A motor que analisa cada paciente individualmente e os padrões na base de pacie
 
 ### 4.3 Digital treatment-package tracking (Priority 3)
 
-Substituição do controlo em papel dos pacotes (e.g., 4 sessões de laser) por um sistema digital simples. Each session registered in the moment, patient receives confirmation, both sides always know how many sessions remain.
+The clinic today uses a physical card — patient holds it, equipa stamps it after each visit. Three jobs the card does: (a) gives the patient a tangible record, (b) lets the patient prove "I've been here X times" if there's any dispute, (c) creates a small ritual confirming "this session happened." The digital version preserves all three jobs but inverts the actor: **the patient confirms, not the equipa stamps**.
 
-- **Runtime:** **Claude Code** owns the session-complete event handler (sub-second wake) and the time-based recordatórios. **Cowork** runs the weekly pacote report for Sara.
+- **Runtime:** **Claude Code** owns the consultation-complete webhook handler, the form delivery, the receipt back, and the equipa-fallback timer. **Cowork** runs the weekly pacote report and surfaces the fallback queue for the equipa.
 - **Setup:** each patient with an active pacote is created in the system (pacote type, total sessions, sessions done, dates, recommended intervals, validity).
-- **Session-complete action:** the equipa marks complete with a single action — in-CRM button, mobile app, or WhatsApp message that Code's webhook handler ingests. Multiple paths so adoption is frictionless.
-- **Patient confirmation:** auto-message fires within seconds of the session-complete event — "Sessão 3 de 4 concluída. Próxima sessão recomendada entre X e Y. Falta 1 sessão para concluir o pacote."
+- **Patient-driven confirmation flow:**
+  1. **Consulta termina.** The booking platform marks the appointment as completed; Code daemon catches the event.
+  2. **Form delivered.** Patient receives a short link via their preferred channel (SMS / WhatsApp / email) — *"Confirma a sessão 2 de 4 de hoje?"* — single question, single tick, single submit.
+  3. **Patient confirms.** Tick + submit. Equivalent of stamping the card.
+  4. **Receipt back.** Patient receives — *"Sessão 2 de 4 confirmada. Próxima recomendada entre X e Y. Faltam 2 sessões para concluir o pacote."* Lives in their channel history.
+  5. **CRM auto-updates.** Pacote counter increments; central database logs the confirmation with timestamp + channel. Triggers the next scheduled recordatório.
+- **Equipa fallback (not the primary path).** If the patient hasn't confirmed within a configurable window (e.g., 6h or 24h), Cowork surfaces a "por confirmar" queue to the equipa — one tap to mark manually. Designed for elderly patients, those without smartphones, or anyone who simply doesn't engage with the form. Keeps the system honest without forcing the equipa to act every time.
 - **Proactive recordatórios:** at X sessions remaining, at 1 session remaining (with marcação offer), and at pacote end (with next-step suggestion fed from Priority 2). All cron-precise.
-- **Weekly report:** Cowork-built — pacotes ativos / próximos a concluir / em risco de abandono / expirados.
+- **Weekly report:** Cowork-built — pacotes ativos / próximos a concluir / em risco de abandono / expirados / por confirmar há > 24h.
+
+**Why this shape:** mirrors the existing physical-card ritual, gives the patient agency, creates a permanent message history they can refer back to, and reduces equipa cognitive load (they only act on the small fraction who don't self-confirm).
 
 ### 4.4 Pre-consultation owner briefing (Priority 4)
 
@@ -115,7 +133,43 @@ Briefing curto delivered to Sara daily before the day starts (or the evening bef
 - **Entrega:** email / WhatsApp pessoal / Cowork app — Sara's choice.
 - **Conversa de seguimento:** Sara can ask Cowork for more detail on any patient ("conta-me mais sobre a Maria Silva," "que tratamentos faz sentido propor à Joana hoje").
 
-### 4.5 CRM (headless Airtable) + channel connectors + Code daemon hosting
+### 4.5 Social media content + auto-post (Priority 5)
+
+A weekly editorial operation for Instagram + Facebook + Google Business Profile. Cowork drafts; Sara approves; Code publishes on schedule.
+
+- **Runtime:** **Code + Cowork.** Cowork researches and drafts (owner-facing, conversational); Code daemon schedules and auto-publishes via Meta Graph API + Google Business Profile API.
+- **Cadence:** weekly content calendar drafted Monday for the week ahead. Sara approves in batch.
+- **Channels:** Instagram, Facebook, Google Business Profile (posts + Q&A + review responses).
+- **Tone:** preserved through the same brand-voice file used in P1.
+- **Engagement loop:** likes, comments, DMs, reviews — all logged to the Brain, feeds back into the weekly research pass.
+
+### 4.6 Google Ads automated (Priority 6)
+
+Campaign management for Google Ads — drafting, launch, daily tuning — without Sara ever opening the Ads dashboard.
+
+- **Runtime:** **Code + Cowork.** Cowork proposes campaigns + drafts copy/audiences; Sara approves in conversation; Code publishes via Google Ads API and runs daily tuning (bids, pauses, budget reallocation within budget cap).
+- **Approval contract:** new campaigns and spend changes always go through Sara. Daily tuning within an approved campaign is autonomous.
+- **Alerts:** spend anomalies, CTR drops, technical failures escalate immediately via Cowork's approval queue.
+- **Reporting:** weekly performance digest in Sara's preferred channel — spend, reach, conversions, recommendations.
+
+### 4.7 Meta Ads (Facebook + Instagram) automated (Priority 7)
+
+Same skill stack as P6, channel MCP swapped to Meta Marketing API. Combined weekly reporting across Google + Meta.
+
+- **Runtime:** **Code + Cowork.** Same pattern as P6.
+- **Creatives:** drafted in the same brand-voice file as P1 + P5.
+- **Cross-channel reporting:** Google Ads + Meta Ads results combined in one weekly digest for Sara.
+
+### 4.8 Website — net-new build + Cowork upkeep (Priority 8)
+
+A net-new B2C-focused clinic website, built during Phase 1, then maintained entirely through Cowork.
+
+- **Runtime:** **Code + Cowork.** Initial build is a one-time Phase 1 deliverable (Days 6–25). Ongoing upkeep is the Renato pattern: Sara describes the change in PT → Cowork drafts → staging preview → approve → live.
+- **Build scope:** B2C-focused conversion surface — hero, services/treatments, "book a consultation" CTAs that land in the booking platform, brand application, basic SEO. **[TBC com Sara]** for CMS choice and hosting.
+- **Brand dependency:** brand kit (logo, colors, photography, tone) needs to land by Day 5 so the build can run in parallel with the patient-ops layer. If no brand kit exists, we either derive one in the first week or commission it from a partner.
+- **No developer in the loop after launch.** Updates flow through Cowork; staging previews protect production.
+
+### 4.9 Infrastructure — CRM, channel connectors, Code daemon hosting
 
 The infrastructure beneath everything in 4.1–4.4. Configured Day 1 — foundation, not add-on.
 
@@ -232,27 +286,28 @@ This is also why we will not need to rebuild anything to move the clinic from Ph
 
 ## 6. What's parked for after Phase 1
 
-Topics raised in the introductory conversation that we deliberately keep out of Phase 1 scope, to be revisited once the loop is producing data:
+After Sara's explicit request, marketing & growth and local presence moved INTO Phase 1 scope (P5–P8). Three topics remain parked, to be revisited once the loop is producing data:
 
-- **Paper note digitalisation** — three approaches on the table (live AI in-consultation, scan/photo post-consultation, capture at the moment of patient-facing document creation). Approach selection is a Phase 1 *discovery* deliverable; the *build* itself is Phase 1.5 or Phase 2 depending on the choice.
-- **No-show and cancellation recovery** — calendar-gap monitoring + automated outreach to waitlisted or follow-up-due patients. Adds clear revenue but depends on a clean booking-platform read/write loop, which Phase 1 establishes.
-- **Marketing and growth** — social media, website, Google Ads, GMB activity. Distinct workstream — natural conversation only after the operational loop is proven. Whether this becomes a Hugo conversation or stays inside Cowork is a Phase 2 design call.
-- **Local presence (GMB / reviews)** — standard Practice Command capability, deferred to Phase 1.5 unless Sara flags it as urgent.
+- **Paper note digitalisation** — three approaches on the table (live AI in-consultation, scan/photo post-consultation, capture at the moment of patient-facing document creation). Approach selection is a Phase 1 *discovery* deliverable; the *build* itself is Phase 1.5 or Phase 2 depending on the choice. Until then, paper notes remain a real limitation on Priority 2's suggestion quality.
+- **No-show and cancellation recovery** — calendar-gap monitoring + automated outreach to waitlisted or follow-up-due patients. Adds clear revenue but benefits from having P1 (journey messaging) running steady-state on real data first so the recovery messages don't conflict with patterns already in motion.
+- **Patient portal (Phase 2 candidate)** — a simple authenticated area where the patient sees the state of their pacotes, full visit history (including all the confirmations from P3), upcoming sessions, and manages consents and channel preferences. **Managed entirely through Cowork — no separate CMS to learn.** Natural evolution from the per-session confirmation flow in P3: the form sends the patient a receipt; the portal lets them see all the receipts in one place. Build this once P1+P3 are producing real engagement data, so the portal reflects what patients actually use.
 
 ---
 
-## 7. Delivery model — OBLQAI's 4-phase process
+## 7. Delivery model — OBLQAI's 4-phase process · expanded scope ~45 days
 
-OBLQAI delivers Tier 1 engagements in four phases over roughly 30 days, then transitions into Managed Service.
+The expanded scope (8 priorities including a net-new website + a full marketing operation) requires a ~45-day Phase 1 instead of the canonical 30. Patient-ops and acquisition build in parallel where possible.
 
 | Phase | Window | What happens |
 |---|---|---|
-| **1. Discovery & Design** | Days 1–3 | Confirm booking platform + canal preferences. Workshop with Sara to map exact existing automations. Choose paper-note approach. Draft the Implementation Blueprint. |
-| **2. Build & Configure** | Days 4–10 | Stand up MCPs, build the Airtable schema, configure Cowork scheduled tasks, build the journey-messaging + briefing prompts, derive the brand-voice file from existing comms, set up the suggestion engine in test mode. |
-| **3. Testing & Launch** | Days 11–14 | End-to-end testing, equipa training, soft launch with Priority 1 + Priority 4 in production first. |
-| **4. Optimization** | Days 15–30, then ongoing | Tune on real conversation/suggestion data. Roll out Priority 2 (suggestions) and Priority 3 (package tracking) in sequence. Formal handover into Managed Service. |
+| **1. Discovery & Design** | Days 1–5 | Expanded workshop covering all 8 priorities. Confirm booking platform + canal preferences. Confirm domain, Meta/Google ad accounts, GMB ownership. Brand kit audit — exists or needs deriving. Choose paper-note approach. Implementation Blueprint covering patient-ops + marketing + website tracks. |
+| **2. Build & Configure** | Days 6–25 | MCPs (booking, WhatsApp, email, SMS, Meta Marketing, Google Ads, GMB, CMS), Airtable schema, Code daemon on VPS, Cowork scheduled tasks, prompts for P1–P8, voz da clínica derivation, suggestion engine in test, **net-new website build runs in parallel**. |
+| **3. Testing & Launch** | Days 26–32 | End-to-end testing of each priority. Equipa training. Soft launch: P1 (journey messaging) + P4 (briefing) + new website live + P5 (social media) shipping content. |
+| **4. Optimization & Expansion** | Days 33–45, then ongoing | Roll out P2 (suggestions) + P3 (package tracking). Launch P6 (Google Ads) + P7 (Meta Ads) in production. Tune on real data across all priorities. Formal handover into Managed Service after Day 45. |
 
-After Day 30 the clinic moves into OBLQAI's **Managed Service** — ongoing maintenance, monitoring, quarterly capability review, monthly performance check-in, 99.5% uptime on deployed workflows, 2-hour critical-incident response.
+After Day 45 the clinic moves into OBLQAI's **Managed Service** — ongoing maintenance, monitoring, quarterly capability review, monthly performance check-in, 99.5% uptime on deployed workflows, 2-hour critical-incident response.
+
+**Timeline honesty:** ~45 days for 8 priorities + a net-new site is ambitious. The risk-mitigated version is a 60-day window with the same priority order — happy to discuss if Sara prefers a less compressed timeline.
 
 ---
 
@@ -272,16 +327,25 @@ For both Phase 1 and the Managed Service that follows:
 
 **For the proposal review (this week, 2026-05-27 → 2026-05-29):**
 1. Confirmation of the **booking platform** (BUK or book.pt or other).
-2. Any additions, corrections or changes to the priority list, based on what surfaces after the introductory conversation.
+2. Any additions, corrections or changes to the 8-priority list.
+3. Confirmation that the **~45-day timeline is acceptable**, or signal to stretch to ~60 days.
 
-**For the Discovery & Design phase (Days 1–3):**
-3. Read/write **access to the booking platform** (or a stand-in account).
-4. List of **pacotes currently sold** — name, número de sessões, intervalo recomendado, validade típica.
-5. **Sample of patient communication** the clinic already sends — to derive the brand voice.
-6. **Decision on paper-note approach** for the pilot (or agreement to defer the build and keep paper for now).
-7. Confirmation of the **equipa members** who'll be DRIs for in-room actions.
-8. **DPO / data-protection contact** (or confirmation that the clinic uses a standard PT DPA shape).
-9. **Existing brand assets** — logo, color guide, photography library if available.
+**For the Discovery & Design phase (Days 1–5) — patient-ops:**
+4. Read/write **access to the booking platform** (or a stand-in account).
+5. List of **pacotes currently sold** — name, número de sessões, intervalo recomendado, validade típica.
+6. **Sample of patient communication** the clinic already sends — to derive the brand voice.
+7. **Decision on paper-note approach** for the pilot (or agreement to defer the build and keep paper for now).
+8. Confirmation of the **equipa members** who'll be DRIs for in-room actions.
+9. **DPO / data-protection contact** (or confirmation that the clinic uses a standard PT DPA shape).
+
+**For the Discovery & Design phase (Days 1–5) — marketing & website:**
+10. **Brand kit** — logo, color guide, typography, photography library. **If none exists**, agreement on whether we derive a v1 in-house during the build, or commission an external designer (separate cost line).
+11. **Domain ownership** — current domain (if any), DNS access. If no domain yet, decision on the domain to register.
+12. **Hosting + CMS preference** — managed hosting on OBLQAI's VPS (default), or specific provider preference. CMS shape will be proposed in Discovery; Sara approves.
+13. **Google Business Profile** — does Sara own/manage the listing, or is it claimed by a third party.
+14. **Meta Business Manager + Instagram/Facebook accounts** — admin access. Or agreement to create from scratch.
+15. **Initial monthly ad budget** — separate cap for Google + Meta. Sets the test-and-learn baseline for P6/P7 tuning.
+16. **Marketing approval cadence** — who else (if anyone) sees campaign drafts before launch. Phase 1 default: Sara alone.
 
 ---
 
@@ -289,7 +353,7 @@ For both Phase 1 and the Managed Service that follows:
 
 OBLQAI Practice Command engagements are priced as **one-time implementation + monthly managed operations**. The implementation covers workflow setup, integrations, deployment, testing and onboarding. The monthly fee covers secure hosting, monitoring, maintenance, workflow updates, messaging infrastructure, integration stability and compliance supervision.
 
-> **Specific numbers withheld pending Joao's pricing-model confirmation for this engagement.** Practice Command canonical pricing exists for PT / DE / CH (see `Context/pricing.md`). Joao to confirm whether this engagement matches the canonical shape or carries adjustments before any number is put in writing.
+> **Specific numbers withheld pending Joao's pricing-model confirmation for this engagement.** Practice Command canonical pricing exists for PT / DE / CH (see `Context/pricing.md`) — but **the expanded scope here (net-new website build + 4-priority marketing operation) sits on top of the canonical shape**. Expect a separate one-time **website-build line item** added to the setup fee (rough order: €4–8k PT depending on complexity), with monthly operations absorbing the ongoing marketing + ads runtime. Joao to set the exact numbers before any figure is put in writing.
 
 ---
 
@@ -304,13 +368,16 @@ OBLQAI Practice Command engagements are priced as **one-time implementation + mo
 
 ## Internal notes for Joao (not for the client version)
 
-- **Healthcare Clinics vertical**, Practice Command canonical pricing applies if the engagement stays on the standard shape (PT €8k setup / €950 monthly; DE 1.5x; CH 2x in CHF — per `Context/pricing.md`). Per `feedback_consulting_is_a_plugin.md`, advisory layers are bundled as plugins, not separate human-recurring work.
+- **SCOPE DOUBLED on 2026-05-27.** Sara asked for social media management, Google Ads, Meta Ads, and a net-new website + Cowork upkeep. Pulled them out of "Fora da Fase 1" and into Phase 1 as P5–P8. Timeline expanded from ~30 days to ~45 days. Patient-ops + acquisition build in parallel.
+- **Healthcare Clinics vertical**, Practice Command canonical pricing applies to the patient-ops layer (PT €8k setup / €950 monthly; DE 1.5x; CH 2x in CHF — per `Context/pricing.md`). **Net-new website build is a separate one-time line item** — rough order €4–8k PT, set the exact number based on CMS choice + design complexity. Monthly operations likely absorbs the marketing/ads runtime; if ad-spend management becomes meaningful effort, may warrant a separate marketing-ops monthly line.
 - **No pricing in writing yet**, per your call. Section 10 carries the placeholder; the number lands only after you sign off and the pt-PT translation pass runs.
 - **Section 5** uses the canonical self-improving-loop framing from `Context/self-improving-loop-architecture.md` — identical topology to the Renato draft, adapted to the clinic context. ASCII diagram in PT inside the code fence.
 - **Phase 2 carefully phrased.** Healthcare clinics aren't excluded from Tier 2 by rule (only law firms are), but Cowork-first house rule applies. Positioned as "if and when," not "Day 1 commitment." Do not let later edits pre-promise autopilot.
 - **Booking platform unconfirmed.** BUK vs book.pt assumption needs verification in the next call. Affects which MCP we ship and how the integration timeline looks.
 - **Paper notes deferred** but not silenced — Section 6 keeps it visible without scope-creeping Phase 1. Don't let it disappear in subsequent revisions: AI suggestions (Priority 2) are weak as long as patient history is on paper.
-- **Brand voice asset doesn't exist.** Plan is to derive it from existing patient comms during Phase 2 (Days 4–10). Confirm Sara is OK with that or wants to write a brief beforehand.
+- **Brand voice asset doesn't exist.** Plan is to derive it from existing patient comms during Build (Days 6–25). Confirm Sara is OK with that or wants to write a brief beforehand.
+- **Brand kit dependency is the new critical-path item.** Net-new website + social engine + ads creative all need it. If Sara doesn't have one, derive a v1 in Discovery (Days 1–5) — likely lean and editable, not a finished brand book. Or commission externally as a separate line item.
+- **Timeline ambition.** 45 days for 8 priorities + a site build is aggressive even by OBLQAI standards. The risk-mitigated alternative is 60 days with the same priority order. Section 7 carries the timeline-honesty paragraph explicitly inviting Sara to stretch to 60 if she prefers.
 - **Two superseded .docx artifacts** already in the Sara folder from the earlier framework attempt:
   - `Sara-Proposta-Piloto-2026-05-27-PT.docx` — the heavy single-file proposal I built before you asked for the Renato framework. **This DRAFT.md supersedes it.** Keep or delete is your call.
   - `Sara-Discovery-Meeting-Minutes-2026-05-27-{EN,PT}.docx` — the meeting-minutes pair. **Superseded by `2026-05-27-introductory-call-summary.md`.** Same call.

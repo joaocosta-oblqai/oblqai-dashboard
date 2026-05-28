@@ -18,6 +18,26 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-27 — P3 (pacote tracking) refined — patient-driven confirmation replaces equipa-stamp model; Phase 2 client portal added to roadmap
+
+- Real-world refinement to Priority 3 (digital pacote tracking). The clinic today uses a **physical card — patient holds it, equipa stamps after each visit**. Three jobs the card does: tangible record, proof of visits, ritual confirming "this happened." The digital version preserves all three but inverts the actor: **the patient confirms, not the equipa stamps**.
+- **Updated P3 flow:** (1) consulta termina → booking platform marks completed → Code daemon picks up the event in seconds. (2) Patient receives short-link form via preferred channel — single question, single tick. (3) Patient confirms — equivalent of stamping the card. (4) Receipt back to the patient with sessions remaining + next-session window — lives in their message history. (5) CRM auto-updates. (6) **Equipa fallback queue in Cowork** if patient hasn't confirmed in X hours — for elderly patients, non-tech, those who didn't engage with the form.
+- Mirrors the existing ritual, gives the patient agency, creates a permanent message archive, reduces equipa cognitive load — the equipa only acts on the small fraction who don't self-confirm. **P3 card on slide 2** of the proposal deck updated; **use-cases Flow 05** fully rewritten; **markdown DRAFT Section 4.3** rewritten with the new patient-driven flow + equipa-fallback contract.
+- **Added Phase 2 patient portal** to Iterações Futuras (proposal slide 7, now 4 cards: Portal · Alargar prioridades · Autonomia gradual · Capacidades adicionais). Markdown DRAFT Section 6 (parked) adds the portal as a third item with a natural-evolution narrative — the form sends the patient a receipt; the portal lets them see all receipts in one place. **Managed via Cowork, no separate CMS.**
+- All three Sara artifacts mirrored to `oblqai-dashboard/clients/sara/`. Brain-free vocabulary preserved.
+
+---
+
+## 2026-05-27 — Sara scope expanded — 4 priorities → 8 (added social media, Google Ads, Meta Ads, net-new website + Cowork upkeep)
+
+- Sara asked for: (a) **social media management** — post creation/editing + auto-post; (b) **Google Ads automated**; (c) **Facebook + Instagram Ads automated**; (d) **net-new website build + Cowork-managed upkeep**. Pulled "Marketing & growth" out of "Fora da Fase 1" and into Phase 1 as P5–P8. Phase 1 stretches from ~30 days to ~45 days; patient-ops and acquisition build in parallel where possible. Sara invited (Section 7) to stretch to ~60 days if she prefers a less compressed timeline.
+- **Architecturally nothing new** — Renato use-cases deck already had clean flows for all 4 new asks. `Sara-Use-Cases.pptx` now has 12 process flows (was 9): added Flow 10 (content + social), Flow 11 (paid ads, Google + Meta with channel MCP swap), Flow 12 (website build + Cowork upkeep). `Sara-Proposal.pptx` slide 2 now shows 8 priorities in a 4×2 grid; slide 4 (parked) shrinks to 2 items; slide 5 expands to 9 perguntas covering the new dependencies (brand kit, domain, hosting, ad accounts, budgets, marketing approval cadence).
+- **Pricing implication for Joao:** Practice Command canonical (PT €8k setup / €950 monthly) covers the patient-ops layer. **Net-new website build is a separate one-time line item (~€4–8k PT** depending on complexity). Section 10 of the proposal carries the placeholder explicitly. Joao to set the exact number before any figure is put in writing.
+- **Timeline honesty flag** in proposal Section 7: ~45 days for 8 priorities + a site build is aggressive even by OBLQAI standards. The risk-mitigated alternative is ~60 days with same priority order. Both options on the table — Sara picks.
+- Sara client materials all refreshed: `Sara-Proposal.pptx`, `Sara-Use-Cases.pptx`, `Cowork-pilot-proposal-DRAFT.md` mirrored to `oblqai-dashboard/clients/sara/`. Sara customer notes updated. snapshot.json deliverable descriptions refreshed. Brain-free vocabulary preserved across the v3 rebuild.
+
+---
+
 ## 2026-05-27 — Sara decks de-jargoned — "Brain" replaced with plain PT across client materials
 
 - Caught a real flaw in the Sara client materials: **"Brain"** — our internal shorthand for the Company Brain layer of the self-improving-loop architecture (= Airtable, the canonical data store) — was leaking into the client-facing decks as untranslated English jargon. Used 10+ times across the proposal and use-cases decks without a definition that read naturally to a PT clinic owner.
