@@ -18,6 +18,28 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-27 — Sara decks de-jargoned — "Brain" replaced with plain PT across client materials
+
+- Caught a real flaw in the Sara client materials: **"Brain"** — our internal shorthand for the Company Brain layer of the self-improving-loop architecture (= Airtable, the canonical data store) — was leaking into the client-facing decks as untranslated English jargon. Used 10+ times across the proposal and use-cases decks without a definition that read naturally to a PT clinic owner.
+- **Sara-Proposal.pptx slide 3:** the architecture layer name went from "Company Brain · BASE DE DADOS" to "Base de dados central · MEMÓRIA DA CLÍNICA"; body mentions of "Brain" → "base de dados central".
+- **Sara-Use-Cases.pptx:** all 7 occurrences swept (flow body cells, step titles, cover subtitle, recap line) — "Brain" replaced with "base de dados" / "o sistema" / "no sistema" by context.
+- **Cowork-pilot-proposal-DRAFT.md:** all 11 EN occurrences replaced with "central database" so the eventual pt-PT translation is mechanical.
+- "Brain" stays in OBLQAI internal docs (`Context/`, `memory/`) — it remains the right shorthand for internal architecture conversations. Client-facing materials are the only place it gets translated out.
+- All three files re-mirrored to `oblqai-dashboard/clients/sara/`. GDrive text mirrors of the decks could use a refresh too but the change is small enough that the existing v2 mirrors describe the same architecture — the live .pptx in the dashboard repo is the source of truth.
+
+---
+
+## 2026-05-27 — Architecture decision: Claude Code daemon + Cowork as the canonical client runtime — Sara deliverables refreshed end-to-end
+
+- **Architectural decision today: every client deployment that involves real-time / proactive customer-facing work runs two AI runtimes on the same Brain + MCP set.** **Claude Code CLI as a VPS daemon** owns event-driven / cron-precise patient-facing work (sub-minute inbound, T-24h pre-appointment, T+6h post-treatment, T+Y months reactivation). **Claude Cowork** stays the owner cockpit (daily briefing, weekly learning, approval queue, conversational ops). Same Brain (Airtable), same MCP set, single source of prompts. Triggered by Sara's patient-comms needs exposing that Cowork's scheduled-task cadence can't deliver real-time alone.
+- **Spec lives in:** `Context/automation-policy.md` (rewritten), `Context/self-improving-loop-architecture.md` (Tier 1 description updated), `Context/client-doc-framework.md` (Section 5 mandate), and auto-memory `project_claude_code_realtime_layer.md`. Behavioural rule updated in `.claude/CLAUDE.md`. n8n shrinks to the WhatsApp Business webhook bridge only.
+- **Still Tier 1 / Practice Command** — Code daemon hosting is absorbed by the Compute layer in canonical pricing (PT €8k / €950 monthly). Customer-facing language unchanged. Tier 2 / Hermes is still the distinct autonomy-widening conversation.
+- **Sara deliverables refreshed in-session:** (a) `Sara-Proposal.pptx` slide 3 rebuilt with two-runtime bar + loop-with-runtime-tags + 3-persistent-layer bar; (b) `Sara-Use-Cases.pptx` cover + all 9 process flows tagged with RUNTIME chips (Code / Cowork / both); (c) `Cowork-pilot-proposal-DRAFT.md` Section 4 sub-sections + Section 5 loop + Day-30 walkthrough rewritten to make Code-as-engine and Cowork-as-cockpit explicit. All three mirrored to `oblqai-dashboard/clients/sara/`. v2 GDrive text mirrors uploaded for proposal and use-cases decks.
+- **Airtable:** Sara customer notes updated to call out Code + Cowork. Deliverable rows refreshed for proposal v2 + new use-cases deck. Updates row added matching this dashboard entry.
+- **Dashboard repo move heads-up:** GitHub auto-redirect noted on last push — repo has moved to `joaocosta-oblqai/oblqai-dashboard`. Local remote URL should be updated with `git remote set-url origin https://github.com/joaocosta-oblqai/oblqai-dashboard.git` when convenient.
+
+---
+
 ## 2026-05-27 — Sara introductory call held — proposal due Friday; Renato/Sara files all wired to dashboard + GDrive
 
 - **Sara introductory call (NOT a formal discovery) held 2026-05-27.** Four candidate priorities surfaced: P1 patient journey messaging, P2 AI next-best-action suggestions, P3 digital pacote tracking, P4 pre-consultation briefing. Cowork-first; Tier 2 not pre-promised. Sara expects written proposal by Fri 2026-05-29.

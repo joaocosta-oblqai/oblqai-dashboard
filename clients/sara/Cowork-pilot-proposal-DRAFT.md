@@ -4,7 +4,7 @@
 **Prepared by:** OBLQAI (Joao Costa)
 **Date:** 2026-05-27
 **Status:** Internal working draft, English. To be refined after Joao's review and any new context Sara shares this week, then translated to European Portuguese for client delivery (.docx).
-**Type:** Tier 1 — Claude Cowork Setup, Practice Command package. Anchored on patient journey messaging (Priority 1) + AI-driven next-best-action suggestions (Priority 2).
+**Type:** Tier 1 — Practice Command package. Runs on a **Code + Cowork** stack: **Claude Code CLI as a VPS daemon** for real-time / proactive patient-facing flows (sub-minute inbound, cron-precise outbound) + **Claude Cowork** as Sara's owner cockpit (daily briefing, weekly learning, approval queue, ad-hoc ops). Anchored on patient journey messaging (Priority 1) + AI-driven next-best-action suggestions (Priority 2).
 **Future-state:** Practice Command Managed Service from Day 31 onwards. Tier 2 (Hugo / Hermes-style autopilot) is **not pre-promised** — it would be a Phase 2 conversation once the loop is producing real data, per the Cowork-first house rule.
 
 > **READ ME FIRST.** This is a pilot proposal, not a fixed scope. Several Phase-1 deliverables depend on context Sara has not yet supplied — flagged inline as **[TBC com Sara]**. Pricing is intentionally omitted from this draft; Joao to confirm once scope is locked. **Do not send to Sara without Joao's review and the pt-PT translation pass.**
@@ -61,9 +61,14 @@ What is *not* yet decided, and what should land in the discovery (Phase 1):
 
 ---
 
-## 4. Proposed approach — Tier 1 (Claude Cowork Setup)
+## 4. Proposed approach — Tier 1 (Code + Cowork stack on Practice Command)
 
-OBLQAI's Tier 1 engagement deploys **Claude Cowork** as Sara's command console. Claude connects, via MCP servers, to every tool the clinic uses and executes work on her command — drafting messages, analysing patient histories, compiling briefings, tracking packages, surfacing next-best actions. The owner stays in the loop; Claude does the work that would otherwise eat hours of attention each week.
+OBLQAI's Tier 1 engagement deploys **two AI runtimes** against the same central database + MCP set:
+
+- **Claude Code CLI as a VPS daemon** — the always-on engine. Event-driven (webhooks: WhatsApp inbound, booking-platform events, session-complete signals) and cron-precise (T-24h pre-appointment messages, T+6h post-treatment follow-ups, T+Y months reactivation thresholds). Calls the Claude API + MCP set directly. Sub-minute wake time. This is what makes patient-facing communication actually real-time and proactive — not "reactive at the next 15-min cadence."
+- **Claude Cowork on Sara's desktop** — the owner cockpit. Daily briefing, weekly learning pass, approval queue for sensitive messages that Code has drafted and flagged, conversational ops ("Claude, find every patient whose laser pacote ended >3 months ago and who hasn't responded"), ad-hoc CRM-via-conversation work.
+
+They are not parallel stacks. They share the central database (Airtable), the MCP set (booking platform, WhatsApp, email, SMS, Ollama), the brand-voice file, and the suggestion engine — single-source. Two clients of one operating system. Decision and full spec in `Context/automation-policy.md` + auto-memory `project_claude_code_realtime_layer.md`.
 
 Phase 1 bundles four workstreams into a single build, in priority order, plus the CRM + connector infrastructure underneath.
 
@@ -71,9 +76,10 @@ Phase 1 bundles four workstreams into a single build, in priority order, plus th
 
 A camada de comunicação inteligente that sits **on top of** the booking platform's existing deterministic messages — not replacing them. Adds personalised, context-aware messages at moments-chave da jornada do paciente, reading the patient's full history and adapting tone, content and next-step recommendation per case.
 
+- **Runtime:** **Claude Code daemon.** Webhook-driven (booking events, session-complete signals) and cron-precise (T-24h, T+6h, T+Y months). This is the layer that makes timing actually proactive — minute-level, not 15-min-cadence approximation.
 - **Triggers:** nova marcação, consulta concluída, X dias pós-tratamento, X dias antes do fim de um pacote, paciente sem visita há Y meses.
-- **Drafting:** Claude reads the patient context from the CRM (treatments, notes, package status, complaints, preferences) and drafts the message in the clinic's voice (preserved through a versioned brand-voice file we derive once and maintain).
-- **Quality gate:** sensitive messages (post-treatment with prior complaint, reactivation after long inactivity, anything clinically relevant) queue for Sara's approval before sending. Routine messages can be sent directly.
+- **Drafting:** Code reads the patient context from the CRM (treatments, notes, package status, complaints, preferences) and drafts the message in the clinic's voice (preserved through a versioned brand-voice file we derive once and maintain).
+- **Quality gate:** sensitive messages (post-treatment with prior complaint, reactivation after long inactivity, anything clinically relevant) get written by Code as "queued for approval" rows; **Cowork surfaces them to Sara**; Sara approves → Code sends. Routine messages Code sends directly.
 - **Channel:** WhatsApp / SMS / email per patient preference recorded in the CRM.
 - **Log & learn:** every message is logged with the context that generated it and the response received — feeding the loop in Section 5.
 
@@ -81,54 +87,65 @@ A camada de comunicação inteligente that sits **on top of** the booking platfo
 
 A motor que analisa cada paciente individualmente e os padrões na base de pacientes como um todo, and produces a structured suggestion per patient. This is the differentiator that pulls the clinic beyond what any booking-platform automation can do.
 
+- **Runtime:** **Claude Code** fires suggestions per event (session completed, pacote ended, queixa reported) for real-time surfacing inside outbound messages. **Cowork** runs the heavier ranking pass for the daily briefing and the weekly dashboard.
 - **Inputs:** complete individual history + aggregated patterns across the patient base (typical treatment spacing, reactivation conversion by message type, package-completion vs abandonment signals).
 - **Output per patient:** ação recomendada + justificação curta apoiada em dados + nível de confiança.
-- **Surfaces:** in the daily owner briefing (Priority 4), inside the journey messaging (Priority 1) where appropriate, and on a weekly review dashboard for Sara.
+- **Surfaces:** in the daily owner briefing (Priority 4, Cowork-built), inside the journey messaging (Priority 1, Code-injected when relevant), and on a weekly review dashboard for Sara (Cowork).
 - **Feedback loop:** Sara's accept / reject / modify decisions enter the learning loop and refine future suggestions.
-- **Compliance:** for sensitive clinical content, inference runs locally via **Ollama / Qwen3 32B** in PT (data residency) — the Claude API handles the rest.
+- **Compliance:** for sensitive clinical content, inference runs locally via **Ollama / Qwen3 32B** in PT (data residency) — the Claude API handles the rest. Both Code and Cowork respect the same local-inference-required tag on the prompt set.
 
 ### 4.3 Digital treatment-package tracking (Priority 3)
 
 Substituição do controlo em papel dos pacotes (e.g., 4 sessões de laser) por um sistema digital simples. Each session registered in the moment, patient receives confirmation, both sides always know how many sessions remain.
 
+- **Runtime:** **Claude Code** owns the session-complete event handler (sub-second wake) and the time-based recordatórios. **Cowork** runs the weekly pacote report for Sara.
 - **Setup:** each patient with an active pacote is created in the system (pacote type, total sessions, sessions done, dates, recommended intervals, validity).
-- **Session-complete action:** the equipa marks complete with a single action — in-CRM button, mobile app, or WhatsApp message to Claude. Multiple paths so adoption is frictionless.
-- **Patient confirmation:** auto-message — "Sessão 3 de 4 concluída. Próxima sessão recomendada entre X e Y. Falta 1 sessão para concluir o pacote."
-- **Proactive recordatórios:** at X sessions remaining, at 1 session remaining (with marcação offer), and at pacote end (with next-step suggestion fed from Priority 2).
-- **Weekly report:** pacotes ativos / próximos a concluir / em risco de abandono / expirados.
+- **Session-complete action:** the equipa marks complete with a single action — in-CRM button, mobile app, or WhatsApp message that Code's webhook handler ingests. Multiple paths so adoption is frictionless.
+- **Patient confirmation:** auto-message fires within seconds of the session-complete event — "Sessão 3 de 4 concluída. Próxima sessão recomendada entre X e Y. Falta 1 sessão para concluir o pacote."
+- **Proactive recordatórios:** at X sessions remaining, at 1 session remaining (with marcação offer), and at pacote end (with next-step suggestion fed from Priority 2). All cron-precise.
+- **Weekly report:** Cowork-built — pacotes ativos / próximos a concluir / em risco de abandono / expirados.
 
 ### 4.4 Pre-consultation owner briefing (Priority 4)
 
 Briefing curto delivered to Sara daily before the day starts (or the evening before — configurable). For each patient of the day: motivo da consulta, historial relevante, estado dos pacotes, queixas anteriores, sugestão de próxima ação no fim da consulta (from Priority 2).
 
+- **Runtime:** **Cowork**. This is owner-facing recurring work — Cowork's sweet spot.
 - **Disparador:** scheduled task at a fixed time.
-- **Compilação:** Claude reads the day's agenda from the booking platform and compiles a per-patient card with everything relevant from the Brain (Section 5.1).
+- **Compilação:** Cowork reads the day's agenda from the booking platform and compiles a per-patient card with everything relevant from the central database (Section 5.1) and the latest Priority-2 suggestion per patient.
 - **Entrega:** email / WhatsApp pessoal / Cowork app — Sara's choice.
-- **Conversa de seguimento:** Sara can ask Claude for more detail on any patient ("conta-me mais sobre a Maria Silva," "que tratamentos faz sentido propor à Joana hoje").
+- **Conversa de seguimento:** Sara can ask Cowork for more detail on any patient ("conta-me mais sobre a Maria Silva," "que tratamentos faz sentido propor à Joana hoje").
 
-### 4.5 CRM (headless Airtable) + channel connectors
+### 4.5 CRM (headless Airtable) + channel connectors + Code daemon hosting
 
-The two infrastructure pieces beneath everything in 4.1–4.4. Configured Day 1 — they are the foundation, not an add-on.
+The infrastructure beneath everything in 4.1–4.4. Configured Day 1 — foundation, not add-on.
 
-**CRM — headless Airtable.** Airtable is the clinic's patient-data backbone with **no user-facing UI of its own** — the clinic interacts with Claude (Cowork), not with Airtable. Tables: **Patients**, **Visits**, **Treatments**, **Packages**, **Messages**, **Suggestions**, **Brand voice**. Status fields, owner fields, tags — all manipulable in conversation ("Claude, find every patient whose laser pacote ended >3 months ago and who hasn't responded to the last reactivation message"). This is OBLQAI's standard pattern for Cowork engagements — no one on Sara's team needs to learn an Airtable UI.
+**CRM — headless Airtable.** Airtable is the clinic's patient-data backbone with **no user-facing UI of its own** — the clinic interacts with Cowork (Sara) and the patient gets Code-drafted messages, but nobody clicks around an Airtable interface. Tables: **Patients**, **Visits**, **Treatments**, **Packages**, **Messages**, **Suggestions**, **Brand voice**, **Approval queue** (the row shape Code writes / Cowork surfaces). Both runtimes read and write the same tables.
 
 **Channel connectors.**
-- WhatsApp Business API — outbound via Claude, inbound via an n8n bridge (per `Context/automation-policy.md`, the only sanctioned use of n8n alongside no-MCP tools).
-- Email — Gmail or the clinic's mail provider, MCP-based.
+- WhatsApp Business API — **n8n catches the public webhook**, drops the event into Airtable, **Code picks it up** within seconds. Outbound via Code or Cowork directly.
+- Email — Gmail or the clinic's mail provider, MCP-based, called by either runtime.
 - SMS — provider TBC with Sara (likely a PT-local SMS gateway).
-- Booking platform — MCP **[TBC com Sara]** once BUK vs book.pt is confirmed; this determines the integration timeline for Day 4–10.
+- Booking platform — MCP **[TBC com Sara]** once BUK vs book.pt is confirmed.
+
+**Claude Code daemon hosting.**
+- Lives on the clinic's VPS (part of the Compute layer in canonical Practice Command pricing — no separate line item).
+- Supervised by `systemd` (or equivalent) — auto-restart on failure, heartbeat to the central database so the weekly learning pass can flag downtime.
+- Same MCP set as Cowork. No duplicate configuration.
+- Logs land in a dedicated Airtable table (or a structured log file the weekly learning pass consumes) for the loop in Section 5.
 
 ---
 
 ## 5. The architecture Phase 1 leaves the clinic with
 
-By the end of Phase 1, the clinic does not own "a smarter messaging app." It owns the first layer of a **self-improving, AI-native operating system** for its patient business — a system where tooling, decision-making, and learning are wired together into recursive loops that get better the more the business is used. We are not setting up automations; we are wiring the clinic as a closed-loop system, with **Claude as the policy engine, MCP servers as the actuators, the Airtable + interaction log as the Company Brain**, and **Sara (plus selected team members) as the edge interface to reality**.
+By the end of Phase 1, the clinic does not own "a smarter messaging app." It owns the first layer of a **self-improving, AI-native operating system** for its patient business — a system where tooling, decision-making, and learning are wired together into recursive loops that get better the more the business is used. We are not setting up automations; we are wiring the clinic as a closed-loop system, with **Claude (across two runtimes — Code and Cowork) as the policy engine, MCP servers as the actuators, the Airtable + interaction log as the Central database**, and **Sara (plus selected team members) as the edge interface to reality**.
+
+The two runtimes earn the split: **Claude Code as a VPS daemon** is what makes patient experience actually real-time (sub-minute inbound, cron-precise outbound); **Claude Cowork** is what makes the owner's day work (briefing, approval queue, weekly learning, conversational ops). They share everything — the central database, MCPs, prompts, brand voice — so they're cheap to coordinate.
 
 ### 5.1 The three persistent layers
 
-**The Company Brain (data layer).** Single source of truth for every interaction the clinic produces — every booking event, every consultation note (digitalised), every message in/out, every package status change, every consent and preference, every suggestion accepted or rejected. The Brain is permanent. Everything else is replaceable.
+**The central database (data layer).** Single source of truth for every interaction the clinic produces — every booking event, every consultation note (digitalised), every message in/out, every package status change, every consent and preference, every suggestion accepted or rejected. The central database is permanent. Everything else is replaceable.
 
-**The Ephemeral Software Layer.** The message-drafting prompts, the suggestion rules, the briefing template, the package-tracking automations, the Cowork scheduled tasks, the Airtable views — all of it is **disposable and regenerable**. As Claude (and later Hermes, if and when) get more capable, or as the clinic's logic changes, these components are rewritten and redeployed. The Brain persists; the software around it evolves. This is what makes "no ops/marketing hire" work: when the clinic needs a new message cadence or a new triage rule, we regenerate the layer.
+**The Ephemeral Software Layer.** The message-drafting prompts, the suggestion rules, the briefing template, the package-tracking automations, the Cowork scheduled tasks, the Airtable views — all of it is **disposable and regenerable**. As Claude (and later Hermes, if and when) get more capable, or as the clinic's logic changes, these components are rewritten and redeployed. The central database persists; the software around it evolves. This is what makes "no ops/marketing hire" work: when the clinic needs a new message cadence or a new triage rule, we regenerate the layer.
 
 **The Human Interface Layer (the edge).** Sara is the **Directly Responsible Individual (DRI)** for the system. Selected team members are DRIs for in-room actions (marking sessions complete, capturing in-consultation notes). The system pushes humans into the loop only where reality demands it: clinical decisions, sensitive patient cases, anything where the cost of a wrong automated response is higher than the value of speed.
 
@@ -187,29 +204,29 @@ Phase 1 wires every part of the patient business — bookings, consultations, me
 
 **1 — Sensor Layer.** Picks up signal from every place the clinic touches reality: every event in the agenda, every message in/out, every package status change, every consultation note (once digitalised), every patient response, every queixa registered, every appointment outcome.
 
-**2 — Policy / Decision Layer.** Claude orchestrates. For every sensor event, Claude decides: respond automatically, draft for Sara's approval, escalate directly to Sara, route to a specific team member, log silently, or trigger a follow-up sequence. This is the "automated clinic manager" layer — Claude does the work a clinic manager would do if the clinic had hired one.
+**2 — Policy / Decision Layer.** Two runtimes share this layer. **Claude Code daemon** handles every real-time / event-driven decision: an inbound message arrives, a session completes, a webhook fires — Code wakes within seconds, reads context from the central database, decides (respond automatically · queue for approval · escalate to Sara · route to a team member · log silently · trigger a follow-up sequence), and acts. **Claude Cowork** handles the owner-facing decisions: which patients to surface on the briefing, what the weekly digest should show Sara, what conversational queries Sara asks ad-hoc. This is the "automated clinic manager" layer — split into a real-time engine and an owner cockpit, both calling the same skills.
 
-**3 — Tool Layer.** Claude executes through MCP servers — Airtable for the CRM, WhatsApp / SMS / email for messaging, the booking platform for agenda reads/writes, Ollama for sensitive clinical inference. The tools are deterministic; the intelligence sits in the Policy layer above them.
+**3 — Tool Layer.** Both runtimes execute through the same MCP servers — Airtable for the CRM, WhatsApp / SMS / email for messaging, the booking platform for agenda reads/writes, Ollama for sensitive clinical inference. The tools are deterministic; the intelligence sits in the Policy layer above them.
 
-**4 — Quality Gate.** Phase 1 keeps Sara as the primary quality gate — sensitive messages and clinical-adjacent decisions pass through her approval. Layered on top are automatic checks: brand-voice consistency, recommendation sanity (e.g., flagging if the system suggests an intensive treatment for a patient with a very recent queixa), classifier drift, stale-task detection. As trust accrues, gates that prove reliable can be promoted to autonomous on a per-category basis; high-stakes gates stay human-DRI indefinitely.
+**4 — Quality Gate.** Phase 1 keeps Sara as the primary quality gate — sensitive messages and clinical-adjacent decisions pass through her approval. The mechanism is concrete: when Code drafts something sensitive, it writes a "queued for approval" row into the central database; Cowork surfaces that row to Sara in her approval queue; one-click approve in Cowork triggers Code to send. Layered on top are automatic checks running in both runtimes: brand-voice consistency, recommendation sanity (e.g., flagging if the system suggests an intensive treatment for a patient with a very recent queixa), classifier drift, stale-task detection. As trust accrues, gates that prove reliable can be promoted to autonomous on a per-category basis; high-stakes gates stay human-DRI indefinitely.
 
-**5 — Learning Mechanism.** Every week — and on every flagged anomaly — Cowork runs a learning pass: message-review (which got good responses, which got ignored, which generated complaints), suggestion-review (which Sara accepted, modified, or rejected, with what justification), briefing-review (which patients on the briefing led to relevant in-consultation actions, which were noise), operational telemetry (which scheduled tasks are stale, which automations are failing silently). The output is **patches** — updated message templates, refined suggestion rules, new triage tags, modified briefing structure, Airtable view changes. Patches go through the Quality Gate (Sara or an automatic check, depending on risk) and are deployed back into the Ephemeral Software Layer. The loop closes; the system gets better.
+**5 — Learning Mechanism.** Every week — and on every flagged anomaly — Cowork runs a learning pass: message-review (which got good responses, which got ignored, which generated complaints), suggestion-review (which Sara accepted, modified, or rejected, with what justification), briefing-review (which patients on the briefing led to relevant in-consultation actions, which were noise), operational telemetry (which Code webhooks fired, which cron jobs ran on time, which automations are failing silently). The output is **patches** — updated message templates, refined suggestion rules, new triage tags, modified briefing structure, Airtable view changes. Patches go through the Quality Gate (Sara or an automatic check, depending on risk) and are deployed back into the Ephemeral Software Layer. **Both Code and Cowork pick up the patches from the next invocation** — same source, same prompts. The loop closes; the system gets better.
 
 ### 5.3 What this looks like in production
 
 A concrete Day-30 scenario at Sara's clinic:
 
-1. **Sensor event.** Maria Silva arrives for her 3rd of 4 laser sessions. The equipa marks "session complete" in Cowork. The session, parameters used, and a one-line note are logged to the Brain. The package status updates; the patient automatically receives a confirmation message with sessions remaining.
-2. **Audit catch.** The weekly Cowork learning pass notices that six of the previous week's twenty-three "session complete" events did not generate the expected follow-up package-status message to the patient — all six were sessions where the equipa used the WhatsApp-to-Claude shortcut rather than the in-CRM button, and the WhatsApp parser dropped a field.
-3. **Root cause & patch.** The learning pass diagnoses the gap (the WhatsApp parser was not extracting the "next session window" field reliably), drafts an updated parser prompt, drafts a one-line equipa note about the alternative shortcut, and queues the patch.
+1. **Sensor event.** Maria Silva arrives for her 3rd of 4 laser sessions. The equipa marks "session complete" — either by clicking the in-CRM button (booking-platform webhook fires) or by messaging Claude on the clinic's WhatsApp ("Maria, sessão 3 feita"). **Claude Code daemon picks up the event within seconds**, logs the session + parameters + a one-line note to the central database, updates the package status, and fires the patient confirmation: "Sessão 3 de 4 concluída. Falta 1 sessão. Próxima entre 18 e 25 de junho." Maria gets the message before she's left the parking lot.
+2. **Audit catch.** The weekly **Cowork** learning pass notices that two of the previous week's twenty-three "session complete" events were classified as ambiguous by Code's WhatsApp parser — the equipa's shorthand had drifted, and Code conservatively queued them for Sara's approval instead of auto-sending.
+3. **Root cause & patch.** The learning pass diagnoses the drift (new shorthand from the equipa: "M-3-feita" instead of "Maria, sessão 3 feita"), drafts an updated parser prompt that recognises both, drafts a one-line equipa note acknowledging both shorthands work, and queues the patch.
 4. **Quality Gate.** Sara approves the patch in Cowork (one click) and forwards the equipa note in the team's WhatsApp group.
-5. **Resolution.** By the following week, every "session complete" event generates the follow-up message regardless of which channel was used to log it. The system is measurably more reliable than it was the week before — and Sara did not write a line of code or a line of copy herself.
+5. **Resolution.** Within minutes, both runtimes pick up the updated parser. The following week, the equipa's shorthand is parsed correctly regardless of variant. The system is measurably more reliable than it was — and Sara did not write a line of code or a line of copy herself.
 
 ### 5.4 Why this matters for what comes after Phase 1
 
 Phase 1 leaves all five components in place — but with **Sara as the Quality Gate and Sara (via Cowork) as the executor of the Learning patches.** A potential Phase 2 — *not committed today* — would be the same architecture, with **autonomous quality gates** (LLM-as-judge, sanity tests, brand-voice filters) and **autonomous patching** (Claude writes and deploys the patch, escalating only the high-risk ones). The architecture does not change between phases; the question Phase 2 answers is *"how much of the loop runs without Sara in it."*
 
-This is also why we will not need to rebuild anything to move the clinic from Phase 1 to a possible Phase 2. The Brain, the tool layer, and the loop topology are identical. We are not shipping a Cowork product and later replacing it with a different product — we are shipping an operating layer and progressively widening its autonomy if and when the clinic is ready.
+This is also why we will not need to rebuild anything to move the clinic from Phase 1 to a possible Phase 2. The central database, the tool layer, and the loop topology are identical. We are not shipping a Cowork product and later replacing it with a different product — we are shipping an operating layer and progressively widening its autonomy if and when the clinic is ready.
 
 ---
 
