@@ -18,6 +18,14 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-28 — Sara proposal deck finalized for client review; clinic confirmed with no existing website
+
+- `Sara-Proposal.pptx` revised end-to-end for clinic-owner readability. Six structural edits across slides 2, 3, 4, 5, 6, 7. Implementation jargon stripped throughout (no more MCP, daemon, schema, scheduled tasks, P-codes, DRI, audit trail). Deck is now in a state Joao can send to Sara after the pt-PT translation pass.
+- **Slide 3** rebuilt as a round pentagon feedback-loop visual (was a horizontal 5-card row). Loop steps now describe the real mechanism — actions logged with outcomes, Sara's approvals/rejections captured, results analyzed, patterns extracted, next week's context updated.
+- **Slide 7** reframed as Joao's future-scaling suggestions (not committed scope) — clearer expectation-setting with Sara.
+- **Clinic has no existing website (confirmed 2026-05-28).** Priority 6 is fully greenfield (net-new build, no migration). Affected docs: call summary, proposal markdown DRAFT (Sections 4.6 / 7 / 9 / 11), `Context/active-pilots.md`, project `memory.md`, Cowork auto-memory.
+- No pricing in writing yet. Final commercial number lands after Joao's pricing decision + serial pt-PT translation pass.
+
 ## 2026-05-28 — Sara pilot: rebalanced to 6 priorities (paid ads → Phase 2), proposal rewritten end-to-end; Code/Cowork auth split standardised for all client work
 
 - **Phase 1 rebalanced from 8 priorities to 6.** Google Ads + Meta Ads pulled out of Phase 1 into a named Phase 2 candidate. Phase 1 keeps **client-ops (P1–P4)** + **organic engine (P5: content + auto-post + Google Business Profile management)** + **website + lead capture surface (P6)**. Rationale (now explicit in the proposal): paid ads on cold-start data perform poorly; the right sequence is organic engine first (validated creative + audience signal) → patient-ops loop steady-state → then layer paid on top.
