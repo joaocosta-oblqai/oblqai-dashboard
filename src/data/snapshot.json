@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T08:12:53Z",
+  "generatedAt": "2026-05-28T20:00:00Z",
   "customers": [
     {
       "id": "rect4kxOi5Xzv7eSK",
@@ -552,6 +552,22 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-28",
+      "headline": "Sara pilot: rebalanced to 6 priorities (paid ads → Phase 2), proposal rewritten end-to-end; Code/Cowork auth split standardised for all client work",
+      "body": [
+        "Phase 1 rebalanced from 8 priorities to 6. Google Ads + Meta Ads pulled out of Phase 1 into a named Phase 2 candidate. Phase 1 keeps client-ops (P1–P4) + organic engine (P5: content + auto-post + Google Business Profile management) + website + lead capture surface (P6). Rationale (now explicit in the proposal): paid ads on cold-start data perform poorly; the right sequence is organic engine first (validated creative + audience signal) → patient-ops loop steady-state → then layer paid on top.",
+        "P1 reframed as strategic, segmented client outreach. Starting playbook = 5 lifecycle segments (prospect, active in-pacote, pacote-complete, dormant, lapsed) — positioned as a proposed starting set, not a fixed rule. Final segmentation defined with the client in Discovery once we map their actual base. Reactivation + win-back outreach always passes through Sara before sending.",
+        "P6 expanded to 'website + lead capture surface.' Site + treatment-specific landing pages + lead form + WhatsApp click-to-chat + form-to-CRM pipeline (auto-tags new leads as Segment 1 prospects, triggers P1's welcome flow) + conversion tracking (GA4 + Meta Pixel + GTM installed in Phase 1 so Phase 2 ads launch with signal day-one).",
+        "Use-cases deck grew to 13 process flows. New Flow 13 specifically illustrates how a lead lands → Buk + central database → Segment 1 → outreach engine in seconds. Three existing journey flows (01/02/03) re-tagged with the segments they serve. Ads flow relabeled as Phase 2 capability.",
+        "Cowork-first → progressively autonomous ladder made explicit. Standard 4-mode ramp per category (Cowork-approves-each-send → daily-batch-approve → autonomous-with-audit-trail → owner-flippable-back-to-mode-1). Architecture doesn't change between modes — only the gate position does. Becomes the standard autonomy posture for every Cowork pilot.",
+        "Architecture decision: Code-via-API-key vs Cowork-via-Pro/Max. Verified against Anthropic's official docs (Pro/Max usage limits are shared across Claude.ai + Cowork + Code; concurrent Code sessions hit OAuth refresh races). Standard pattern for every client deployment going forward: Claude Code daemon on the client's VPS authenticates via an OBLQAI-managed Anthropic Console API key (pay-as-you-go, absorbed into Practice Command monthly); Claude Cowork on the owner's desktop continues on the owner's Pro/Max plan.",
+        "Buk confirmed as Sara's booking/CRM platform. Two validations gate signature: (a) Sara confirms her subscription is on Buk's Pro+ tier (the API gate, per their public help center) or accepts the upgrade as a pilot cost; (b) OBLQAI contacts Buk support directly for API + webhook surface confirmation. Working assumption in the proposal: OBLQAI builds a dedicated Buk MCP server with full read/write + event subscriptions.",
+        "Terminology + contact sweeps across all three Sara artifacts. 'patient' → 'client' / 'paciente' → 'cliente' (no medical procedures at an aesthetic clinic). 'Brain' → 'central database' / 'base de dados central' (was internal jargon that confused the client-facing message). All footers updated to joao.costa@oblqai.com · Porto, Portugal (was HELLO@OBLQAI.COM · LISBOA).",
+        "All date and timeline language stripped from the decks. No '~35 dias', 'Dia 14', 'Semana 4', 'DIAS 1–5', '4–6 semanas'. Slide 6 ('Como chegamos lá') now uses non-dated phase blocks (Descoberta, Construção, Teste & Lançamento, Otimização). Cronograma exato deferred to Discovery once scope is fully agreed.",
+        "'Fora da Fase 1' slide restructured from 2 cards to 3 (paper notes + calendar-gap-fill engine + paid acquisition). No-show messaging clearly folded into P1; the waitlist-match engine kept as its own parked capability."
+      ]
+    },
     {
       "date": "2026-05-27",
       "headline": "P3 (pacote tracking) refined — patient-driven confirmation replaces equipa-stamp model; Phase 2 client portal added to roadmap",
