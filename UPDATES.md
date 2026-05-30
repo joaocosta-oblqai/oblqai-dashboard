@@ -18,6 +18,13 @@ Newest entries on top. Format:
 
 ---
 
+## 2026-05-30 — May tooling costs reconciled to actuals (Codex €108, Claude Max €222, Google Cloud €100 added)
+
+- Codex (OpenAI) corrected from €25 to €108/month to reflect actual May usage.
+- Anthropic Claude Pro Max rounded to €222/month (was €221.40).
+- New line: Google Cloud €100/month (GCP compute/API), separate from the €22 Gemini AI subscription.
+- Net effect on internal monthly burn: +€183 vs the previously recorded May figures.
+
 ## 2026-05-28 — Sara proposal deck finalized for client review; clinic confirmed with no existing website
 
 - `Sara-Proposal.pptx` revised end-to-end for clinic-owner readability. Six structural edits across slides 2, 3, 4, 5, 6, 7. Implementation jargon stripped throughout (no more MCP, daemon, schema, scheduled tasks, P-codes, DRI, audit trail). Deck is now in a state Joao can send to Sara after the pt-PT translation pass.

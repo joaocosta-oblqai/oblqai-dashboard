@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T20:00:00Z",
+  "generatedAt": "2026-05-30T07:30:12Z",
   "customers": [
     {
       "id": "rect4kxOi5Xzv7eSK",
@@ -303,7 +303,7 @@
       "date": "2026-05-01",
       "category": "Intelligence",
       "vendor": "Anthropic",
-      "amountEur": 221.4,
+      "amountEur": 222,
       "cadence": "monthly",
       "notes": "Joao's claude.ai Max subscription. Powers all Cowork sessions for delivery work."
     },
@@ -402,7 +402,7 @@
       "date": "2026-05-01",
       "category": "Intelligence",
       "vendor": "OpenAI",
-      "amountEur": 25,
+      "amountEur": 108,
       "cadence": "monthly",
       "notes": "OpenAI Codex — cloud coding agent. Current tier €25/month. Expected to scale to €100/month as usage grows; bump the Amount field when the upgrade lands."
     },
@@ -416,6 +416,17 @@
       "amountEur": 0,
       "cadence": "one-off",
       "notes": "3-year domain registration purchased 2026-05-13. Renews 2029-05-13. Amount placeholder — update with actual charge from Squarespace billing."
+    },
+    {
+      "id": "recUjSjhgzOWMSWq5",
+      "description": "Google Cloud — May 2026",
+      "scope": "Internal",
+      "date": "2026-05-01",
+      "category": "Compute",
+      "vendor": "Google",
+      "amountEur": 100,
+      "cadence": "monthly",
+      "notes": "Google Cloud Platform usage (GCP compute / API). Distinct from the Gemini AI subscription line."
     }
   ],
   "tasks": [
@@ -552,6 +563,16 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-30",
+      "headline": "May tooling costs reconciled to actuals — Codex up to €108, Claude Max €222, Google Cloud €100 added",
+      "body": [
+        "Codex (OpenAI) corrected from €25 to €108/month to reflect actual May usage.",
+        "Anthropic Claude Pro Max rounded to €222/month (was €221.40).",
+        "New line: Google Cloud €100/month (GCP compute/API), separate from the €22 Gemini AI subscription.",
+        "Net effect on internal monthly burn: +€183 vs the previously recorded May figures."
+      ]
+    },
     {
       "date": "2026-05-28",
       "headline": "Sara proposal deck finalized for client review; clinic confirmed with no existing website",
