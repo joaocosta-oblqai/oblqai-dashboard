@@ -632,6 +632,77 @@ function GlobalDocs({ docs }: { docs: Deliverable[] }) {
   );
 }
 
+// External free audit tool — https://mooreiq.ai/scan. Crawls a business
+// website and returns five ranked AI automation opportunities with dollar
+// estimates, build costs and payback timelines. Useful as a first touch on
+// prospects (Lead → Qualified) before we run our own Audit stage.
+const SCAN_URL = 'https://mooreiq.ai/scan';
+
+function ScanLink({
+  label,
+  className,
+}: {
+  label: string;
+  className?: string;
+}) {
+  return (
+    <a
+      href={SCAN_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {label}
+    </a>
+  );
+}
+
+function ScanTool() {
+  const facts = [
+    { label: 'Cost', value: 'Free' },
+    { label: 'Time', value: '≈ 90 seconds' },
+    { label: 'Input', value: 'Website URL' },
+    { label: 'Output', value: '5 ranked automations' },
+  ];
+  return (
+    <section className="mb-12">
+      <SectionHeader
+        eyebrow="Tools"
+        title="AI Operations X-Ray"
+        subtitle="Free automated audit from MooreIQ. Point it at a prospect's website and it returns five ranked automation opportunities with estimated value, build cost and payback, plus a first-month action plan."
+      />
+      <div className="rounded-lg border border-[#D8CFC0] bg-white p-5 md:flex md:items-center md:justify-between md:gap-8">
+        <div className="min-w-0 flex-1">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {facts.map((f) => (
+              <div key={f.label}>
+                <div className="text-xs uppercase tracking-wide text-[var(--color-faint)]">
+                  {f.label}
+                </div>
+                <div className="font-serif text-lg leading-tight">{f.value}</div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-sm text-[var(--color-charcoal)]">
+            No call required and no credit card. The report is email-gated only
+            at the end, so it works as a low-friction first touch before our own
+            Audit stage.
+          </p>
+        </div>
+        <div className="mt-5 shrink-0 md:mt-0">
+          <ScanLink
+            label="Run the X-Ray →"
+            className="inline-block rounded-md bg-[var(--color-copper)] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--color-copper-soft)]"
+          />
+          <div className="mt-2 text-center text-[11px] text-[var(--color-faint)] md:text-right">
+            mooreiq.ai/scan · opens in a new tab
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function SectionHeader({
   eyebrow,
   title,
@@ -743,6 +814,7 @@ function Dashboard() {
     <PageShell>
       <KPIStrip customers={customers} costs={costs} />
       <Pipeline customers={customers} />
+      <ScanTool />
       <Costs costs={costs} />
       <Updates updates={updates ?? []} />
       <Activities activities={activities} customers={customers} />
@@ -804,11 +876,17 @@ function CustomerDetail() {
       </div>
       <header className="mb-8 border-b border-[#D8CFC0] pb-4">
         <h1 className="font-serif text-3xl md:text-4xl">{c.name.trim()}</h1>
-        {c.stage && (
-          <div className="mt-2 inline-block rounded-full bg-[var(--color-copper)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-            {c.stage}
-          </div>
-        )}
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          {c.stage && (
+            <div className="inline-block rounded-full bg-[var(--color-copper)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+              {c.stage}
+            </div>
+          )}
+          <ScanLink
+            label="Run AI Operations X-Ray on this prospect →"
+            className="text-xs font-semibold uppercase tracking-widest text-[var(--color-copper)] hover:underline"
+          />
+        </div>
       </header>
 
       <section className="mb-10 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
