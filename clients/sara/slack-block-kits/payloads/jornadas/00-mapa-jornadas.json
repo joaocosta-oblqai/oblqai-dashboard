@@ -1,0 +1,158 @@
+{
+  "text": "Jornadas do Cliente · Clínica DLux",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":compass: Jornadas do Cliente · Clínica DLux",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Sete jornadas sobre a mesma base de dados.\n:zap: *Automático* — o Claude envia sozinho e só aparece aqui se falhar.\n:lock: *Com aprovação* — nada sai sem um cartão aprovado pela equipa."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*J1 · Novo Cliente* · :zap: automático\nResposta ao 1.º contacto + PDF informativo do tratamento."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver jornada",
+          "emoji": true
+        },
+        "action_id": "dlux.mapa.ver_j1",
+        "value": "{\"jornada\":\"j1\"}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*J2 · Cliente Recorrente* · :zap: automático\nCuidados pré/pós por tipo de tratamento, check-in de criolipólise, prova de presença, avaliação Google, próxima sessão, manutenção de laser."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver jornada",
+          "emoji": true
+        },
+        "action_id": "dlux.mapa.ver_j2",
+        "value": "{\"jornada\":\"j2\"}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*J3 · Reativação* · :lock: com aprovação\nSem visita há 6–18 meses · ondas diárias · desconto com validade."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver jornada",
+          "emoji": true
+        },
+        "action_id": "dlux.mapa.ver_j3",
+        "value": "{\"jornada\":\"j3\"}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*J4 · Recuperação de falta* · :zap: lista de espera · :lock: contacto a quem faltou\nVaga libertada oferecida por prioridade; mensagem de reagendamento a quem faltou."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver jornada",
+          "emoji": true
+        },
+        "action_id": "dlux.mapa.ver_j4",
+        "value": "{\"jornada\":\"j4\"}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*J5 · Plano / Pack* · :lock: com aprovação\nProposta de renovação quando falta 1 sessão para acabar o pack."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver jornada",
+          "emoji": true
+        },
+        "action_id": "dlux.mapa.ver_j5",
+        "value": "{\"jornada\":\"j5\"}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*J6 · Formação Profissional* · :zap: automático\nPortfólio de formações, seguimento aos 7 dias, último seguimento a 1 mês, onboarding."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver jornada",
+          "emoji": true
+        },
+        "action_id": "dlux.mapa.ver_j6",
+        "value": "{\"jornada\":\"j6\"}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*J8 · Campanhas* · :lock: com aprovação\nAniversário 15% (fixa), campanhas sazonais, flash de reativação e de fidelização."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver jornada",
+          "emoji": true
+        },
+        "action_id": "dlux.mapa.ver_j8",
+        "value": "{\"jornada\":\"j8\"}"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "A antiga J7 (cuidados de tratamentos intrusivos) vive agora dentro da J2, por tipo de tratamento."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":shield: Mensagens comerciais (J3, J8) só saem para clientes com consentimento registado."
+        }
+      ]
+    }
+  ]
+}

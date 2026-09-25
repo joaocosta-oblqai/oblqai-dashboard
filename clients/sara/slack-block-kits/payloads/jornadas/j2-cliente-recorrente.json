@@ -1,0 +1,156 @@
+{
+  "text": "J2 · Cliente Recorrente",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":repeat: J2 · Cliente Recorrente",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":zap: automático · WhatsApp / SMS · só aparece no canal se falhar"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Quando:* cada sessão marcada ou concluída na Buk. As mensagens dependem do tipo de tratamento."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Cliente de 1.ª vez* · após a sessão · :zap: automático\n>Olá {primeiro_nome}, obrigada pela sua preferência pela DLux! Deixamos-lhe o Guia de Cuidados Pós-Tratamento para os próximos dias. Qualquer dúvida, estamos aqui.\n_Anexo: Guia de Cuidados Pós-Tratamento (PDF)._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*2 · Laser — cuidados pré-sessão* · 48h antes · :zap: automático\n>Olá {primeiro_nome}, a sua sessão de laser é {data} às {hora}. Para o melhor resultado, veja os cuidados a ter antes da sessão no documento em anexo."
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*3 · Laser — cuidados pós-sessão* · logo após a sessão · :zap: automático\n>Olá {primeiro_nome}, obrigada pela visita de hoje! Seguem os cuidados pós-laser para os próximos dias."
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*4 · Criolipólise — check-in* · dia seguinte · :zap: automático\n>Olá {primeiro_nome}, como se sentiu depois da sessão de criolipólise de ontem? Se notar algo fora do normal, responda a esta mensagem.\n_Vai para todas as clientes de criolipólise, não só as de 1.ª vez._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*5 · Peeling / microagulhamento* · após a sessão · :zap: automático\n>Olá {primeiro_nome}, obrigada pela visita de hoje! Seguem os cuidados pós-tratamento para os próximos dias.\n_Anexo: PDF de cuidados pós-tratamento._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*6 · Prova de presença* · sessão concluída na Buk · :zap: automático\n>Confirma a sessão {n} de {total} de hoje?\n>→ Sessão {n} de {total} confirmada. Próxima recomendada entre {de} e {ate}. Faltam {restantes} sessões.\n_Substitui o cartão de carimbos. Sem confirmação em 24h, vai para a fila «por confirmar» da equipa._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*7 · Pedido de avaliação Google* · momento a definir · :grey_question: a decidir\n>Olá {primeiro_nome}, ficou satisfeita com a sua experiência na DLux? A sua opinião ajuda-nos muito: {link_google}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*8 · Laser — próxima sessão* · ~1 mês depois · :zap: automático\n>Olá {primeiro_nome}, está na altura da sua próxima sessão de laser. Marque aqui: clinica-dlux.buk.pt\n_Só para quem ainda não deixou a sessão seguinte marcada._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*9 · Laser — manutenção* · +1 ano sem visita · :zap: automático\n>Olá {primeiro_nome}, para manter os resultados do laser recomendamos uma sessão de manutenção. Quer marcar? clinica-dlux.buk.pt"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j2.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j2.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j2\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j2.jornada.registo",
+          "value": "{\"jornada\":\"j2\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j2.jornada.pausar",
+          "value": "{\"jornada\":\"j2\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

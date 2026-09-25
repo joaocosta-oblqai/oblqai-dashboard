@@ -1,0 +1,124 @@
+{
+  "text": "J8 · Campanhas",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":mega: J8 · Campanhas",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":lock: com aprovação · WhatsApp · toda a base com consentimento"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Regra:* qualquer campanha passa sempre por aprovação antes do envio. Aprovar a campanha gera ondas diárias — cada onda tem o seu cartão."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Aniversário (fixa)* · cartão semanal · :lock: com aprovação\n>Olá {primeiro_nome}, feliz aniversário da parte de toda a equipa DLux! Este mês oferecemos-lhe 15% num pack ou serviço à sua escolha. Marque aqui: clinica-dlux.buk.pt\n_15% · uso único · válido durante o mês de aniversário._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*2 · Campanha sazonal* · por campanha · :lock: com aprovação\n>Olá {primeiro_nome}, chegou {campanha}! {oferta} até {validade}. Aproveite e marque a sua sessão aqui: clinica-dlux.buk.pt"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*3 · Flash — reativação / fidelização* · por campanha · :grey_question: a decidir\n>Olá {primeiro_nome}, só {periodo}: {oferta}. Marque aqui: clinica-dlux.buk.pt\n_Igual à sazonal, com {periodo} em vez de mês._"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j8.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":inbox_tray: Ver por decidir",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.por_decidir",
+          "value": "{\"jornada\":\"j8\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j8\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.registo",
+          "value": "{\"jornada\":\"j8\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.pausar",
+          "value": "{\"jornada\":\"j8\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

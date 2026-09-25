@@ -1,0 +1,144 @@
+{
+  "text": "J3 · Reativação",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":arrows_counterclockwise: J3 · Reativação",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":lock: com aprovação · WhatsApp · cada mensagem passa por um cartão"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Quando:* todos os dias às 08:00 — clientes sem visita há 6–18 meses, consentimento verificado, ordenadas por lealdade.\n*Envio:* em ondas, 1 mensagem por minuto, só em horário de clínica. Um grupo de controlo fica retido para medir o efeito."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Mensagem de reativação* · onda diária · :lock: com aprovação\n>Olá {primeiro_nome}, sentimos a sua falta na DLux! Da última vez fez {tratamento}. Gostávamos muito de a voltar a ver. Oferecemos-lhe {oferta}. Válida até {validade}. Marque a sua sessão quando quiser: clinica-dlux.buk.pt\n_«Da última vez fez…» só aparece quando é seguro dizê-lo (omitido em criolipólise)._"
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Miracle DLux*\n20% na próxima sessão"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Peeling*\n15% no próximo tratamento"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Depilação laser*\nsessão de manutenção com 25%"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Criolipólise*\navaliação gratuita + 10% na sessão seguinte"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "`{primeiro_nome}` `{tratamento}` `{oferta}` `{validade}` são substituídos por cliente. Chaves desconhecidas fazem falhar a geração — nunca chegam à cliente como texto literal."
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Clientes inativas há mais de 36 meses ficam fora — alargar é decisão da Sara."
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":inbox_tray: Ver por decidir",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.jornada.por_decidir",
+          "value": "{\"jornada\":\"j3\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j3\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.jornada.registo",
+          "value": "{\"jornada\":\"j3\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.jornada.pausar",
+          "value": "{\"jornada\":\"j3\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "text": "Aniversários 15–21 set · 4 por decidir",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":birthday: Aniversários · 15–21 set",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Esta semana*\n4"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Já receberam este ano*\n0"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Sem consentimento*\n1 (não listada)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Oferta*\n15% · uso único · mês inteiro"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Modelo*\n>Olá {primeiro_nome}, feliz aniversário da parte de toda a equipa DLux! Este mês oferecemos-lhe 15% num pack ou serviço à sua escolha. Marque aqui: clinica-dlux.buk.pt"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Joana Almeida* · faz anos a 16 set · WhatsApp · :hourglass_flowing_sand: por decidir"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.j8.linha.menu:demo.c_0150",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":white_check_mark: Aprovar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"aprovar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0150\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0150\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0150\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0150\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Rita Carvalho* · faz anos a 17 set · WhatsApp · :hourglass_flowing_sand: por decidir"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.j8.linha.menu:demo.c_0288",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":white_check_mark: Aprovar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"aprovar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0288\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0288\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0288\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0288\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Beatriz Lopes* · faz anos a 19 set · WhatsApp · :hourglass_flowing_sand: por decidir"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.j8.linha.menu:demo.c_0463",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":white_check_mark: Aprovar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"aprovar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0463\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0463\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0463\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0463\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Catarina Reis* · faz anos a 21 set · WhatsApp · :hourglass_flowing_sand: por decidir"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.j8.linha.menu:demo.c_0714",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":white_check_mark: Aprovar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"aprovar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0714\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0714\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0714\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"card\":\"j8-aniv-38\",\"cliente\":\"demo.c_0714\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j8.lote",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Aprovar as 4",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.lote.aprovar_todas",
+          "value": "{\"card\":\"j8-aniv-38\"}",
+          "style": "primary",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Aprovar as 4?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Cada cliente recebe a mensagem no dia de aniversário. Aprova só as que estão *por decidir*."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Aprovar as 4",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Não enviar nenhuma",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.lote.nao_enviar",
+          "value": "{\"card\":\"j8-aniv-38\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Não enviar nenhuma?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nenhuma cliente desta semana recebe a mensagem de aniversário."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Não enviar nenhuma",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":memo: Editar o modelo",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.lote.editar_modelo",
+          "value": "{\"card\":\"j8-aniv-38\"}"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":lock: Nada sai sem aprovação. *Aprovar* põe na fila — o envio é espaçado, não instantâneo. Uma falha volta a *por decidir* sozinha e não afeta as outras. *Não enviar* é definitivo."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}

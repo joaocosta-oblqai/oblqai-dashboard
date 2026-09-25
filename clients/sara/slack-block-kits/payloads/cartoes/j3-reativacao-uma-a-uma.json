@@ -1,0 +1,188 @@
+{
+  "text": "Reativação · 1 de 2 · Marta Silva",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":arrows_counterclockwise: Reativação · 1 de 2",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Cliente*\nMarta Silva"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Último tratamento*\nMiracle DLux"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Última visita*\nhá 8 meses"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Oferta*\n20% · válida até 16 out"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Canal*\nWhatsApp"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Lealdade*\n6 visitas · cliente desde 2023"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": ">Olá Marta, sentimos a sua falta na DLux! Da última vez fez Miracle DLux. Gostávamos muito de a voltar a ver. Oferecemos-lhe 20% na próxima sessão. Válida até 16 out. Marque a sua sessão quando quiser: clinica-dlux.buk.pt"
+      }
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.decisao",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Aprovar e enviar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.aprovar",
+          "value": "{\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0412\"}",
+          "style": "primary",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Enviar esta mensagem?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Sai exatamente como está escrita, pelo canal preferido da cliente."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Aprovar e enviar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.editar",
+          "value": "{\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0412\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":no_entry_sign: Não enviar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.nao_enviar",
+          "value": "{\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0412\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Não enviar?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "*Não enviar* é definitivo — esta mensagem não volta a ser gerada."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Não enviar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":bust_in_silhouette: Ver ficha",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.ficha",
+          "value": "{\"cliente\":\"demo.c_0412\"}"
+        }
+      ]
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.navegar",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "← Anterior",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.anterior",
+          "value": "{\"card\":\"j3-onda-1\",\"pos\":0}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Seguinte →",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.seguinte",
+          "value": "{\"card\":\"j3-onda-1\",\"pos\":2}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Voltar à lista",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.voltar_lista",
+          "value": "{\"card\":\"j3-onda-1\"}"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":lock: Nada sai sem aprovação. *Aprovar* põe na fila — o envio é espaçado, não instantâneo. Uma falha volta a *por decidir* sozinha e não afeta as outras. *Não enviar* é definitivo."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "text": "J1 · Novo Cliente",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":wave: J1 · Novo Cliente",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":zap: automático · WhatsApp / SMS · só aparece no canal se falhar"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Quando:* primeiro contacto — WhatsApp, formulário do site ou novo lead registado na Buk."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Resposta ao 1.º contacto* · imediato · :zap: automático\n>Olá {primeiro_nome}, obrigada pelo seu contacto com a Clínica DLux! Enviamos-lhe a informação sobre {tratamento}. Pode marcar a sua avaliação aqui: clinica-dlux.buk.pt — ou responda a esta mensagem e a equipa ajuda.\n_Anexo: PDF informativo do tratamento (criolipólise, laser)._"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j1.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j1.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j1\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j1.jornada.registo",
+          "value": "{\"jornada\":\"j1\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j1.jornada.pausar",
+          "value": "{\"jornada\":\"j1\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
