@@ -19,6 +19,8 @@ SLACK_BOT_TOKEN=xoxb-… node clients/sara/slack-block-kits/post.mjs            
 node clients/sara/slack-block-kits/post.mjs --dry-run                           # lists what it would post
 ```
 
+To change cards that are already posted, edit `build.mjs`, rebuild, then run `update.mjs` the same way. It edits each card in place using the message ids in `posted.json`, deletes cards whose payload was removed, and keeps a journey's pause. Texts changed with *Editar mensagens* are overwritten by the payload.
+
 It posts only `payloads/jornadas/`. The operational cards in `payloads/cartoes/` hold demo data and are posted by the daemon when real events happen.
 
 The validator checks Slack's limits on every payload: 50 blocks, header text 150 chars, section text 3000, fields 10, buttons 75 chars, overflow menus 2–5 options, confirm-dialog lengths, unique `action_id`/`block_id`, and escaped `<` / `>` in mrkdwn.
@@ -28,7 +30,6 @@ The validator checks Slack's limits on every payload: 50 blocks, header text 150
 | Jornada | Mode | Reference card |
 |---|---|---|
 | Map of all journeys (pin this) | — | `payloads/jornadas/00-mapa-jornadas.json` |
-| J1 · Novo Cliente | :zap: automatic | `payloads/jornadas/j1-novo-cliente.json` |
 | J2 · Cliente Recorrente (includes the old J7) | :zap: automatic | `payloads/jornadas/j2-cliente-recorrente.json` |
 | J3 · Reativação | :lock: approval | `payloads/jornadas/j3-reativacao.json` |
 | J4 · Recuperação de falta | waitlist :zap: · missed-session contact :lock: | `payloads/jornadas/j4-recuperacao-falta.json` |
@@ -36,15 +37,15 @@ The validator checks Slack's limits on every payload: 50 blocks, header text 150
 | J6 · Formação Profissional | :zap: automatic | `payloads/jornadas/j6-formacao.json` |
 | J8 · Campanhas | :lock: approval | `payloads/jornadas/j8-campanhas.json` |
 
-J7 no longer exists; its treatment-care messages live inside J2, grouped by treatment type. The reference cards list each journey's touchpoints: trigger, timing, mode and message template. Every card ends with the same controls: *Ver por decidir* (approval journeys only), *Editar mensagens*, *Ver o registo* and *Pausar jornada*.
+J1 (Novo Cliente) is not ours: Buk already sends the first-contact reply and the booking confirmation, so there is no J1 card and the map says so (decided 2026-09-25). J7 no longer exists; its treatment-care messages live inside J2, grouped by treatment type. The reference cards list each journey's touchpoints: trigger, timing, mode and message template. Every card ends with the same controls: *Ver por decidir* (approval journeys only), *Editar mensagens*, *Ver o registo* and *Pausar jornada*.
 
 ## Operational cards (what the team acts on)
 
-Automatic journeys (J1, J2, J4 waitlist, J6) post nothing when they succeed. They show up only in the failures card. Every approval journey has its own card.
+Automatic journeys (J2, J4 waitlist, J6) post nothing when they succeed. They show up only in the failures card. Every approval journey has its own card.
 
 | Card | When it's posted | File |
 |---|---|---|
-| Envios automáticos · falhas | A J1/J2/J4-waitlist/J6 send fails | `payloads/cartoes/automaticos-falhas.json` |
+| Envios automáticos · falhas | A J2/J4-waitlist/J6 send fails | `payloads/cartoes/automaticos-falhas.json` |
 | J3 · lista da onda (batch) | Every wave, daily at 08:00 | `payloads/cartoes/j3-reativacao-lista.json` |
 | J3 · uma a uma | *Rever uma a uma* | `payloads/cartoes/j3-reativacao-uma-a-uma.json` |
 | J3 · a editar (in place) | *Editar* on a row | `payloads/cartoes/j3-reativacao-editar.json` |

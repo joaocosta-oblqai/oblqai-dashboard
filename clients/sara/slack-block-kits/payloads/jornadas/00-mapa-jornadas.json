@@ -14,28 +14,11 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "Sete jornadas sobre a mesma base de dados.\n:zap: *Automático* — o Claude envia sozinho e só aparece aqui se falhar.\n:lock: *Com aprovação* — nada sai sem um cartão aprovado pela equipa."
+        "text": "Seis jornadas sobre a mesma base de dados.\n:zap: *Automático* — o Claude envia sozinho e só aparece aqui se falhar.\n:lock: *Com aprovação* — nada sai sem um cartão aprovado pela equipa."
       }
     },
     {
       "type": "divider"
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "*J1 · Novo Cliente* · :zap: automático\nResposta imediata ao 1.º contacto, 24/7, com o link da avaliação gratuita."
-      },
-      "accessory": {
-        "type": "button",
-        "text": {
-          "type": "plain_text",
-          "text": "Ver jornada",
-          "emoji": true
-        },
-        "action_id": "dlux.mapa.ver_j1",
-        "value": "{\"jornada\":\"j1\"}"
-      }
     },
     {
       "type": "section",
@@ -145,6 +128,10 @@
     {
       "type": "context",
       "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":calendar: A J1 · Novo Cliente fica na Buk — o 1.º contacto e a confirmação da marcação já saem de lá, não enviamos nada por cima."
+        },
         {
           "type": "mrkdwn",
           "text": "A antiga J7 (cuidados de tratamentos intrusivos) vive agora dentro da J2, por tipo de tratamento."

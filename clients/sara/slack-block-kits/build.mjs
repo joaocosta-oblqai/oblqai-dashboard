@@ -9,7 +9,7 @@
 // Each payload is a chat.postMessage body ({ channel, text, blocks }). Button values carry ids only —
 // the daemon re-reads the record at click time and never trusts the payload.
 
-import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync, rmSync } from 'node:fs'
 import { dirname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -117,13 +117,12 @@ const jornadas = {
     blocks: [
       header(':compass: Jornadas do Cliente · Clínica DLux'),
       section(
-        'Sete jornadas sobre a mesma base de dados.\n' +
+        'Seis jornadas sobre a mesma base de dados.\n' +
           ':zap: *Automático* — o Claude envia sozinho e só aparece aqui se falhar.\n' +
           ':lock: *Com aprovação* — nada sai sem um cartão aprovado pela equipa.',
       ),
       divider(),
       ...[
-        ['j1', '*J1 · Novo Cliente* · :zap: automático', 'Resposta imediata ao 1.º contacto, 24/7, com o link da avaliação gratuita.'],
         ['j2', '*J2 · Cliente Recorrente* · :zap: automático', 'Cuidados pré/pós por tipo de tratamento, check-in de criolipólise, prova de presença, avaliação Google, próxima sessão, manutenção de laser.'],
         ['j3', '*J3 · Reativação* · :lock: com aprovação', 'Sem visita há 6–18 meses · ondas diárias · desconto com validade.'],
         ['j4', '*J4 · Recuperação de falta* · :zap: lista de espera · :lock: contacto a quem faltou', 'Vaga libertada oferecida por prioridade; mensagem de reagendamento a quem faltou.'],
@@ -133,24 +132,10 @@ const jornadas = {
       ].map(([j, title, body]) => section(`${title}\n${body}`, button('Ver jornada', `dlux.mapa.ver_${j}`, { jornada: j }))),
       divider(),
       context(
+        ':calendar: A J1 · Novo Cliente fica na Buk — o 1.º contacto e a confirmação da marcação já saem de lá, não enviamos nada por cima.',
         'A antiga J7 (cuidados de tratamentos intrusivos) vive agora dentro da J2, por tipo de tratamento.',
         ':shield: Mensagens comerciais (J3, J8) só saem para clientes que deram consentimento na Buk.',
       ),
-    ],
-  },
-
-  'jornadas/j1-novo-cliente.json': {
-    text: 'J1 · Novo Cliente',
-    blocks: [
-      header(':wave: J1 · Novo Cliente'),
-      context(`${AUTO} · WhatsApp · só aparece no canal se falhar`),
-      section('*Quando:* chega mensagem por WhatsApp, Instagram, site ou anúncio. O Claude responde de imediato, 24/7.'),
-      divider(),
-      step(1, 'Resposta automática ao 1.º contacto', 'imediato', AUTO,
-        'Olá! Bem-vindo(a) à Clínica DLux. Obrigada pelo seu contacto. Posso ajudar com informações sobre tratamentos, preços e disponibilidade. Quer marcar a sua avaliação gratuita? É por aqui: {link Buk}'),
-      context('A marcação e a confirmação da avaliação continuam no Buk; o Claude regista o novo cliente.'),
-      divider(),
-      journeyControls('j1', { approval: false }),
     ],
   },
 
@@ -335,7 +320,7 @@ const cartoes = {
     text: 'Envios automáticos · 3 falharam hoje',
     blocks: [
       header(':warning: Envios automáticos · 3 falharam hoje'),
-      section('As jornadas 1, 2, 4 (lista de espera) e 6 saem *sem cartão* — só aparecem aqui quando falham.'),
+      section('As jornadas 2, 4 (lista de espera) e 6 saem *sem cartão* — só aparecem aqui quando falham.'),
       divider(),
       ...falhas.map(([id, nome, jornada, motivo]) =>
         section(`*${nome}* · ${jornada} · _${esc(motivo)}_`,
@@ -707,7 +692,22 @@ function validate(name, payload) {
 
 const args = new Set(process.argv.slice(2))
 const all = { ...jornadas, ...cartoes }
+
 const problems = []
+
+// A payload removed from this file must disappear from payloads/ too, or post.mjs
+// keeps posting a journey that no longer exists.
+for (const dir of ['jornadas', 'cartoes']) {
+  const d = join(OUT, dir)
+  if (!existsSync(d)) continue
+  for (const f of readdirSync(d)) {
+    const name = `${dir}/${f}`
+    if (f.endsWith('.json') && !(name in all)) {
+      if (args.has('--check')) problems.push(`${name}: stale — run build.mjs`)
+      else rmSync(join(d, f))
+    }
+  }
+}
 
 for (const [name, payload] of Object.entries(all)) {
   problems.push(...validate(name, payload))
