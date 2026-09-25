@@ -1,0 +1,122 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "J6 · Formação Profissional",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":mortar_board: J6 · Formação Profissional",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":zap: automático · WhatsApp · só aparece no canal se falhar"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Quando:* uma profissional pede informações sobre formações (site, Instagram ou anúncio). Os seguimentos param assim que ela responde."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Resposta + portfólio* · imediato · :zap: automático\n>Olá {Nome}, obrigada pelo interesse nas formações DLux! Seguem em anexo o portfólio, com datas e níveis disponíveis. Qualquer questão, estou à sua disposição.\n_Anexo: Portfólio de Formações (PDF)._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*2 · Seguimento* · 7 dias sem resposta · :zap: automático\n>Olá {Nome}, teve oportunidade de ver o portfólio de formações que enviámos? Fico disponível para esclarecer qualquer dúvida e ajudar a escolher o nível certo para si."
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*3 · Último seguimento* · 1 mês sem resposta · :zap: automático\n>Olá {Nome}, um último contacto sobre as nossas formações — se ainda tiver interesse, teria todo o gosto em ajudar. As vagas são limitadas.\n_Proposta da DLux. Último contacto — não insistimos mais do que isso._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*4 · Onboarding da inscrição* · após confirmar a vaga · :zap: automático\n>Olá {Nome}, parabéns pela inscrição! Seguem em anexo o manual, a ficha RGPD e o que deve trazer no dia. Até breve na DLux!\n_Anexos: manual, ficha RGPD, lista do que trazer._"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j6.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j6.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j6\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j6.jornada.registo",
+          "value": "{\"jornada\":\"j6\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j6.jornada.pausar",
+          "value": "{\"jornada\":\"j6\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

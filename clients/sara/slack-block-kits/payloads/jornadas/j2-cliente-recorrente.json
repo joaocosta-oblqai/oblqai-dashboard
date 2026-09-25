@@ -1,0 +1,157 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "J2 · Cliente Recorrente",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":repeat: J2 · Cliente Recorrente",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":zap: automático · WhatsApp · só aparece no canal se falhar"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Quando:* cada sessão marcada ou concluída no Buk. Os cuidados dependem do tipo de tratamento. O lembrete de 24h do Buk mantém-se — não enviamos lembrete extra."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Pós-tratamento · 1.ª vez* · após a 1.ª sessão · :zap: automático\n>Olá {Nome}, foi um prazer recebê-la hoje na DLux. Seguem em anexo os cuidados a ter após a sua sessão. Qualquer dúvida, estamos aqui para si.\n_Anexo: PDF de cuidados pós-tratamento._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*2 · Pré-laser* · 48h antes · :zap: automático\n>Olá {Nome}, a sua sessão de laser é já {data}. Para o melhor resultado: evite a exposição solar e não aplique cremes ou perfumes na zona nas 48h anteriores. Até já!"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*3 · Pós-laser* · logo após a sessão · :zap: automático\n>Olá {Nome}, obrigada pela sua visita. Após o laser: hidrate a zona, use protetor solar e evite sol direto nos próximos dias. Estamos aqui para qualquer questão."
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*4 · Criolipólise · check-in* · dia seguinte · :zap: automático\n>Olá {Nome}, como se está a sentir após a sessão de criolipólise de ontem? Alguma sensibilidade na zona é normal. Qualquer dúvida, conte connosco.\n_Vai para todas as clientes de criolipólise, não só as de 1.ª vez._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*5 · Peeling / microagulhamento* · após a sessão · :zap: automático\n>Olá {Nome}, seguem em anexo os cuidados após o seu {tratamento}. Siga as indicações para o melhor resultado — e qualquer dúvida é só dizer.\n_Anexo: PDF de cuidados pós-tratamento._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*6 · Prova de presença* · após a sessão · :zap: automático\n>Olá {Nome}, confirma que concluiu a sua sessão de hoje na DLux? Responda SIM para registarmos. Obrigada!\n_Mensagem à parte dos cuidados. Substitui aos poucos a assinatura em papel._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*7 · Pedido de avaliação (Google)* · 3 dias após a visita · :zap: automático\n>Olá {Nome}, esperamos que tenha gostado da sua experiência na DLux. A sua opinião ajuda muito quem procura a clínica — deixe a sua avaliação aqui: {link Google}. Obrigada!\n_Uma só vez por cliente — o sistema regista que já pediu._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*8 · Sugestão de próxima sessão* · no ritmo do tratamento (laser ~1 mês) · :zap: automático\n>Olá {Nome}, está na altura ideal de agendar a sua próxima sessão para manter os resultados. Escolha o horário que lhe der mais jeito: {link Buk}\n_Só para quem ainda não tem a sessão seguinte marcada._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*9 · Lembrete de manutenção · laser* · +1 ano sem sessão · :zap: automático\n>Olá {Nome}, já passou algum tempo desde a sua última sessão de laser. Que tal retomar e manter os resultados? Temos disponibilidade — marque aqui: {link Buk}"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j2.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j2.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j2\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j2.jornada.registo",
+          "value": "{\"jornada\":\"j2\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j2.jornada.pausar",
+          "value": "{\"jornada\":\"j2\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

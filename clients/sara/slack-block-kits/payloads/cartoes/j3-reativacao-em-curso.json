@@ -1,0 +1,96 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "Reativação · em curso",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":arrows_counterclockwise: Reativação · em curso",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Enviadas*\n3"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Na fila*\n1"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Falharam*\n1 · número inválido"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Ritmo*\n1 por minuto · só em horário de clínica"
+        }
+      ]
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.fila",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":octagonal_sign: Parar a fila",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.fila.parar",
+          "value": "{\"card\":\"j3-onda-1\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Parar a fila?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "O que está na fila volta a *por decidir*. Parar a fila não cancela o que já saiu."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Parar a fila",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.fila.registo",
+          "value": "{\"card\":\"j3-onda-1\"}"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "Uma falha volta a *por decidir* sozinha — nunca fica a parecer enviada. Parar a fila não cancela o que já saiu."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "Envios automáticos · 3 falharam hoje",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":warning: Envios automáticos · 3 falharam hoje",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "As jornadas 2, 4 (lista de espera) e 6 saem *sem cartão* — só aparecem aqui quando falham."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Ana Ribeiro* · J2 · Pré-laser 48h · _número inválido_"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.auto.falha.menu:demo.c_0118",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":arrows_counterclockwise: Tentar de novo",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"repetir\",\"cliente\":\"demo.c_0118\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar e reenviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"cliente\":\"demo.c_0118\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"cliente\":\"demo.c_0118\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"cliente\":\"demo.c_0118\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Inês Moura* · J2 · Prova de presença · _WhatsApp sem entrega 24h_"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.auto.falha.menu:demo.c_0342",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":arrows_counterclockwise: Tentar de novo",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"repetir\",\"cliente\":\"demo.c_0342\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar e reenviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"cliente\":\"demo.c_0342\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"cliente\":\"demo.c_0342\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"cliente\":\"demo.c_0342\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Carla Santos* · J6 · Seguimento 7 dias · _anexo do portfólio &gt; 16 MB_"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.auto.falha.menu:demo.c_0907",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":arrows_counterclockwise: Tentar de novo",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"repetir\",\"cliente\":\"demo.c_0907\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar e reenviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"cliente\":\"demo.c_0907\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"cliente\":\"demo.c_0907\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"cliente\":\"demo.c_0907\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "Hoje: 41 enviadas · 3 falharam. Uma falha nunca fica a parecer enviada."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}

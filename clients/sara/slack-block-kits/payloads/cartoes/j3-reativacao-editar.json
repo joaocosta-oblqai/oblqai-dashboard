@@ -1,0 +1,88 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "Reativação · a editar · Sofia Costa",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":pencil2: Reativação · a editar",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Sofia Costa* · Peeling · última visita há 11 meses · 15%\nA editar *aqui*, sem janela nova. O que guardar é o que sai — byte a byte."
+      }
+    },
+    {
+      "type": "input",
+      "block_id": "dlux.j3.editar.texto",
+      "label": {
+        "type": "plain_text",
+        "text": "Mensagem",
+        "emoji": true
+      },
+      "element": {
+        "type": "plain_text_input",
+        "action_id": "dlux.j3.editar.valor",
+        "multiline": true,
+        "max_length": 1000,
+        "initial_value": "Olá Sofia, sentimos a sua falta na DLux! Da última vez fez um peeling. Gostávamos muito de a voltar a ver. Oferecemos-lhe 15% no próximo tratamento. Válida até 16 out. Marque a sua sessão quando quiser: clinica-dlux.buk.pt"
+      },
+      "hint": {
+        "type": "plain_text",
+        "text": "{Nome}, {tratamento}, {oferta} e {link Buk} continuam a funcionar.",
+        "emoji": true
+      }
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.editar.acoes",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Guardar e aprovar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.editar.guardar_aprovar",
+          "value": "{\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0233\"}",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Guardar sem aprovar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.editar.guardar",
+          "value": "{\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0233\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Cancelar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.editar.cancelar",
+          "value": "{\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0233\"}"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}

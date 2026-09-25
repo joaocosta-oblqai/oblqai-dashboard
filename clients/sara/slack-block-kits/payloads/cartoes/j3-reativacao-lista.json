@@ -1,0 +1,365 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "Reativação · onda 1 de 3 · 2 por decidir",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":arrows_counterclockwise: Reativação · onda 1 de 3 · hoje 08:00",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "Geradas hoje 08:00 · sem visita há 6–18 meses · consentimento verificado · ordenadas por lealdade"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Elegíveis*\n274"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Contactadas*\n36"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Hoje*\n4 de 12"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Retidas (controlo)*\n54"
+        }
+      ]
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.lote.topo",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":mag: Rever uma a uma",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.lote.uma_a_uma",
+          "value": "{\"card\":\"j3-onda-1\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Não enviar nenhuma",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.lote.nao_enviar_topo",
+          "value": "{\"card\":\"j3-onda-1\"}",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Não enviar nenhuma?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "As mensagens *por decidir* desta onda são recusadas. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Não enviar nenhuma",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "por decidir 2 · na fila 1 · enviadas 1 · recusadas 0"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Marta Silva* · Miracle DLux · última visita há 8 meses · 20% · :hourglass_flowing_sand: por decidir\n>Olá Marta, sentimos a sua falta na DLux! Da última vez fez Miracle DLux. Gostávamos muito de a voltar a ver. Oferecemos-lhe 20% na próxima sessão. Válida até 16 out. Marque a sua sessão quando quiser: clinica-dlux.buk.pt"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.j3.linha.menu:demo.c_0412",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":white_check_mark: Aprovar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"aprovar\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0412\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0412\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0412\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0412\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Sofia Costa* · Peeling · última visita há 11 meses · 15% · :hourglass_flowing_sand: por decidir\n>Olá Sofia, sentimos a sua falta na DLux! Da última vez fez um peeling. Gostávamos muito de a voltar a ver. Oferecemos-lhe 15% no próximo tratamento. Válida até 16 out. Marque a sua sessão quando quiser: clinica-dlux.buk.pt"
+      },
+      "accessory": {
+        "type": "overflow",
+        "action_id": "dlux.j3.linha.menu:demo.c_0233",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":white_check_mark: Aprovar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"aprovar\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0233\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":pencil2: Editar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"editar\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0233\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":no_entry_sign: Não enviar",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"nao_enviar\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0233\"}"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": ":bust_in_silhouette: Ver a ficha",
+              "emoji": true
+            },
+            "value": "{\"acao\":\"ficha\",\"card\":\"j3-onda-1\",\"cliente\":\"demo.c_0233\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Helena Duarte* · Depilação laser · última visita há 7 meses · 25% · :hourglass: na fila\n>Olá Helena, sentimos a sua falta na DLux! Da última vez fez depilação laser. Gostávamos muito de a voltar a ver. Oferecemos-lhe uma sessão de manutenção com 25% de desconto. Válida até 16 out. Marque a sua sessão quando quiser: clinica-dlux.buk.pt"
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver a ficha",
+          "emoji": true
+        },
+        "action_id": "dlux.j3.linha.ficha:demo.c_0578",
+        "value": "{\"cliente\":\"demo.c_0578\"}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Joana Pires* · Criolipólise · última visita há 14 meses · avaliação + 10% · :white_check_mark: enviada\n>Olá Joana, sentimos a sua falta na DLux! Gostávamos muito de a voltar a ver. Oferecemos-lhe uma avaliação gratuita e 10% na sessão seguinte. Válida até 16 out. Marque a sua sessão quando quiser: clinica-dlux.buk.pt"
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Ver a ficha",
+          "emoji": true
+        },
+        "action_id": "dlux.j3.linha.ficha:demo.c_0691",
+        "value": "{\"cliente\":\"demo.c_0691\"}"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "1 472 clientes ficaram fora por estarem inativas há mais de 36 meses — alargar é decisão da Sara."
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "Continuar · alargar para 48 meses",
+          "emoji": true
+        },
+        "action_id": "dlux.j3.alargar_48",
+        "value": "{\"card\":\"j3-onda-1\"}",
+        "confirm": {
+          "title": {
+            "type": "plain_text",
+            "text": "Alargar para 48 meses?",
+            "emoji": true
+          },
+          "text": {
+            "type": "mrkdwn",
+            "text": "As próximas ondas passam a incluir clientes inativas até 48 meses."
+          },
+          "confirm": {
+            "type": "plain_text",
+            "text": "Alargar",
+            "emoji": true
+          },
+          "deny": {
+            "type": "plain_text",
+            "text": "Voltar",
+            "emoji": true
+          }
+        }
+      }
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.lote.fundo",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Aprovar as 2",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.lote.aprovar_todas",
+          "value": "{\"card\":\"j3-onda-1\"}",
+          "style": "primary",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Aprovar as 2?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Aprova só as que estão *por decidir* — não toca no que já editou ou recusou."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Aprovar as 2",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Não enviar nenhuma",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.lote.nao_enviar",
+          "value": "{\"card\":\"j3-onda-1\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Não enviar nenhuma?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "As mensagens *por decidir* desta onda são recusadas. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Não enviar nenhuma",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":memo: Editar o modelo",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.lote.editar_modelo",
+          "value": "{\"card\":\"j3-onda-1\"}"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "*Aprovar as 2* aprova só as que estão *por decidir*. Se editou várias no mesmo sentido, o errado é o *modelo*."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":lock: Nada sai sem aprovação. *Aprovar* põe na fila — o envio é espaçado, não instantâneo. Uma falha volta a *por decidir* sozinha e não afeta as outras. *Não enviar* é definitivo."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}

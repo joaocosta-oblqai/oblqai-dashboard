@@ -1,0 +1,118 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "J4 · Recuperação de falta",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":calendar: J4 · Recuperação de falta",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "Lista de espera :zap: automático · contacto a quem faltou :lock: com aprovação"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Quando:* o Claude deteta no Buk que uma cliente cancelou ou faltou. A falta fica no histórico para acompanhar padrões de absentismo."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Oferta de horário livre (lista de espera)* · abre uma vaga e há procura · :zap: automático\n>Olá {Nome}, abriu uma vaga para {tratamento} no dia {data} às {hora}. Quer ficar com ela? Responda SIM e confirmamos consigo.\n_Por prioridade (VIP → recorrentes → novos) e conforme a duração do tratamento. A lista de espera é inserida pela equipa._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*2 · Contacto a quem faltou* · 1h depois da hora marcada · :lock: com aprovação\n>Olá {Nome}, notámos que não conseguiu comparecer à sua sessão — sem problema! Quer reagendar? Escolha um novo horário aqui: {link Buk}\n_Se ninguém decidir até às 18:00, não sai — a regra é aprovar, não silenciar._"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j4.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":inbox_tray: Ver por decidir",
+            "emoji": true
+          },
+          "action_id": "dlux.j4.jornada.por_decidir",
+          "value": "{\"jornada\":\"j4\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j4.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j4\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j4.jornada.registo",
+          "value": "{\"jornada\":\"j4\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j4.jornada.pausar",
+          "value": "{\"jornada\":\"j4\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

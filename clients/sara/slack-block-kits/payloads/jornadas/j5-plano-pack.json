@@ -1,0 +1,120 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "J5 · Plano / Pack",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":package: J5 · Plano / Pack",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":lock: com aprovação · WhatsApp"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Como segue o pack:* por uma nota no Buk (ex.: «próximas 5 sessões = pack XPTO») — o Buk não marca packs sozinho.\n*Quando:* faltam 1–2 sessões para terminar o pack, contadas pelas sessões *concluídas* no Buk."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Proposta de renovação de pack* · faltam 1–2 sessões · :lock: com aprovação\n>Olá {Nome}, o seu pack está a chegar ao fim. Para dar continuidade aos seus resultados, preparámos uma proposta de renovação. Quer que agendemos já as próximas sessões?\n_Sem link de marcação de propósito: packs não são reserváveis no Buk, a renovação fecha-se em conversa._"
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "A sugestão da sessão seguinte depois de cada sessão vem da J2 — nunca para quem já a tem marcada."
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j5.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":inbox_tray: Ver por decidir",
+            "emoji": true
+          },
+          "action_id": "dlux.j5.jornada.por_decidir",
+          "value": "{\"jornada\":\"j5\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j5.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j5\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j5.jornada.registo",
+          "value": "{\"jornada\":\"j5\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j5.jornada.pausar",
+          "value": "{\"jornada\":\"j5\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

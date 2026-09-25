@@ -1,0 +1,132 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "J8 · Campanhas",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":mega: J8 · Campanhas",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":lock: com aprovação · WhatsApp · toda a base com consentimento"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Regra:* qualquer campanha passa pela aprovação prévia da DLux antes de ser enviada. Aprovar a campanha gera ondas diárias — cada onda tem o seu cartão."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*1 · Aniversário · 15% (fixa)* · mês de aniversário · :lock: com aprovação\n>Olá {Nome}, feliz aniversário da parte de toda a equipa DLux! Este mês oferecemos-lhe 15% num pack ou serviço à sua escolha. Marque aqui: {link Buk}\n_15% · uso único · durante o mês de aniversário · a toda a base. Cartão semanal._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*2 · Promoção sazonal* · ao longo do ano · :lock: com aprovação\n>Olá {Nome}, {campanha} na DLux! {desconto} em {serviço} até {data}. Aproveite e marque a sua sessão aqui: {link Buk}"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*3 · Flash · reativação* · horários de baixa procura · :lock: com aprovação\n>Olá {Nome}, promoção relâmpago só {período}: {oferta}. Temos horários disponíveis — reserve já o seu: {link Buk}\n_Ligada à J3 (reativação)._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*4 · Flash · fidelização* · clientes recorrentes · :lock: com aprovação\n>Olá {Nome}, porque é cliente DLux, temos uma oferta especial só para si: {oferta}. Válida até {data}."
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j8.jornada",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":inbox_tray: Ver por decidir",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.por_decidir",
+          "value": "{\"jornada\":\"j8\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar mensagens",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.editar_modelos",
+          "value": "{\"jornada\":\"j8\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":scroll: Ver o registo",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.registo",
+          "value": "{\"jornada\":\"j8\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar jornada",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.jornada.pausar",
+          "value": "{\"jornada\":\"j8\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Pausar a jornada?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Nada desta jornada sai enquanto estiver em pausa. O que já saiu não é afetado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Pausar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

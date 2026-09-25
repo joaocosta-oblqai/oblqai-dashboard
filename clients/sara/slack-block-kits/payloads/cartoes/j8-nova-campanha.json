@@ -1,0 +1,142 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "Nova campanha · Outono · por aprovar",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":mega: Nova campanha · Outono",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Outono* · promoção sazonal · Radiofrequência −20% · 1–31 out · *por aprovar*"
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Segmento*\nToda a base com consentimento"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Alcance*\n1 218"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Ondas*\n~87/dia · 14 dias úteis"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Excluídas*\n273 em reativação · 41 sem consentimento"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": ">Olá {Nome}, Outono na DLux! −20% em Radiofrequência até 31 out. Aproveite e marque a sua sessão aqui: clinica-dlux.buk.pt"
+      }
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j8.campanha",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Aprovar a campanha → gerar ondas",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.campanha.aprovar",
+          "value": "{\"campanha\":\"demo.camp_outono\"}",
+          "style": "primary",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Aprovar a campanha?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Não envia nada — gera as ondas diárias, e cada onda passa pelo cartão de aprovação normal."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Gerar ondas",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":pencil2: Editar texto / segmento",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.campanha.editar",
+          "value": "{\"campanha\":\"demo.camp_outono\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Cancelar",
+            "emoji": true
+          },
+          "action_id": "dlux.j8.campanha.cancelar",
+          "value": "{\"campanha\":\"demo.camp_outono\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Cancelar a campanha?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "A campanha é descartada. Nada foi enviado."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Cancelar campanha",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "*Aprovar a campanha* não envia nada — gera as ondas diárias, e cada onda passa pelo cartão de aprovação normal. *Flash* é a mesma coisa com um período em vez de mês."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}

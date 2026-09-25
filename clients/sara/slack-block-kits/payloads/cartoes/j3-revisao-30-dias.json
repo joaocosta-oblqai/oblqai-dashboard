@@ -1,0 +1,232 @@
+{
+  "channel": "C0BMCASQL1L",
+  "text": "Reativação · revisão dos primeiros 30 dias",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": ":bar_chart: Reativação · revisão dos primeiros 30 dias",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "1–30 ago · onda diária · WhatsApp"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Enviadas*\n25"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Entregues*\n24"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Responderam*\n9"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Marcaram*\n6"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Receita*\n387 €"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Custo*\n~2 € · mensagens WhatsApp"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Sugestão 1* · Deixar de contactar clientes com mais de 12 meses sem visita — marcaram 11% contra 36% abaixo dos 12 meses."
+      }
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.revisao.s1",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Aceitar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.revisao.aceitar_s1",
+          "value": "{\"sugestao\":\"s1\"}",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Recusar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.revisao.recusar_s1",
+          "value": "{\"sugestao\":\"s1\"}"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Sugestão 2* · Começar pelo tratamento que a cliente já fez — Miracle DLux marcou 43%; criolipólise 0 em 4."
+      }
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.revisao.s2",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Aceitar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.revisao.aceitar_s2",
+          "value": "{\"sugestao\":\"s2\"}",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Recusar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.revisao.recusar_s2",
+          "value": "{\"sugestao\":\"s2\"}"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Sugestão 3* · Repetir ao fim de 30 dias para quem não respondeu."
+      }
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.revisao.s3",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":white_check_mark: Aceitar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.revisao.aceitar_s3",
+          "value": "{\"sugestao\":\"s3\"}",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Recusar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.revisao.recusar_s3",
+          "value": "{\"sugestao\":\"s3\"}"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "dlux.j3.campanha",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":arrow_forward: Continuar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.campanha.continuar",
+          "value": "{\"jornada\":\"j3\"}",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":double_vertical_bar: Pausar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.campanha.pausar",
+          "value": "{\"jornada\":\"j3\"}"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": ":octagonal_sign: Parar",
+            "emoji": true
+          },
+          "action_id": "dlux.j3.campanha.parar",
+          "value": "{\"jornada\":\"j3\"}",
+          "style": "danger",
+          "confirm": {
+            "title": {
+              "type": "plain_text",
+              "text": "Parar a reativação?",
+              "emoji": true
+            },
+            "text": {
+              "type": "mrkdwn",
+              "text": "Não são geradas novas ondas até voltar a ligar a jornada."
+            },
+            "confirm": {
+              "type": "plain_text",
+              "text": "Parar",
+              "emoji": true
+            },
+            "deny": {
+              "type": "plain_text",
+              "text": "Voltar",
+              "emoji": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "Cada sugestão cita o número de onde saiu. Sem número não é sugestão, é palpite."
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":construction: *MAQUETA* — nomes inventados, `demo.*`, nada ligado."
+        }
+      ]
+    }
+  ]
+}
