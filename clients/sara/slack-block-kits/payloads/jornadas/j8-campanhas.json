@@ -46,7 +46,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*3 · Flash — reativação / fidelização* · por campanha · :grey_question: a decidir\n>Olá {primeiro_nome}, só {periodo}: {oferta}. Marque aqui: clinica-dlux.buk.pt\n_Igual à sazonal, com {periodo} em vez de mês._"
+        "text": "*3 · Flash — reativação / fidelização* · por campanha · :lock: com aprovação\n>Olá {primeiro_nome}, só {periodo}: {oferta}. Marque aqui: clinica-dlux.buk.pt\n_Igual à sazonal, com {periodo} em vez de mês._"
       }
     },
     {

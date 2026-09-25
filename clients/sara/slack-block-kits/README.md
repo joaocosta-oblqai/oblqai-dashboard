@@ -2,6 +2,8 @@
 
 Block Kit payloads for every DLux customer journey (Jornadas do Cliente), in pt-PT, ready for the clinic's Slack. Each JSON file is a `chat.postMessage` body (`{ text, blocks }`) that the Slack daemon on the DLux VPS can post as is.
 
+**Where they go:** the marketing channels in the DLux Slack workspace. That workspace isn't the OBLQAI one, so the daemon on the DLux VPS posts these with its own bot token; channel ids live in its config, not here.
+
 `build.mjs` is the source. Edit the file, then regenerate:
 
 ```bash
@@ -78,10 +80,10 @@ All operational cards use demo data: invented names and `demo.*` ids. Like the e
   - J8 seasonal and flash templates.
 
   Compare these with `Sara-Mensagens-SMS-Jornadas-PT.pdf` (the 2026-07-11 list the clinic reviewed) and replace them with the approved wording before go-live.
-- **J2 step 7 (Google review request)** has no agreed timing yet, so it's marked *a decidir*. So is **J8 flash**.
+- **Decided 2026-09-25:** the J2 Google review request goes out automatically 3 days after the visit, and J8 flash campaigns are in (approval required, like every campaign).
 
 ## Open gates before go-live
 
-- **RGPD consent.** J3 and J8 must check a per-client consent record (channel, date, consent version). The Buk checkbox is the proposed source, but that is still an open decision.
+- **RGPD consent.** Source decided: the consent checkbox on the Buk booking form ("Aceito receber informações comerciais e promoções adaptadas ao meu perfil e interesses"). Still to do: confirm Buk exposes that field per client, and store it with channel, date and consent version before J3/J8 bulk sends run.
 - **WhatsApp.** The VPS currently sends through WhatsApp Web. After the move to the Cloud API, messages that open a conversation need Meta-approved templates.
 - **Pack flag in Buk.** J5 depends on it, and it's free text today, so confirm its format first.

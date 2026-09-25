@@ -93,7 +93,6 @@ const step = (n, title, when, mode, text, note) =>
 
 const AUTO = ':zap: automático'
 const APPROVAL = ':lock: com aprovação'
-const TBD = ':grey_question: a decidir'
 
 // Controls every journey reference card ends with.
 const journeyControls = (j, { approval }) =>
@@ -133,7 +132,7 @@ const jornadas = {
       divider(),
       context(
         'A antiga J7 (cuidados de tratamentos intrusivos) vive agora dentro da J2, por tipo de tratamento.',
-        ':shield: Mensagens comerciais (J3, J8) só saem para clientes com consentimento registado.',
+        ':shield: Mensagens comerciais (J3, J8) só saem para clientes que deram consentimento na Buk.',
       ),
     ],
   },
@@ -181,7 +180,7 @@ const jornadas = {
       step(6, 'Prova de presença', 'sessão concluída na Buk', AUTO,
         'Confirma a sessão {n} de {total} de hoje?\n→ Sessão {n} de {total} confirmada. Próxima recomendada entre {de} e {ate}. Faltam {restantes} sessões.',
         'Substitui o cartão de carimbos. Sem confirmação em 24h, vai para a fila «por confirmar» da equipa.'),
-      step(7, 'Pedido de avaliação Google', 'momento a definir', TBD,
+      step(7, 'Pedido de avaliação Google', '3 dias após a visita', AUTO,
         'Olá {primeiro_nome}, ficou satisfeita com a sua experiência na DLux? A sua opinião ajuda-nos muito: {link_google}'),
       step(8, 'Laser — próxima sessão', '~1 mês depois', AUTO,
         `Olá {primeiro_nome}, está na altura da sua próxima sessão de laser. Marque aqui: ${BUK}`,
@@ -289,7 +288,7 @@ const jornadas = {
         '15% · uso único · válido durante o mês de aniversário.'),
       step(2, 'Campanha sazonal', 'por campanha', APPROVAL,
         `Olá {primeiro_nome}, chegou {campanha}! {oferta} até {validade}. Aproveite e marque a sua sessão aqui: ${BUK}`),
-      step(3, 'Flash — reativação / fidelização', 'por campanha', TBD,
+      step(3, 'Flash — reativação / fidelização', 'por campanha', APPROVAL,
         `Olá {primeiro_nome}, só {periodo}: {oferta}. Marque aqui: ${BUK}`,
         'Igual à sazonal, com {periodo} em vez de mês.'),
       divider(),

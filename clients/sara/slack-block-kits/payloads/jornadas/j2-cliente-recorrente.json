@@ -74,7 +74,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*7 · Pedido de avaliação Google* · momento a definir · :grey_question: a decidir\n>Olá {primeiro_nome}, ficou satisfeita com a sua experiência na DLux? A sua opinião ajuda-nos muito: {link_google}"
+        "text": "*7 · Pedido de avaliação Google* · 3 dias após a visita · :zap: automático\n>Olá {primeiro_nome}, ficou satisfeita com a sua experiência na DLux? A sua opinião ajuda-nos muito: {link_google}"
       }
     },
     {

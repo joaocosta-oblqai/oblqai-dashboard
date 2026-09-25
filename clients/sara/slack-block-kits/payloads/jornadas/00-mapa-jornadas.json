@@ -150,7 +150,7 @@
         },
         {
           "type": "mrkdwn",
-          "text": ":shield: Mensagens comerciais (J3, J8) só saem para clientes com consentimento registado."
+          "text": ":shield: Mensagens comerciais (J3, J8) só saem para clientes que deram consentimento na Buk."
         }
       ]
     }
