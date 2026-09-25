@@ -12,6 +12,15 @@ node clients/sara/slack-block-kits/build.mjs --check   # validate only, fails if
 node clients/sara/slack-block-kits/build.mjs --links   # also print a Block Kit Builder link per payload
 ```
 
+To put the journey cards on the DLux Slack, run this on the DLux VPS with that workspace's bot token (scopes `chat:write` and `pins:write`, and the bot must be in `#marketing`):
+
+```bash
+SLACK_BOT_TOKEN=xoxb-… node clients/sara/slack-block-kits/post.mjs            # posts the map + 7 journey cards, pins the map
+node clients/sara/slack-block-kits/post.mjs --dry-run                           # lists what it would post
+```
+
+It posts only `payloads/jornadas/`. The operational cards in `payloads/cartoes/` hold demo data and are posted by the daemon when real events happen.
+
 The validator checks Slack's limits on every payload: 50 blocks, header text 150 chars, section text 3000, fields 10, buttons 75 chars, overflow menus 2–5 options, confirm-dialog lengths, unique `action_id`/`block_id`, and escaped `<` / `>` in mrkdwn.
 
 ## The journeys
