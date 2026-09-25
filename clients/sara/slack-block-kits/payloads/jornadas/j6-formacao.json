@@ -15,7 +15,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": ":zap: automático · email / WhatsApp · só aparece no canal se falhar"
+          "text": ":zap: automático · WhatsApp · só aparece no canal se falhar"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Quando:* pedido de informação sobre formações. Pára assim que a pessoa responde."
+        "text": "*Quando:* uma profissional pede informações sobre formações (site, Instagram ou anúncio). Os seguimentos param assim que ela responde."
       }
     },
     {
@@ -33,28 +33,28 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*1 · Resposta + portfólio* · imediato · :zap: automático\n>Olá {primeiro_nome}, obrigada pelo interesse nas formações DLux! Segue o nosso Portfólio de Formações. Se tiver alguma dúvida, responda a esta mensagem.\n_Anexo: Portfólio de Formações (PDF)._"
+        "text": "*1 · Resposta + portfólio* · imediato · :zap: automático\n>Olá {Nome}, obrigada pelo interesse nas formações DLux! Seguem em anexo o portfólio, com datas e níveis disponíveis. Qualquer questão, estou à sua disposição.\n_Anexo: Portfólio de Formações (PDF)._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*2 · Seguimento* · 7 dias depois · :zap: automático\n>Olá {primeiro_nome}, conseguiu ver o portfólio? Estamos disponíveis para esclarecer qualquer dúvida — há alguma formação que lhe interesse?"
+        "text": "*2 · Seguimento* · 7 dias sem resposta · :zap: automático\n>Olá {Nome}, teve oportunidade de ver o portfólio de formações que enviámos? Fico disponível para esclarecer qualquer dúvida e ajudar a escolher o nível certo para si."
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*3 · Último seguimento* · 1 mês depois, sem resposta · :zap: automático\n>Olá {primeiro_nome}, passamos só para lembrar que as inscrições nas formações DLux continuam abertas. Se fizer sentido, é só responder.\n_Último contacto — não insistimos mais do que isso._"
+        "text": "*3 · Último seguimento* · 1 mês sem resposta · :zap: automático\n>Olá {Nome}, um último contacto sobre as nossas formações — se ainda tiver interesse, teria todo o gosto em ajudar. As vagas são limitadas.\n_Proposta da DLux. Último contacto — não insistimos mais do que isso._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*4 · Onboarding* · inscrição confirmada · :zap: automático\n>Bem-vinda à formação {formacao}, {primeiro_nome}! Começamos {data} às {hora}. Enviamos-lhe tudo o que precisa de saber antes do primeiro dia."
+        "text": "*4 · Onboarding da inscrição* · após confirmar a vaga · :zap: automático\n>Olá {Nome}, parabéns pela inscrição! Seguem em anexo o manual, a ficha RGPD e o que deve trazer no dia. Até breve na DLux!\n_Anexos: manual, ficha RGPD, lista do que trazer._"
       }
     },
     {

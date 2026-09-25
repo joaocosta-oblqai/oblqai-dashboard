@@ -63,27 +63,24 @@ All operational cards use demo data: invented names and `demo.*` ids. Like the e
   client.chat_postMessage(**payload)  # channel is already in the payload
   ```
 
-## Message texts: what's confirmed and what's a draft
+## Message texts
 
-- **Taken from the September mockups or from Ana's brief:**
-  - J3 reactivation template and its per-treatment offers.
-  - J4 message to a client who missed a session.
-  - J5 renewal message.
-  - J8 birthday message.
-  - J2 prova de presença, from the proposal.
-  - All journey timings and rules.
-- **Written here as drafts:**
-  - J1 first-contact reply.
-  - J2 care and follow-up messages (steps 1–5, 7–9).
-  - J4 waitlist offer.
-  - J6 portfolio sequence.
-  - J8 seasonal and flash templates.
+Every journey message is the approved wording from `Sara-Mensagens-SMS-Jornadas-PT.pdf` (the 17-message list the clinic reviewed, 2026-07-11). Triggers and rules come from `Sara-Jornadas-Cliente.pptx` (updated with Ana's feedback, 2026-07-04). Placeholders keep the PDF's names: `{Nome}`, `{tratamento}`, `{data}`, `{hora}`, `{oferta}`, `{campanha}`, `{desconto}`, `{serviço}`, `{período}`, `{link Buk}`, `{link Google}`.
 
-  Compare these with `Sara-Mensagens-SMS-Jornadas-PT.pdf` (the 2026-07-11 list the clinic reviewed) and replace them with the approved wording before go-live.
-- **Decided 2026-09-25:** the J2 Google review request goes out automatically 3 days after the visit, and J8 flash campaigns are in (approval required, like every campaign).
+- **J3 reactivation:** uses the approved base text. The live waves add "Da última vez fez {tratamento}." when that's safe to say (never for criolipólise), with per-treatment offers from the September mockups.
+- **Decided 2026-09-25:**
+  - The J2 Google review request goes out automatically 3 days after the visit, once per client.
+  - Both J8 flash campaigns (reactivation and loyalty) are in, with approval like every campaign.
+- **J6 last follow-up (1 month):** was the clinic's own proposal and has been accepted.
+- **Operational cards:** the example messages are these templates filled with demo data.
 
-## Open gates before go-live
+## Open before go-live
 
 - **RGPD consent.** Source decided: the consent checkbox on the Buk booking form ("Aceito receber informações comerciais e promoções adaptadas ao meu perfil e interesses"). Still to do: confirm Buk exposes that field per client, and store it with channel, date and consent version before J3/J8 bulk sends run.
 - **WhatsApp.** The VPS currently sends through WhatsApp Web. After the move to the Cloud API, messages that open a conversation need Meta-approved templates.
-- **Pack flag in Buk.** J5 depends on it, and it's free text today, so confirm its format first.
+- **Packs (J5).** The team writes a note on the client in Buk (e.g. "próximas 5 sessões = pack XPTO"), and the daemon reads it. Keep that wording consistent so it can be parsed.
+- **Still to confirm with the clinic (from the journeys deck):**
+  - **First-time laser or criolipólise clients:** do they get both messages (first visit and treatment), or only one?
+  - **Other treatments** (radiofrequência, pressoterapia, massagens…): generic care messages, or nothing?
+  - **Care PDFs by treatment:** the clinic still needs to send them (first visit, pre-laser, post-laser, peeling/microagulhamento).
+  - **Birthday 15%:** how single use is controlled — a code, or a note in Buk.

@@ -34,7 +34,7 @@
       },
       "hint": {
         "type": "plain_text",
-        "text": "{primeiro_nome}, {tratamento}, {oferta} e {validade} continuam a funcionar.",
+        "text": "{Nome}, {tratamento}, {oferta} e {link Buk} continuam a funcionar.",
         "emoji": true
       }
     },

@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Regra:* qualquer campanha passa sempre por aprovação antes do envio. Aprovar a campanha gera ondas diárias — cada onda tem o seu cartão."
+        "text": "*Regra:* qualquer campanha passa pela aprovação prévia da DLux antes de ser enviada. Aprovar a campanha gera ondas diárias — cada onda tem o seu cartão."
       }
     },
     {
@@ -33,21 +33,28 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*1 · Aniversário (fixa)* · cartão semanal · :lock: com aprovação\n>Olá {primeiro_nome}, feliz aniversário da parte de toda a equipa DLux! Este mês oferecemos-lhe 15% num pack ou serviço à sua escolha. Marque aqui: clinica-dlux.buk.pt\n_15% · uso único · válido durante o mês de aniversário._"
+        "text": "*1 · Aniversário · 15% (fixa)* · mês de aniversário · :lock: com aprovação\n>Olá {Nome}, feliz aniversário da parte de toda a equipa DLux! Este mês oferecemos-lhe 15% num pack ou serviço à sua escolha. Marque aqui: {link Buk}\n_15% · uso único · durante o mês de aniversário · a toda a base. Cartão semanal._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*2 · Campanha sazonal* · por campanha · :lock: com aprovação\n>Olá {primeiro_nome}, chegou {campanha}! {oferta} até {validade}. Aproveite e marque a sua sessão aqui: clinica-dlux.buk.pt"
+        "text": "*2 · Promoção sazonal* · ao longo do ano · :lock: com aprovação\n>Olá {Nome}, {campanha} na DLux! {desconto} em {serviço} até {data}. Aproveite e marque a sua sessão aqui: {link Buk}"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*3 · Flash — reativação / fidelização* · por campanha · :lock: com aprovação\n>Olá {primeiro_nome}, só {periodo}: {oferta}. Marque aqui: clinica-dlux.buk.pt\n_Igual à sazonal, com {periodo} em vez de mês._"
+        "text": "*3 · Flash · reativação* · horários de baixa procura · :lock: com aprovação\n>Olá {Nome}, promoção relâmpago só {período}: {oferta}. Temos horários disponíveis — reserve já o seu: {link Buk}\n_Ligada à J3 (reativação)._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*4 · Flash · fidelização* · clientes recorrentes · :lock: com aprovação\n>Olá {Nome}, porque é cliente DLux, temos uma oferta especial só para si: {oferta}. Válida até {data}."
       }
     },
     {

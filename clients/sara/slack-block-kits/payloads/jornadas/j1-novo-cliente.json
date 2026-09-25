@@ -15,7 +15,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": ":zap: automático · WhatsApp / SMS · só aparece no canal se falhar"
+          "text": ":zap: automático · WhatsApp · só aparece no canal se falhar"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Quando:* primeiro contacto — WhatsApp, formulário do site ou novo lead registado na Buk."
+        "text": "*Quando:* chega mensagem por WhatsApp, Instagram, site ou anúncio. O Claude responde de imediato, 24/7."
       }
     },
     {
@@ -33,8 +33,17 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*1 · Resposta ao 1.º contacto* · imediato · :zap: automático\n>Olá {primeiro_nome}, obrigada pelo seu contacto com a Clínica DLux! Enviamos-lhe a informação sobre {tratamento}. Pode marcar a sua avaliação aqui: clinica-dlux.buk.pt — ou responda a esta mensagem e a equipa ajuda.\n_Anexo: PDF informativo do tratamento (criolipólise, laser)._"
+        "text": "*1 · Resposta automática ao 1.º contacto* · imediato · :zap: automático\n>Olá! Bem-vindo(a) à Clínica DLux. Obrigada pelo seu contacto. Posso ajudar com informações sobre tratamentos, preços e disponibilidade. Quer marcar a sua avaliação gratuita? É por aqui: {link Buk}"
       }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "A marcação e a confirmação da avaliação continuam no Buk; o Claude regista o novo cliente."
+        }
+      ]
     },
     {
       "type": "divider"

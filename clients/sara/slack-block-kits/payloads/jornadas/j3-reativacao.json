@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Quando:* todos os dias às 08:00 — clientes sem visita há 6–18 meses, consentimento verificado, ordenadas por lealdade.\n*Envio:* em ondas, 1 mensagem por minuto, só em horário de clínica. Um grupo de controlo fica retido para medir o efeito."
+        "text": "*Quando:* todos os dias às 08:00 — clientes sem visita há 6–18 meses, consentimento verificado, ordenadas por lealdade.\n*Envio:* devagar, no máximo 1 mensagem por minuto, só em horário de clínica. Um grupo de controlo fica retido para medir o efeito."
       }
     },
     {
@@ -33,7 +33,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*1 · Mensagem de reativação* · onda diária · :lock: com aprovação\n>Olá {primeiro_nome}, sentimos a sua falta na DLux! Da última vez fez {tratamento}. Gostávamos muito de a voltar a ver. Oferecemos-lhe {oferta}. Válida até {validade}. Marque a sua sessão quando quiser: clinica-dlux.buk.pt\n_«Da última vez fez…» só aparece quando é seguro dizê-lo (omitido em criolipólise)._"
+        "text": "*1 · Mensagem de reativação* · onda diária · :lock: com aprovação\n>Olá {Nome}, sentimos a sua falta na DLux! Gostávamos muito de a voltar a ver. {oferta} Marque a sua sessão quando quiser: {link Buk}\n_Texto personalizado por cliente — quando é seguro dizê-lo, junta «Da última vez fez {tratamento}.» (nunca em criolipólise)._"
       }
     },
     {
@@ -62,11 +62,11 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": "`{primeiro_nome}` `{tratamento}` `{oferta}` `{validade}` são substituídos por cliente. Chaves desconhecidas fazem falhar a geração — nunca chegam à cliente como texto literal."
+          "text": "`{Nome}` `{tratamento}` `{oferta}` `{link Buk}` são substituídos por cliente. Chaves desconhecidas fazem falhar a geração — nunca chegam à cliente como texto literal."
         },
         {
           "type": "mrkdwn",
-          "text": "Clientes inativas há mais de 36 meses ficam fora — alargar é decisão da Sara."
+          "text": "Clientes inativas há mais de 36 meses ficam fora — alargar é decisão da Sara. O Claude regista quem voltou para medir o impacto."
         }
       ]
     },

@@ -1,12 +1,12 @@
 {
   "channel": "C0BMCASQL1L",
-  "text": "Nova campanha · Outono DLux · por aprovar",
+  "text": "Nova campanha · Outono · por aprovar",
   "blocks": [
     {
       "type": "header",
       "text": {
         "type": "plain_text",
-        "text": ":mega: Nova campanha · Outono DLux",
+        "text": ":mega: Nova campanha · Outono",
         "emoji": true
       }
     },
@@ -14,7 +14,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Outono DLux* · Radiofrequência −20% · 1–31 out · *por aprovar*"
+        "text": "*Outono* · promoção sazonal · Radiofrequência −20% · 1–31 out · *por aprovar*"
       }
     },
     {
@@ -42,7 +42,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": ">Olá {primeiro_nome}, chegou o Outono DLux! −20% em Radiofrequência até 31 out. Aproveite e marque a sua sessão aqui: clinica-dlux.buk.pt"
+        "text": ">Olá {Nome}, Outono na DLux! −20% em Radiofrequência até 31 out. Aproveite e marque a sua sessão aqui: clinica-dlux.buk.pt"
       }
     },
     {

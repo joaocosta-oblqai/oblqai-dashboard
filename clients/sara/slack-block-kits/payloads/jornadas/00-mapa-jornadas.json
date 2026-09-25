@@ -24,7 +24,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*J1 · Novo Cliente* · :zap: automático\nResposta ao 1.º contacto + PDF informativo do tratamento."
+        "text": "*J1 · Novo Cliente* · :zap: automático\nResposta imediata ao 1.º contacto, 24/7, com o link da avaliação gratuita."
       },
       "accessory": {
         "type": "button",
@@ -92,7 +92,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*J5 · Plano / Pack* · :lock: com aprovação\nProposta de renovação quando falta 1 sessão para acabar o pack."
+        "text": "*J5 · Plano / Pack* · :lock: com aprovação\nProposta de renovação quando faltam 1–2 sessões para acabar o pack."
       },
       "accessory": {
         "type": "button",

@@ -147,7 +147,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": "Sai depois da 9.ª sessão ficar *concluída* na Buk — não na marcação."
+          "text": "Gerado quando faltam 1–2 sessões, contadas pelas sessões *concluídas* no Buk. Nota do pack no Buk: «próximas 10 sessões = pack Miracle DLux»."
         },
         {
           "type": "mrkdwn",

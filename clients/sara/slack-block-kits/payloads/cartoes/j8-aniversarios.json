@@ -35,7 +35,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Modelo*\n>Olá {primeiro_nome}, feliz aniversário da parte de toda a equipa DLux! Este mês oferecemos-lhe 15% num pack ou serviço à sua escolha. Marque aqui: clinica-dlux.buk.pt"
+        "text": "*Modelo*\n>Olá {Nome}, feliz aniversário da parte de toda a equipa DLux! Este mês oferecemos-lhe 15% num pack ou serviço à sua escolha. Marque aqui: {link Buk}"
       }
     },
     {

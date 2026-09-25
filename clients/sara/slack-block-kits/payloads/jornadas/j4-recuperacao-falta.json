@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Quando:* uma sessão fica marcada como falta na Buk, ou uma vaga é libertada."
+        "text": "*Quando:* o Claude deteta no Buk que uma cliente cancelou ou faltou. A falta fica no histórico para acompanhar padrões de absentismo."
       }
     },
     {
@@ -33,14 +33,14 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*1 · Oferta de vaga (lista de espera)* · vaga libertada · :zap: automático\n>Olá {primeiro_nome}, libertou-se uma vaga {data} às {hora} para {tratamento}. Quer ficar com ela? Responda SIM.\n_Oferecida por prioridade: VIP → recorrentes → novas. A primeira a responder SIM fica com a vaga._"
+        "text": "*1 · Oferta de horário livre (lista de espera)* · abre uma vaga e há procura · :zap: automático\n>Olá {Nome}, abriu uma vaga para {tratamento} no dia {data} às {hora}. Quer ficar com ela? Responda SIM e confirmamos consigo.\n_Por prioridade (VIP → recorrentes → novos) e conforme a duração do tratamento. A lista de espera é inserida pela equipa._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*2 · Contacto a quem faltou* · 1h depois da hora marcada · :lock: com aprovação\n>Olá {primeiro_nome}, notámos que não conseguiu comparecer à sua sessão — sem problema! Quer reagendar? Escolha um novo horário aqui: clinica-dlux.buk.pt\n_Se ninguém decidir até às 18:00, não sai — a regra é aprovar, não silenciar._"
+        "text": "*2 · Contacto a quem faltou* · 1h depois da hora marcada · :lock: com aprovação\n>Olá {Nome}, notámos que não conseguiu comparecer à sua sessão — sem problema! Quer reagendar? Escolha um novo horário aqui: {link Buk}\n_Se ninguém decidir até às 18:00, não sai — a regra é aprovar, não silenciar._"
       }
     },
     {

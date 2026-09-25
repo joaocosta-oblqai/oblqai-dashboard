@@ -15,7 +15,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": ":zap: automático · WhatsApp / SMS · só aparece no canal se falhar"
+          "text": ":zap: automático · WhatsApp · só aparece no canal se falhar"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Quando:* cada sessão marcada ou concluída na Buk. As mensagens dependem do tipo de tratamento."
+        "text": "*Quando:* cada sessão marcada ou concluída no Buk. Os cuidados dependem do tipo de tratamento. O lembrete de 24h do Buk mantém-se — não enviamos lembrete extra."
       }
     },
     {
@@ -33,63 +33,63 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*1 · Cliente de 1.ª vez* · após a sessão · :zap: automático\n>Olá {primeiro_nome}, obrigada pela sua preferência pela DLux! Deixamos-lhe o Guia de Cuidados Pós-Tratamento para os próximos dias. Qualquer dúvida, estamos aqui.\n_Anexo: Guia de Cuidados Pós-Tratamento (PDF)._"
+        "text": "*1 · Pós-tratamento · 1.ª vez* · após a 1.ª sessão · :zap: automático\n>Olá {Nome}, foi um prazer recebê-la hoje na DLux. Seguem em anexo os cuidados a ter após a sua sessão. Qualquer dúvida, estamos aqui para si.\n_Anexo: PDF de cuidados pós-tratamento._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*2 · Laser — cuidados pré-sessão* · 48h antes · :zap: automático\n>Olá {primeiro_nome}, a sua sessão de laser é {data} às {hora}. Para o melhor resultado, veja os cuidados a ter antes da sessão no documento em anexo."
+        "text": "*2 · Pré-laser* · 48h antes · :zap: automático\n>Olá {Nome}, a sua sessão de laser é já {data}. Para o melhor resultado: evite a exposição solar e não aplique cremes ou perfumes na zona nas 48h anteriores. Até já!"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*3 · Laser — cuidados pós-sessão* · logo após a sessão · :zap: automático\n>Olá {primeiro_nome}, obrigada pela visita de hoje! Seguem os cuidados pós-laser para os próximos dias."
+        "text": "*3 · Pós-laser* · logo após a sessão · :zap: automático\n>Olá {Nome}, obrigada pela sua visita. Após o laser: hidrate a zona, use protetor solar e evite sol direto nos próximos dias. Estamos aqui para qualquer questão."
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*4 · Criolipólise — check-in* · dia seguinte · :zap: automático\n>Olá {primeiro_nome}, como se sentiu depois da sessão de criolipólise de ontem? Se notar algo fora do normal, responda a esta mensagem.\n_Vai para todas as clientes de criolipólise, não só as de 1.ª vez._"
+        "text": "*4 · Criolipólise · check-in* · dia seguinte · :zap: automático\n>Olá {Nome}, como se está a sentir após a sessão de criolipólise de ontem? Alguma sensibilidade na zona é normal. Qualquer dúvida, conte connosco.\n_Vai para todas as clientes de criolipólise, não só as de 1.ª vez._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*5 · Peeling / microagulhamento* · após a sessão · :zap: automático\n>Olá {primeiro_nome}, obrigada pela visita de hoje! Seguem os cuidados pós-tratamento para os próximos dias.\n_Anexo: PDF de cuidados pós-tratamento._"
+        "text": "*5 · Peeling / microagulhamento* · após a sessão · :zap: automático\n>Olá {Nome}, seguem em anexo os cuidados após o seu {tratamento}. Siga as indicações para o melhor resultado — e qualquer dúvida é só dizer.\n_Anexo: PDF de cuidados pós-tratamento._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*6 · Prova de presença* · sessão concluída na Buk · :zap: automático\n>Confirma a sessão {n} de {total} de hoje?\n>→ Sessão {n} de {total} confirmada. Próxima recomendada entre {de} e {ate}. Faltam {restantes} sessões.\n_Substitui o cartão de carimbos. Sem confirmação em 24h, vai para a fila «por confirmar» da equipa._"
+        "text": "*6 · Prova de presença* · após a sessão · :zap: automático\n>Olá {Nome}, confirma que concluiu a sua sessão de hoje na DLux? Responda SIM para registarmos. Obrigada!\n_Mensagem à parte dos cuidados. Substitui aos poucos a assinatura em papel._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*7 · Pedido de avaliação Google* · 3 dias após a visita · :zap: automático\n>Olá {primeiro_nome}, ficou satisfeita com a sua experiência na DLux? A sua opinião ajuda-nos muito: {link_google}"
+        "text": "*7 · Pedido de avaliação (Google)* · 3 dias após a visita · :zap: automático\n>Olá {Nome}, esperamos que tenha gostado da sua experiência na DLux. A sua opinião ajuda muito quem procura a clínica — deixe a sua avaliação aqui: {link Google}. Obrigada!\n_Uma só vez por cliente — o sistema regista que já pediu._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*8 · Laser — próxima sessão* · ~1 mês depois · :zap: automático\n>Olá {primeiro_nome}, está na altura da sua próxima sessão de laser. Marque aqui: clinica-dlux.buk.pt\n_Só para quem ainda não deixou a sessão seguinte marcada._"
+        "text": "*8 · Sugestão de próxima sessão* · no ritmo do tratamento (laser ~1 mês) · :zap: automático\n>Olá {Nome}, está na altura ideal de agendar a sua próxima sessão para manter os resultados. Escolha o horário que lhe der mais jeito: {link Buk}\n_Só para quem ainda não tem a sessão seguinte marcada._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*9 · Laser — manutenção* · +1 ano sem visita · :zap: automático\n>Olá {primeiro_nome}, para manter os resultados do laser recomendamos uma sessão de manutenção. Quer marcar? clinica-dlux.buk.pt"
+        "text": "*9 · Lembrete de manutenção · laser* · +1 ano sem sessão · :zap: automático\n>Olá {Nome}, já passou algum tempo desde a sua última sessão de laser. Que tal retomar e manter os resultados? Temos disponibilidade — marque aqui: {link Buk}"
       }
     },
     {

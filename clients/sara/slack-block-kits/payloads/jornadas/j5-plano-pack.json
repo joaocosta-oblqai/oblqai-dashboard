@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Quando:* a penúltima sessão do pack fica *concluída* na Buk — não na marcação."
+        "text": "*Como segue o pack:* por uma nota no Buk (ex.: «próximas 5 sessões = pack XPTO») — o Buk não marca packs sozinho.\n*Quando:* faltam 1–2 sessões para terminar o pack, contadas pelas sessões *concluídas* no Buk."
       }
     },
     {
@@ -33,7 +33,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*1 · Proposta de renovação* · falta 1 sessão · :lock: com aprovação\n>Olá {primeiro_nome}, o seu pack está a chegar ao fim. Para dar continuidade aos seus resultados, preparámos uma proposta de renovação. Quer que agendemos já as próximas sessões?\n_Sem link de marcação de propósito: packs não são reserváveis na Buk, a renovação fecha-se em conversa._"
+        "text": "*1 · Proposta de renovação de pack* · faltam 1–2 sessões · :lock: com aprovação\n>Olá {Nome}, o seu pack está a chegar ao fim. Para dar continuidade aos seus resultados, preparámos uma proposta de renovação. Quer que agendemos já as próximas sessões?\n_Sem link de marcação de propósito: packs não são reserváveis no Buk, a renovação fecha-se em conversa._"
       }
     },
     {
@@ -41,7 +41,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": ":warning: O pack está registado na Buk como texto livre — confirmar o formato antes de ativar."
+          "text": "A sugestão da sessão seguinte depois de cada sessão vem da J2 — nunca para quem já a tem marcada."
         }
       ]
     },
