@@ -6,7 +6,7 @@
 //   node clients/sara/slack-block-kits/build.mjs --check   # validate only, fail if JSON is stale
 //   node clients/sara/slack-block-kits/build.mjs --links   # also print Block Kit Builder links
 //
-// Each payload is a chat.postMessage body ({ text, blocks }). Button values carry ids only —
+// Each payload is a chat.postMessage body ({ channel, text, blocks }). Button values carry ids only —
 // the daemon re-reads the record at click time and never trusts the payload.
 
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
@@ -16,6 +16,8 @@ import { fileURLToPath } from 'node:url'
 const ROOT = dirname(fileURLToPath(import.meta.url))
 const OUT = join(ROOT, 'payloads')
 const BUK = 'clinica-dlux.buk.pt'
+// #marketing in the Clínica DLux Slack workspace — every journey card posts there.
+const CHANNEL = 'C0BMCASQL1L'
 
 // ── Block helpers ────────────────────────────────────────────────────────────
 
@@ -708,7 +710,7 @@ const problems = []
 for (const [name, payload] of Object.entries(all)) {
   problems.push(...validate(name, payload))
   const file = join(OUT, name)
-  const json = `${JSON.stringify(payload, null, 2)}\n`
+  const json = `${JSON.stringify({ channel: CHANNEL, ...payload }, null, 2)}\n`
   if (args.has('--check')) {
     if (!existsSync(file) || readFileSync(file, 'utf8') !== json) problems.push(`${name}: stale — run build.mjs`)
   } else {

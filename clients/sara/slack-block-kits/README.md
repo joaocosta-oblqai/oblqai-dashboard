@@ -1,8 +1,8 @@
 # Clínica DLux — Slack Block Kit por jornada
 
-Block Kit payloads for every DLux customer journey (Jornadas do Cliente), in pt-PT, ready for the clinic's Slack. Each JSON file is a `chat.postMessage` body (`{ text, blocks }`) that the Slack daemon on the DLux VPS can post as is.
+Block Kit payloads for every DLux customer journey (Jornadas do Cliente), in pt-PT, ready for the clinic's Slack. Each JSON file is a `chat.postMessage` body (`{ channel, text, blocks }`) that the Slack daemon on the DLux VPS can post as is.
 
-**Where they go:** the marketing channels in the DLux Slack workspace. That workspace isn't the OBLQAI one, so the daemon on the DLux VPS posts these with its own bot token; channel ids live in its config, not here.
+**Where they go:** `#marketing` (`C0BMCASQL1L`) in the Clínica DLux Slack workspace — set as `channel` in every payload. That workspace isn't the OBLQAI one, so the daemon on the DLux VPS posts them with its own bot token, and the bot must be a member of `#marketing`.
 
 `build.mjs` is the source. Edit the file, then regenerate:
 
@@ -60,7 +60,7 @@ All operational cards use demo data: invented names and `demo.*` ids. Like the e
 
   ```python
   payload = json.load(open("payloads/cartoes/j4-falta.json"))
-  client.chat_postMessage(channel=CHANNEL_ID, **payload)
+  client.chat_postMessage(**payload)  # channel is already in the payload
   ```
 
 ## Message texts: what's confirmed and what's a draft
