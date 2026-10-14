@@ -32,7 +32,7 @@ The validator checks Slack's limits on every payload: 50 blocks, header text 150
 | Map of all journeys (pin this) | — | `payloads/jornadas/00-mapa-jornadas.json` |
 | J2 · Cliente Recorrente (includes the old J7) | :zap: automatic | `payloads/jornadas/j2-cliente-recorrente.json` |
 | J3 · Reativação | :lock: approval | `payloads/jornadas/j3-reativacao.json` |
-| J4 · Recuperação de falta | waitlist :zap: · missed-session contact :lock: | `payloads/jornadas/j4-recuperacao-falta.json` |
+| J4 · Recuperação de falta | waitlist :zap: · no-show and cancellation contact :lock: | `payloads/jornadas/j4-recuperacao-falta.json` |
 | J5 · Plano / Pack | :lock: approval | `payloads/jornadas/j5-plano-pack.json` |
 | J6 · Formação Profissional | :zap: automatic | `payloads/jornadas/j6-formacao.json` |
 | J8 · Campanhas | :lock: approval | `payloads/jornadas/j8-campanhas.json` |
@@ -82,6 +82,7 @@ Every journey message is the approved wording from `Sara-Mensagens-SMS-Jornadas-
   - The J2 Google review request goes out automatically 3 days after the visit, once per client.
   - Both J8 flash campaigns (reactivation and loyalty) are in, with approval like every campaign.
 - **Decided 2026-10-14:** the J2 *prova de presença* is no longer a message asking the client to reply SIM. The team records it in the CRM on each session (signed the sheet, or confirmed by the team): `oblqai-booking-crm`, field `presence` on the booking. The J2 card says so, and its steps are renumbered 1–8.
+- **Decided 2026-10-14 (J4):** a no-show and a cancellation are different, and Buk labels them (*faltou* / *cancelada*). *Faltou* → the rebooking message, 1h after the session. *Cancelada* → first check whether she already booked another session after cancelling; if not, suggest a message asking when she'd like to come back. Both still need approval. The timing of the cancellation message is still to confirm with the clinic.
 - **J6 last follow-up (1 month):** was the clinic's own proposal and has been accepted.
 - **Operational cards:** the example messages are these templates filled with demo data.
 

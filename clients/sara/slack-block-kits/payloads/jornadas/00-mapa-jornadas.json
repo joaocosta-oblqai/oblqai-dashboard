@@ -58,7 +58,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*J4 · Recuperação de falta* · :zap: lista de espera · :lock: contacto a quem faltou\nVaga libertada oferecida por prioridade; mensagem de reagendamento a quem faltou."
+        "text": "*J4 · Recuperação de falta* · :zap: lista de espera · :lock: contacto a quem faltou ou cancelou\nVaga libertada oferecida por prioridade; a quem faltou, mensagem para remarcar; a quem cancelou e não voltou a marcar, pergunta de quando quer voltar."
       },
       "accessory": {
         "type": "button",

@@ -23,7 +23,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*Quando:* o Claude deteta no Buk que uma cliente cancelou ou faltou. A falta fica no histórico para acompanhar padrões de absentismo."
+        "text": "*Quando:* a Buk marca a sessão como *faltou* ou como *cancelada*. São casos diferentes e têm mensagens diferentes. A falta fica no histórico para acompanhar padrões de absentismo."
       }
     },
     {
@@ -40,7 +40,14 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*2 · Contacto a quem faltou* · 1h depois da hora marcada · :lock: com aprovação\n>Olá {Nome}, notámos que não conseguiu comparecer à sua sessão — sem problema! Quer reagendar? Escolha um novo horário aqui: {link Buk}\n_Se ninguém decidir até às 18:00, não sai — a regra é aprovar, não silenciar._"
+        "text": "*2 · Faltou · mensagem para remarcar* · a Buk marca *faltou* · 1h depois da hora marcada · :lock: com aprovação\n>Olá {Nome}, notámos que não conseguiu comparecer à sua sessão — sem problema! Quer reagendar? Escolha um novo horário aqui: {link Buk}\n_Se ninguém decidir até às 18:00, não sai — a regra é aprovar, não silenciar._"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*3 · Cancelou · quando quer voltar* · a Buk marca *cancelada* · só se não houver nova marcação · :lock: com aprovação\n>Olá {Nome}, vimos que cancelou a sua sessão de {tratamento} de {data}. Quando lhe dava jeito voltar? Pode escolher um novo horário aqui: {link Buk}\n_Antes de sugerir, confirma na agenda se ela já marcou outra sessão depois de cancelar. Se já marcou, não se envia nada._"
       }
     },
     {
