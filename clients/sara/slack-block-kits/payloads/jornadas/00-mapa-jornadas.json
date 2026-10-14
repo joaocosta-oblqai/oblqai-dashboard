@@ -24,7 +24,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*J2 · Cliente Recorrente* · :zap: automático\nCuidados pré/pós por tipo de tratamento, check-in de criolipólise, prova de presença, avaliação Google, próxima sessão, manutenção de laser."
+        "text": "*J2 · Cliente Recorrente* · :zap: automático\nCuidados pré/pós por tipo de tratamento, check-in de criolipólise, avaliação Google, próxima sessão, manutenção de laser."
       },
       "accessory": {
         "type": "button",

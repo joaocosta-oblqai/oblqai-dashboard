@@ -123,7 +123,7 @@ const jornadas = {
       ),
       divider(),
       ...[
-        ['j2', '*J2 · Cliente Recorrente* · :zap: automático', 'Cuidados pré/pós por tipo de tratamento, check-in de criolipólise, prova de presença, avaliação Google, próxima sessão, manutenção de laser.'],
+        ['j2', '*J2 · Cliente Recorrente* · :zap: automático', 'Cuidados pré/pós por tipo de tratamento, check-in de criolipólise, avaliação Google, próxima sessão, manutenção de laser.'],
         ['j3', '*J3 · Reativação* · :lock: com aprovação', 'Sem visita há 6–18 meses · ondas diárias · desconto com validade.'],
         ['j4', '*J4 · Recuperação de falta* · :zap: lista de espera · :lock: contacto a quem faltou', 'Vaga libertada oferecida por prioridade; mensagem de reagendamento a quem faltou.'],
         ['j5', '*J5 · Plano / Pack* · :lock: com aprovação', 'Proposta de renovação quando faltam 1–2 sessões para acabar o pack.'],
@@ -159,18 +159,16 @@ const jornadas = {
       step(5, 'Peeling / microagulhamento', 'após a sessão', AUTO,
         'Olá {Nome}, seguem em anexo os cuidados após o seu {tratamento}. Siga as indicações para o melhor resultado — e qualquer dúvida é só dizer.',
         'Anexo: PDF de cuidados pós-tratamento.'),
-      step(6, 'Prova de presença', 'após a sessão', AUTO,
-        'Olá {Nome}, confirma que concluiu a sua sessão de hoje na DLux? Responda SIM para registarmos. Obrigada!',
-        'Mensagem à parte dos cuidados. Substitui aos poucos a assinatura em papel.'),
-      step(7, 'Pedido de avaliação (Google)', '3 dias após a visita', AUTO,
+      step(6, 'Pedido de avaliação (Google)', '3 dias após a visita', AUTO,
         'Olá {Nome}, esperamos que tenha gostado da sua experiência na DLux. A sua opinião ajuda muito quem procura a clínica — deixe a sua avaliação aqui: {link Google}. Obrigada!',
         'Uma só vez por cliente — o sistema regista que já pediu.'),
-      step(8, 'Sugestão de próxima sessão', 'no ritmo do tratamento (laser ~1 mês)', AUTO,
+      step(7, 'Sugestão de próxima sessão', 'no ritmo do tratamento (laser ~1 mês)', AUTO,
         'Olá {Nome}, está na altura ideal de agendar a sua próxima sessão para manter os resultados. Escolha o horário que lhe der mais jeito: {link Buk}',
         'Só para quem ainda não tem a sessão seguinte marcada.'),
-      step(9, 'Lembrete de manutenção · laser', '+1 ano sem sessão', AUTO,
+      step(8, 'Lembrete de manutenção · laser', '+1 ano sem sessão', AUTO,
         'Olá {Nome}, já passou algum tempo desde a sua última sessão de laser. Que tal retomar e manter os resultados? Temos disponibilidade — marque aqui: {link Buk}'),
       divider(),
+      context(':clipboard: A prova de presença não é uma mensagem: a equipa regista-a no CRM, em cada sessão (assinou a folha ou confirmada pela equipa).'),
       journeyControls('j2', { approval: false }),
     ],
   },
@@ -290,7 +288,7 @@ const jornadas = {
 
 const falhas = [
   ['demo.c_0118', 'Ana Ribeiro', 'J2 · Pré-laser 48h', 'número inválido'],
-  ['demo.c_0342', 'Inês Moura', 'J2 · Prova de presença', 'WhatsApp sem entrega 24h'],
+  ['demo.c_0342', 'Inês Moura', 'J2 · Pós-laser', 'WhatsApp sem entrega 24h'],
   ['demo.c_0907', 'Carla Santos', 'J6 · Seguimento 7 dias', 'anexo do portfólio > 16 MB'],
 ]
 

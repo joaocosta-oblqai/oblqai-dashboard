@@ -81,6 +81,7 @@ Every journey message is the approved wording from `Sara-Mensagens-SMS-Jornadas-
 - **Decided 2026-09-25:**
   - The J2 Google review request goes out automatically 3 days after the visit, once per client.
   - Both J8 flash campaigns (reactivation and loyalty) are in, with approval like every campaign.
+- **Decided 2026-10-14:** the J2 *prova de presença* is no longer a message asking the client to reply SIM. The team records it in the CRM on each session (signed the sheet, or confirmed by the team): `oblqai-booking-crm`, field `presence` on the booking. The J2 card says so, and its steps are renumbered 1–8.
 - **J6 last follow-up (1 month):** was the clinic's own proposal and has been accepted.
 - **Operational cards:** the example messages are these templates filled with demo data.
 

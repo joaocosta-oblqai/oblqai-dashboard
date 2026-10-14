@@ -68,32 +68,34 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*6 · Prova de presença* · após a sessão · :zap: automático\n>Olá {Nome}, confirma que concluiu a sua sessão de hoje na DLux? Responda SIM para registarmos. Obrigada!\n_Mensagem à parte dos cuidados. Substitui aos poucos a assinatura em papel._"
+        "text": "*6 · Pedido de avaliação (Google)* · 3 dias após a visita · :zap: automático\n>Olá {Nome}, esperamos que tenha gostado da sua experiência na DLux. A sua opinião ajuda muito quem procura a clínica — deixe a sua avaliação aqui: {link Google}. Obrigada!\n_Uma só vez por cliente — o sistema regista que já pediu._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*7 · Pedido de avaliação (Google)* · 3 dias após a visita · :zap: automático\n>Olá {Nome}, esperamos que tenha gostado da sua experiência na DLux. A sua opinião ajuda muito quem procura a clínica — deixe a sua avaliação aqui: {link Google}. Obrigada!\n_Uma só vez por cliente — o sistema regista que já pediu._"
+        "text": "*7 · Sugestão de próxima sessão* · no ritmo do tratamento (laser ~1 mês) · :zap: automático\n>Olá {Nome}, está na altura ideal de agendar a sua próxima sessão para manter os resultados. Escolha o horário que lhe der mais jeito: {link Buk}\n_Só para quem ainda não tem a sessão seguinte marcada._"
       }
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*8 · Sugestão de próxima sessão* · no ritmo do tratamento (laser ~1 mês) · :zap: automático\n>Olá {Nome}, está na altura ideal de agendar a sua próxima sessão para manter os resultados. Escolha o horário que lhe der mais jeito: {link Buk}\n_Só para quem ainda não tem a sessão seguinte marcada._"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "*9 · Lembrete de manutenção · laser* · +1 ano sem sessão · :zap: automático\n>Olá {Nome}, já passou algum tempo desde a sua última sessão de laser. Que tal retomar e manter os resultados? Temos disponibilidade — marque aqui: {link Buk}"
+        "text": "*8 · Lembrete de manutenção · laser* · +1 ano sem sessão · :zap: automático\n>Olá {Nome}, já passou algum tempo desde a sua última sessão de laser. Que tal retomar e manter os resultados? Temos disponibilidade — marque aqui: {link Buk}"
       }
     },
     {
       "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": ":clipboard: A prova de presença não é uma mensagem: a equipa regista-a no CRM, em cada sessão (assinou a folha ou confirmada pela equipa)."
+        }
+      ]
     },
     {
       "type": "actions",
